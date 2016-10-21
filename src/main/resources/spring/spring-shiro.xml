@@ -9,14 +9,16 @@
     
     
     <!-- 会话id生成器 -->
-    <bean id="sessionIdGenerator" class="org.apache.shiro.session.mgt.eis.JavaUuidSessionIdGenerator"/>  
+    <bean id="sessionIdGenerator" class="org.apache.shiro.session.mgt.eis.JavaUuidSessionIdGenerator"/>
+
     <!-- 凭证匹配器 -->
-    <bean id="credentialsMatcher" class="com.yingjun.ssm.security.RetryLimitHashedCredentialsMatcher">
+    <bean id="credentialsMatcher" class="top.joylife.lemon.security.RetryLimitHashedCredentialsMatcher">
         <constructor-arg ref="cacheManager"/>
         <property name="hashAlgorithmName" value="MD5"/>
         <property name="hashIterations" value="2"/>
         <property name="storedCredentialsHexEncoded" value="true"/>
     </bean>
+
     <!-- 会话DAO -->  
     <bean id="sessionDAO" class="org.apache.shiro.session.mgt.eis.EnterpriseCacheSessionDAO">
         <property name="activeSessionsCacheName" value="shiro-activeSessionCache"/>
@@ -43,14 +45,14 @@
     
     <!-- 安全管理器 -->  
     <bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
-        <property name="realm" ref="MyShiroRealm"/>
+        <property name="realm" ref="lemonShiroRealm"/>
         <property name="sessionManager" ref="sessionManager"/>
         <property name="cacheManager" ref="cacheManager"/>
     </bean>
         
     <!--realm配置，realm是shiro的桥梁，它主要是用来判断subject是否可以登录及权限等-->
-    <bean id="MyShiroRealm" class="com.yingjun.ssm.security.MyShiroRealm">
-        <property name="accountMapper" ref="accountMapper" />
+    <bean id="lemonShiroRealm" class="top.joylife.lemon.security.LemonShiroRealm">
+        <property name="accountService" ref="accountService" />
     </bean>
     
     
