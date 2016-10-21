@@ -1,5 +1,6 @@
 package top.joylife.lemon.dao;
 
+import org.apache.ibatis.annotations.Mapper;
 import top.joylife.lemon.entity.Account;
 
 public interface AccountMapper {

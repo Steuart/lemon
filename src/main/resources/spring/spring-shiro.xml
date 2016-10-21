@@ -31,13 +31,12 @@
         <property name="httpOnly" value="true"/>
         <property name="maxAge" value="180000"/>
     </bean>
-    
+
     <!-- 会话管理器 -->  
     <bean id="sessionManager" class="org.apache.shiro.web.session.mgt.DefaultWebSessionManager">
         <property name="globalSessionTimeout" value="1800000"/>
         <property name="deleteInvalidSessions" value="true"/>
         <property name="sessionValidationSchedulerEnabled" value="true"/>
-        <property name="sessionValidationScheduler" ref="sessionValidationScheduler"/>
         <property name="sessionDAO" ref="sessionDAO"/>
         <property name="sessionIdCookieEnabled" value="true"/>
         <property name="sessionIdCookie" ref="sessionIdCookie"/>
@@ -49,10 +48,10 @@
         <property name="sessionManager" ref="sessionManager"/>
         <property name="cacheManager" ref="cacheManager"/>
     </bean>
-        
+
+
     <!--realm配置，realm是shiro的桥梁，它主要是用来判断subject是否可以登录及权限等-->
     <bean id="lemonShiroRealm" class="top.joylife.lemon.security.LemonShiroRealm">
-        <property name="accountService" ref="accountService" />
     </bean>
     
     
@@ -60,19 +59,20 @@
     <bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
         <property name="securityManager" ref="securityManager" />
         <!-- 没有权限或者失败后跳转的页面 -->
-        <property name="loginUrl" value="/index.jsp" />
+        <property name="loginUrl" value="/json" />
         <property name="successUrl" value="/loginSuccess.jsp" />
-        <property name="unauthorizedUrl" value="" />
+        <property name="unauthorizedUrl" value="/home" />
         <property name="filterChainDefinitions">
             <value>  
                 /logout.do = logout
                 /user/** = authc
+                /** = authc
                 /admin/** = authc,roles[admin]
             </value>
         </property>
     </bean>
     
-    <bean id="cacheManager" class="org.apache.shiro.cache.ehcache.EhCacheManager">  
+    <bean id="cacheManager" class="org.apache.shiro.cache.ehcache.EhCacheManager">
         <property name="cacheManagerConfigFile" value="classpath:shiro/ehcache-shiro.xml" />  
     </bean>
     

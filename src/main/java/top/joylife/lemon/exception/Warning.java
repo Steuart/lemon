@@ -1,4 +1,4 @@
-package top.joylife.lemon.common.exception;
+package top.joylife.lemon.exception;
 
 
 import top.joylife.lemon.common.consts.ReCode;
