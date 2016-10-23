@@ -59,7 +59,7 @@
     <bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
         <property name="securityManager" ref="securityManager" />
         <!-- 没有权限或者失败后跳转的页面 -->
-        <property name="loginUrl" value="/json" />
+        <property name="loginUrl" value="/index.html" />
         <property name="successUrl" value="/loginSuccess.jsp" />
         <property name="unauthorizedUrl" value="/home" />
         <property name="filterChainDefinitions">

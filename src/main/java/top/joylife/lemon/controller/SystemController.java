@@ -6,10 +6,16 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import top.joylife.lemon.common.consts.ReCode;
+import sun.util.calendar.LocalGregorianCalendar;
 import top.joylife.lemon.common.consts.ReData;
 import top.joylife.lemon.common.util.ReUtil;
-import top.joylife.lemon.exception.Warning;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.ZoneId;
+import java.util.Date;
+
 
 /**
  * Created by HemingWU on 2016/10/22.
@@ -19,7 +25,7 @@ import top.joylife.lemon.exception.Warning;
 public class SystemController {
 
     private Logger logger = LoggerFactory.getLogger(SystemController.class);
-    @RequestMapping("/json")
+    @RequestMapping("/json.do")
     @ResponseBody
     public ReData index(){
         return ReUtil.success();
@@ -28,9 +34,11 @@ public class SystemController {
     @RequestMapping("")
     public String home(ModelMap model){
         logger.error("dsaadasd__________________________");
-        model.put("aaa","hello");
-        throw new Warning(ReCode.FAIL,"helllo");
 
-        //return "home";
+
+        model.put("aaa",new java.sql.Timestamp(new Date().getTime()));
+
+
+        return "/login";
     }
 }
