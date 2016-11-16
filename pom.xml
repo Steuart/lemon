@@ -286,6 +286,13 @@
     </dependency>
     <!--freemarker end-->
 
+      <!--sitemesh begin-->
+    <dependency>
+      <groupId>org.sitemesh</groupId>
+      <artifactId>sitemesh</artifactId>
+      <version>3.0.1</version>
+    </dependency>
+    <!--sitemesh end-->
   </dependencies>
   <build>
     <finalName>lemon</finalName>

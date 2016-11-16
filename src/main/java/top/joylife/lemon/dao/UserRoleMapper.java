@@ -2,8 +2,6 @@ package top.joylife.lemon.dao;
 
 import top.joylife.lemon.entity.UserRole;
 
-import java.util.List;
-
 public interface UserRoleMapper {
     int deleteByPrimaryKey(Integer id);
 
