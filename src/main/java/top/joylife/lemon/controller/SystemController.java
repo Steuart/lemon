@@ -23,7 +23,9 @@ public class SystemController {
 
 
     @RequestMapping("")
-    public String index(){
+    public String index(ModelMap model){
+        model.put("msg","welcome");
+
         return "index";
     }
 
