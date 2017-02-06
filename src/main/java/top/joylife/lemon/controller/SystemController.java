@@ -20,9 +20,16 @@ import java.util.Date;
 public class SystemController {
 
     private Logger logger = LoggerFactory.getLogger(SystemController.class);
-    @RequestMapping("json.do")
+
+
+    @RequestMapping("")
+    public String index(){
+        return "index";
+    }
+
+    @RequestMapping("json")
     @ResponseBody
-    public ReData index(){
+    public ReData indexJson(){
         return ReUtil.success();
     }
 
