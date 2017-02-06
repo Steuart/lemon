@@ -11,12 +11,12 @@
         <meta name="viewport" content="width=device-width">
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
-        <link rel="stylesheet" href="../css/normalize.css">
-        <link rel="stylesheet" href="../css/main.css">
-        <link rel="stylesheet" href="../css/index.css">
+        <link rel="stylesheet" href="../public/lib/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../public/css/normalize.css">
+        <link rel="stylesheet" href="../public/css/main.css">
+        <link rel="stylesheet" href="../public/css/index.css">
 
-        <script src="../js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="../public/js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -27,21 +27,22 @@
         <!-- Add your site or application content here -->
         <h1 class="title">${msg}</h1>
 
-        <p>Hello world! This is HTML5 Boilerplate.</p>
+        <div class="row body">
+            <div class="col-md-2 left">
+asdda
+            </div>
+            <div class="col-md-7 middle">
+
+            </div>
+            <div class="col-md-3 right">
 
 
+            </div>
+        </div>
 
-        <script src="../lib/jquery-2.2.1.min.js"></script>
-        <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
-        <script src="../js/plugins.js"></script>
-        <script src="../js/main.js"></script>
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>
+        <script src="../public/lib/jquery-2.2.1.min.js"></script>
+        <script src="../public/lib/bootstrap/js/bootstrap.min.js"></script>
+        <script src="../public/js/plugins.js"></script>
+        <script src="../public/js/main.js"></script>
     </body>
 </html>

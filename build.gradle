@@ -85,3 +85,11 @@ dependencies {
     compile 'com.qiniu:qiniu-java-sdk:7.2.+'
 
 }
+
+//打包排除nodejs包
+war {
+    exclude("lemon/node_modules")
+    exclude("lemon/src")
+    exclude("lemon/gulpfile.js")
+    exclude("lemon/package.json")
+}
