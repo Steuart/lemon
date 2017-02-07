@@ -8,14 +8,13 @@
     <result column="parent_id" property="parentId" jdbcType="INTEGER" />
     <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
     <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
-    <result column="delete_flag" property="deleteFlag" jdbcType="TINYINT" />
+    <result column="status" property="status" jdbcType="TINYINT" />
     <result column="name" property="name" jdbcType="VARCHAR" />
     <result column="describe" property="describe" jdbcType="VARCHAR" />
     <result column="type" property="type" jdbcType="INTEGER" />
   </resultMap>
   <sql id="Base_Column_List" >
-    id, url, sort, parent_id, update_time, create_time, delete_flag, name, describe, 
-    type
+    id, url, sort, parent_id, update_time, create_time, status, name, describe, type
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
@@ -30,11 +29,11 @@
   <insert id="insert" parameterType="top.joylife.lemon.entity.Page" >
     insert into t_page (id, url, sort, 
       parent_id, update_time, create_time, 
-      delete_flag, name, describe, 
+      status, name, describe, 
       type)
     values (#{id,jdbcType=INTEGER}, #{url,jdbcType=VARCHAR}, #{sort,jdbcType=INTEGER}, 
       #{parentId,jdbcType=INTEGER}, #{updateTime,jdbcType=TIMESTAMP}, #{createTime,jdbcType=TIMESTAMP}, 
-      #{deleteFlag,jdbcType=TINYINT}, #{name,jdbcType=VARCHAR}, #{describe,jdbcType=VARCHAR}, 
+      #{status,jdbcType=TINYINT}, #{name,jdbcType=VARCHAR}, #{describe,jdbcType=VARCHAR}, 
       #{type,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="top.joylife.lemon.entity.Page" >
@@ -58,8 +57,8 @@
       <if test="createTime != null" >
         create_time,
       </if>
-      <if test="deleteFlag != null" >
-        delete_flag,
+      <if test="status != null" >
+        status,
       </if>
       <if test="name != null" >
         name,
@@ -90,8 +89,8 @@
       <if test="createTime != null" >
         #{createTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="deleteFlag != null" >
-        #{deleteFlag,jdbcType=TINYINT},
+      <if test="status != null" >
+        #{status,jdbcType=TINYINT},
       </if>
       <if test="name != null" >
         #{name,jdbcType=VARCHAR},
@@ -122,8 +121,8 @@
       <if test="createTime != null" >
         create_time = #{createTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="deleteFlag != null" >
-        delete_flag = #{deleteFlag,jdbcType=TINYINT},
+      <if test="status != null" >
+        status = #{status,jdbcType=TINYINT},
       </if>
       <if test="name != null" >
         name = #{name,jdbcType=VARCHAR},
@@ -144,7 +143,7 @@
       parent_id = #{parentId,jdbcType=INTEGER},
       update_time = #{updateTime,jdbcType=TIMESTAMP},
       create_time = #{createTime,jdbcType=TIMESTAMP},
-      delete_flag = #{deleteFlag,jdbcType=TINYINT},
+      status = #{status,jdbcType=TINYINT},
       name = #{name,jdbcType=VARCHAR},
       describe = #{describe,jdbcType=VARCHAR},
       type = #{type,jdbcType=INTEGER}

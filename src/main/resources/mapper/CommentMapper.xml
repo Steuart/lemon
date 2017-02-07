@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="top.joylife.lemon.dao.commentMapper" >
-  <resultMap id="BaseResultMap" type="top.joylife.lemon.entity.comment" >
+<mapper namespace="top.joylife.lemon.dao.CommentMapper" >
+  <resultMap id="BaseResultMap" type="top.joylife.lemon.entity.Comment" >
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="user_id" property="userId" jdbcType="INTEGER" />
     <result column="article_id" property="articleId" jdbcType="INTEGER" />
@@ -9,9 +9,12 @@
     <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
     <result column="delete_flag" property="deleteFlag" jdbcType="TINYINT" />
     <result column="status" property="status" jdbcType="TINYINT" />
+    <result column="user_head_img" property="userHeadImg" jdbcType="VARCHAR" />
+    <result column="user_name" property="userName" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
-    id, user_id, article_id, content, create_time, delete_flag, status
+    id, user_id, article_id, content, create_time, delete_flag, status, user_head_img, 
+    user_name
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
@@ -23,15 +26,17 @@
     delete from t_comment
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="top.joylife.lemon.entity.comment" >
+  <insert id="insert" parameterType="top.joylife.lemon.entity.Comment" >
     insert into t_comment (id, user_id, article_id, 
       content, create_time, delete_flag, 
-      status)
+      status, user_head_img, user_name
+      )
     values (#{id,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{articleId,jdbcType=INTEGER}, 
       #{content,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, #{deleteFlag,jdbcType=TINYINT}, 
-      #{status,jdbcType=TINYINT})
+      #{status,jdbcType=TINYINT}, #{userHeadImg,jdbcType=VARCHAR}, #{userName,jdbcType=VARCHAR}
+      )
   </insert>
-  <insert id="insertSelective" parameterType="top.joylife.lemon.entity.comment" >
+  <insert id="insertSelective" parameterType="top.joylife.lemon.entity.Comment" >
     insert into t_comment
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -54,6 +59,12 @@
       </if>
       <if test="status != null" >
         status,
+      </if>
+      <if test="userHeadImg != null" >
+        user_head_img,
+      </if>
+      <if test="userName != null" >
+        user_name,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
@@ -78,9 +89,15 @@
       <if test="status != null" >
         #{status,jdbcType=TINYINT},
       </if>
+      <if test="userHeadImg != null" >
+        #{userHeadImg,jdbcType=VARCHAR},
+      </if>
+      <if test="userName != null" >
+        #{userName,jdbcType=VARCHAR},
+      </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="top.joylife.lemon.entity.comment" >
+  <update id="updateByPrimaryKeySelective" parameterType="top.joylife.lemon.entity.Comment" >
     update t_comment
     <set >
       <if test="userId != null" >
@@ -101,17 +118,25 @@
       <if test="status != null" >
         status = #{status,jdbcType=TINYINT},
       </if>
+      <if test="userHeadImg != null" >
+        user_head_img = #{userHeadImg,jdbcType=VARCHAR},
+      </if>
+      <if test="userName != null" >
+        user_name = #{userName,jdbcType=VARCHAR},
+      </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="top.joylife.lemon.entity.comment" >
+  <update id="updateByPrimaryKey" parameterType="top.joylife.lemon.entity.Comment" >
     update t_comment
     set user_id = #{userId,jdbcType=INTEGER},
       article_id = #{articleId,jdbcType=INTEGER},
       content = #{content,jdbcType=VARCHAR},
       create_time = #{createTime,jdbcType=TIMESTAMP},
       delete_flag = #{deleteFlag,jdbcType=TINYINT},
-      status = #{status,jdbcType=TINYINT}
+      status = #{status,jdbcType=TINYINT},
+      user_head_img = #{userHeadImg,jdbcType=VARCHAR},
+      user_name = #{userName,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>

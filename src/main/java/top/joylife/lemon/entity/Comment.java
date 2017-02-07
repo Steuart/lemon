@@ -2,7 +2,7 @@ package top.joylife.lemon.entity;
 
 import java.util.Date;
 
-public class comment {
+public class Comment {
     private Integer id;
 
     private Integer userId;
@@ -16,6 +16,10 @@ public class comment {
     private Byte deleteFlag;
 
     private Byte status;
+
+    private String userHeadImg;
+
+    private String userName;
 
     public Integer getId() {
         return id;
@@ -71,5 +75,21 @@ public class comment {
 
     public void setStatus(Byte status) {
         this.status = status;
+    }
+
+    public String getUserHeadImg() {
+        return userHeadImg;
+    }
+
+    public void setUserHeadImg(String userHeadImg) {
+        this.userHeadImg = userHeadImg == null ? null : userHeadImg.trim();
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName == null ? null : userName.trim();
     }
 }

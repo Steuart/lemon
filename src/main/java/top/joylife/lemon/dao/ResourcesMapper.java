@@ -1,7 +1,5 @@
 package top.joylife.lemon.dao;
 
-import top.joylife.lemon.entity.Resources;
-
 import java.util.List;
 
 public interface ResourcesMapper {

@@ -1,14 +1,20 @@
 package top.joylife.lemon.service.impl;
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import top.joylife.lemon.dao.AccountMapper;
 import top.joylife.lemon.dao.UserMapper;
+import top.joylife.lemon.dao.UserRoleMapper;
 import top.joylife.lemon.domain.PageDto;
-import top.joylife.lemon.domain.UserDto;
+import top.joylife.lemon.domain.StatusDto;
+import top.joylife.lemon.domain.UserAccountDto;
 import top.joylife.lemon.entity.Account;
 import top.joylife.lemon.entity.User;
+import top.joylife.lemon.entity.UserRole;
 import top.joylife.lemon.service.UserService;
 
 import javax.annotation.Resource;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -19,61 +25,50 @@ public class UserServiceImpl implements UserService{
 
     @Resource
     private UserMapper userMapper;
+
+    @Resource
+    private AccountMapper accountMapper;
+
+    @Resource
+    private UserRoleMapper userRoleMapper;
+
     /**
      * 增加
-     *
      * @param entity
      * @return
      */
     @Override
-    public int add(UserDto entity) {
+    @Transactional
+    public int addUser(UserAccountDto entity) {
         User user = entity.getUser();
-
+        user.setCreateTime(new Date());
+        userMapper.insertSelective(user);
         Account account = entity.getAccount();
-        return 0;
+        account.setCreateTime(new Date());
+        account.setUserId(user.getId());
+        accountMapper.insertSelective(account);
+        Integer[] roleIds = entity.getRoleIds();
+        if(roleIds!=null && roleIds.length!=0) {
+            for(Integer roleId:roleIds){
+                UserRole userRole = new UserRole();
+                userRole.setUserId(user.getId());
+                userRole.setRoleId(roleId);
+                userRoleMapper.insertSelective(userRole);
+            }
+        }
+        return user.getId();
     }
 
+
     /**
-     * 删除
+     * 更新用户信息
      *
-     * @param id
+     * @param user
      * @return
      */
     @Override
-    public int remove(int id) {
-        return 0;
+    public int updateUser(User user) {
+        return userMapper.updateByPrimaryKeySelective(user);
     }
 
-    /**
-     * 逻辑删除
-     *
-     * @param id
-     * @return
-     */
-    @Override
-    public int logicRemove(int id) {
-        return 0;
-    }
-
-    /**
-     * 修改
-     *
-     * @param entity
-     * @return
-     */
-    @Override
-    public int modify(UserDto entity) {
-        return 0;
-    }
-
-    /**
-     * 分页获取数据列表
-     *
-     * @param pageDto
-     * @return
-     */
-    @Override
-    public List<UserDto> pageList(PageDto pageDto) {
-        return null;
-    }
 }

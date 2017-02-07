@@ -13,11 +13,11 @@
     <result column="comment_no" property="commentNo" jdbcType="INTEGER" />
     <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
     <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
-    <result column="delete_flag" property="deleteFlag" jdbcType="TINYINT" />
+    <result column="status" property="status" jdbcType="TINYINT" />
   </resultMap>
   <sql id="Base_Column_List" >
     id, title, summary, author, source, sort, click_no, scan_no, comment_no, create_time, 
-    update_time, delete_flag
+    update_time, status
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
@@ -33,12 +33,12 @@
     insert into t_article (id, title, summary, 
       author, source, sort, 
       click_no, scan_no, comment_no, 
-      create_time, update_time, delete_flag
+      create_time, update_time, status
       )
     values (#{id,jdbcType=INTEGER}, #{title,jdbcType=VARCHAR}, #{summary,jdbcType=VARCHAR}, 
       #{author,jdbcType=VARCHAR}, #{source,jdbcType=VARCHAR}, #{sort,jdbcType=INTEGER}, 
       #{clickNo,jdbcType=INTEGER}, #{scanNo,jdbcType=INTEGER}, #{commentNo,jdbcType=INTEGER}, 
-      #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, #{deleteFlag,jdbcType=TINYINT}
+      #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, #{status,jdbcType=TINYINT}
       )
   </insert>
   <insert id="insertSelective" parameterType="top.joylife.lemon.entity.Article" >
@@ -77,8 +77,8 @@
       <if test="updateTime != null" >
         update_time,
       </if>
-      <if test="deleteFlag != null" >
-        delete_flag,
+      <if test="status != null" >
+        status,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
@@ -115,8 +115,8 @@
       <if test="updateTime != null" >
         #{updateTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="deleteFlag != null" >
-        #{deleteFlag,jdbcType=TINYINT},
+      <if test="status != null" >
+        #{status,jdbcType=TINYINT},
       </if>
     </trim>
   </insert>
@@ -153,8 +153,8 @@
       <if test="updateTime != null" >
         update_time = #{updateTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="deleteFlag != null" >
-        delete_flag = #{deleteFlag,jdbcType=TINYINT},
+      <if test="status != null" >
+        status = #{status,jdbcType=TINYINT},
       </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
@@ -171,7 +171,7 @@
       comment_no = #{commentNo,jdbcType=INTEGER},
       create_time = #{createTime,jdbcType=TIMESTAMP},
       update_time = #{updateTime,jdbcType=TIMESTAMP},
-      delete_flag = #{deleteFlag,jdbcType=TINYINT}
+      status = #{status,jdbcType=TINYINT}
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>

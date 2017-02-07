@@ -8,6 +8,7 @@ import top.joylife.lemon.dao.AccountMapper;
 import top.joylife.lemon.dao.ResourceMapper;
 import top.joylife.lemon.dao.RoleMapper;
 import top.joylife.lemon.domain.PageDto;
+import top.joylife.lemon.domain.StatusDto;
 import top.joylife.lemon.entity.Account;
 import top.joylife.lemon.service.AccountService;
 
@@ -59,63 +60,24 @@ public class AccountServiceImpl implements AccountService {
      * @return
      */
     @Override
-    public List<String> getResourceByUserId(Integer userId) {
-
+    public List<String> getResourceByUserId(int userId) {
         return null;
     }
 
     /**
-     * 增加
+     * 更新用户的账户状态
      *
-     * @param entity
+     * @param statusCode
+     * @param userId
      * @return
      */
     @Override
-    public int add(Account entity) {
-        return accountMapper.insert(entity);
+    public int updateStatus(byte statusCode, int userId) {
+        Account account = new Account();
+        account.setUserId(userId);
+        account.setStatus(statusCode);
+        return accountMapper.updateStatusByUserId(account);
     }
 
-    /**
-     * 删除
-     *
-     * @param id
-     * @return
-     */
-    @Override
-    public int remove(int id) {
-        return 0;
-    }
 
-    /**
-     * 逻辑删除
-     *
-     * @param id
-     * @return
-     */
-    @Override
-    public int logicRemove(int id) {
-        return 0;
-    }
-
-    /**
-     * 修改
-     *
-     * @param entity
-     * @return
-     */
-    @Override
-    public int modify(Account entity) {
-        return 0;
-    }
-
-    /**
-     * 分页获取数据列表
-     *
-     * @param pageDto
-     * @return
-     */
-    @Override
-    public List<Account> pageList(PageDto pageDto) {
-        return null;
-    }
 }

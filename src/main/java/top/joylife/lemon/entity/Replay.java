@@ -9,13 +9,19 @@ public class Replay {
 
     private Integer replayId;
 
+    private String replayHeadImg;
+
+    private String replayName;
+
+    private String content;
+
+    private String targetName;
+
     private Integer targetId;
 
     private Date createTime;
 
     private Byte status;
-
-    private Byte deleteFlag;
 
     public Integer getId() {
         return id;
@@ -41,6 +47,38 @@ public class Replay {
         this.replayId = replayId;
     }
 
+    public String getReplayHeadImg() {
+        return replayHeadImg;
+    }
+
+    public void setReplayHeadImg(String replayHeadImg) {
+        this.replayHeadImg = replayHeadImg == null ? null : replayHeadImg.trim();
+    }
+
+    public String getReplayName() {
+        return replayName;
+    }
+
+    public void setReplayName(String replayName) {
+        this.replayName = replayName == null ? null : replayName.trim();
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content == null ? null : content.trim();
+    }
+
+    public String getTargetName() {
+        return targetName;
+    }
+
+    public void setTargetName(String targetName) {
+        this.targetName = targetName == null ? null : targetName.trim();
+    }
+
     public Integer getTargetId() {
         return targetId;
     }
@@ -63,13 +101,5 @@ public class Replay {
 
     public void setStatus(Byte status) {
         this.status = status;
-    }
-
-    public Byte getDeleteFlag() {
-        return deleteFlag;
-    }
-
-    public void setDeleteFlag(Byte deleteFlag) {
-        this.deleteFlag = deleteFlag;
     }
 }

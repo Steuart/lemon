@@ -8,11 +8,11 @@
     <result column="name" property="name" jdbcType="VARCHAR" />
     <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
     <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
-    <result column="delete_flag" property="deleteFlag" jdbcType="TINYINT" />
+    <result column="status" property="status" jdbcType="TINYINT" />
     <result column="image" property="image" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
-    id, url, describe, name, create_time, update_time, delete_flag, image
+    id, url, describe, name, create_time, update_time, status, image
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
@@ -27,10 +27,10 @@
   <insert id="insert" parameterType="top.joylife.lemon.entity.Link" >
     insert into t_link (id, url, describe, 
       name, create_time, update_time, 
-      delete_flag, image)
+      status, image)
     values (#{id,jdbcType=INTEGER}, #{url,jdbcType=VARCHAR}, #{describe,jdbcType=VARCHAR}, 
       #{name,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, 
-      #{deleteFlag,jdbcType=TINYINT}, #{image,jdbcType=VARCHAR})
+      #{status,jdbcType=TINYINT}, #{image,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="top.joylife.lemon.entity.Link" >
     insert into t_link
@@ -53,8 +53,8 @@
       <if test="updateTime != null" >
         update_time,
       </if>
-      <if test="deleteFlag != null" >
-        delete_flag,
+      <if test="status != null" >
+        status,
       </if>
       <if test="image != null" >
         image,
@@ -79,8 +79,8 @@
       <if test="updateTime != null" >
         #{updateTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="deleteFlag != null" >
-        #{deleteFlag,jdbcType=TINYINT},
+      <if test="status != null" >
+        #{status,jdbcType=TINYINT},
       </if>
       <if test="image != null" >
         #{image,jdbcType=VARCHAR},
@@ -105,8 +105,8 @@
       <if test="updateTime != null" >
         update_time = #{updateTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="deleteFlag != null" >
-        delete_flag = #{deleteFlag,jdbcType=TINYINT},
+      <if test="status != null" >
+        status = #{status,jdbcType=TINYINT},
       </if>
       <if test="image != null" >
         image = #{image,jdbcType=VARCHAR},
@@ -121,7 +121,7 @@
       name = #{name,jdbcType=VARCHAR},
       create_time = #{createTime,jdbcType=TIMESTAMP},
       update_time = #{updateTime,jdbcType=TIMESTAMP},
-      delete_flag = #{deleteFlag,jdbcType=TINYINT},
+      status = #{status,jdbcType=TINYINT},
       image = #{image,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>

@@ -11,7 +11,7 @@ public class Resource {
 
     private Date updateTime;
 
-    private Integer deleteFlag;
+    private Integer status;
 
     public Integer getId() {
         return id;
@@ -45,11 +45,11 @@ public class Resource {
         this.updateTime = updateTime;
     }
 
-    public Integer getDeleteFlag() {
-        return deleteFlag;
+    public Integer getStatus() {
+        return status;
     }
 
-    public void setDeleteFlag(Integer deleteFlag) {
-        this.deleteFlag = deleteFlag;
+    public void setStatus(Integer status) {
+        this.status = status;
     }
 }

@@ -8,10 +8,10 @@
     <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
     <result column="email" property="email" jdbcType="VARCHAR" />
     <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
-    <result column="delete_flag" property="deleteFlag" jdbcType="TINYINT" />
+    <result column="status" property="status" jdbcType="TINYINT" />
   </resultMap>
   <sql id="Base_Column_List" >
-    id, nickname, head_pic, create_time, email, update_time, delete_flag
+    id, nickname, head_pic, create_time, email, update_time, status
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
@@ -26,10 +26,10 @@
   <insert id="insert" parameterType="top.joylife.lemon.entity.User" >
     insert into t_user (id, nickname, head_pic, 
       create_time, email, update_time, 
-      delete_flag)
+      status)
     values (#{id,jdbcType=INTEGER}, #{nickname,jdbcType=VARCHAR}, #{headPic,jdbcType=VARCHAR}, 
       #{createTime,jdbcType=TIMESTAMP}, #{email,jdbcType=VARCHAR}, #{updateTime,jdbcType=TIMESTAMP}, 
-      #{deleteFlag,jdbcType=TINYINT})
+      #{status,jdbcType=TINYINT})
   </insert>
   <insert id="insertSelective" parameterType="top.joylife.lemon.entity.User" >
     insert into t_user
@@ -52,8 +52,8 @@
       <if test="updateTime != null" >
         update_time,
       </if>
-      <if test="deleteFlag != null" >
-        delete_flag,
+      <if test="status != null" >
+        status,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
@@ -75,8 +75,8 @@
       <if test="updateTime != null" >
         #{updateTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="deleteFlag != null" >
-        #{deleteFlag,jdbcType=TINYINT},
+      <if test="status != null" >
+        #{status,jdbcType=TINYINT},
       </if>
     </trim>
   </insert>
@@ -98,8 +98,8 @@
       <if test="updateTime != null" >
         update_time = #{updateTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="deleteFlag != null" >
-        delete_flag = #{deleteFlag,jdbcType=TINYINT},
+      <if test="status != null" >
+        status = #{status,jdbcType=TINYINT},
       </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
@@ -111,7 +111,7 @@
       create_time = #{createTime,jdbcType=TIMESTAMP},
       email = #{email,jdbcType=VARCHAR},
       update_time = #{updateTime,jdbcType=TIMESTAMP},
-      delete_flag = #{deleteFlag,jdbcType=TINYINT}
+      status = #{status,jdbcType=TINYINT}
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>

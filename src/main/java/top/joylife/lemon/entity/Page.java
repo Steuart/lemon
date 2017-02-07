@@ -15,7 +15,7 @@ public class Page {
 
     private Date createTime;
 
-    private Byte deleteFlag;
+    private Byte status;
 
     private String name;
 
@@ -71,12 +71,12 @@ public class Page {
         this.createTime = createTime;
     }
 
-    public Byte getDeleteFlag() {
-        return deleteFlag;
+    public Byte getStatus() {
+        return status;
     }
 
-    public void setDeleteFlag(Byte deleteFlag) {
-        this.deleteFlag = deleteFlag;
+    public void setStatus(Byte status) {
+        this.status = status;
     }
 
     public String getName() {

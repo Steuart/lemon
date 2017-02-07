@@ -2,5 +2,6 @@ target
 .idea
 *.yml
 *.iml
+.gradle
 build
 node_modules

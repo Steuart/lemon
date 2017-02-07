@@ -6,13 +6,13 @@ import top.joylife.lemon.entity.User;
 /**
  * Created by HemingWu on 2017/2/7.
  */
-public class UserDto {
+public class UserAccountDto {
 
     private User user;
 
     private Account account;
 
-    private String roleIds;
+    private Integer[] roleIds;
 
     public User getUser() {
         return user;
@@ -30,11 +30,11 @@ public class UserDto {
         this.account = account;
     }
 
-    public String getRoleIds() {
+    public Integer[] getRoleIds() {
         return roleIds;
     }
 
-    public void setRoleIds(String roleIds) {
+    public void setRoleIds(Integer[] roleIds) {
         this.roleIds = roleIds;
     }
 }

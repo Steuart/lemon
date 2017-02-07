@@ -1,5 +1,6 @@
 package top.joylife.lemon.service;
 
+import top.joylife.lemon.domain.StatusDto;
 import top.joylife.lemon.entity.Account;
 
 import java.util.List;
@@ -7,7 +8,7 @@ import java.util.List;
 /**
  * Created by WuHaiming on 2016/10/21.
  */
-public interface AccountService extends SuperService<Account>{
+public interface AccountService {
 
     /**
      * 通过身份标识获取账户
@@ -27,5 +28,13 @@ public interface AccountService extends SuperService<Account>{
      * @param userId
      * @return
      */
-    List<String> getResourceByUserId(Integer userId);
+    List<String> getResourceByUserId(int userId);
+
+    /**
+     * 更新用户的账户状态
+     * @param statusCode
+     * @param userId
+     * @return
+     */
+    int updateStatus(byte statusCode,int userId);
 }

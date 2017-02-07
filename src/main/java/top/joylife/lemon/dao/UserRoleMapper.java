@@ -3,6 +3,7 @@ package top.joylife.lemon.dao;
 import top.joylife.lemon.entity.UserRole;
 
 public interface UserRoleMapper {
+
     int deleteByPrimaryKey(Integer id);
 
     int insert(UserRole record);

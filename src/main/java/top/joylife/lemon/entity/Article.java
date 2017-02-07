@@ -25,7 +25,7 @@ public class Article {
 
     private Date updateTime;
 
-    private Byte deleteFlag;
+    private Byte status;
 
     public Integer getId() {
         return id;
@@ -115,11 +115,11 @@ public class Article {
         this.updateTime = updateTime;
     }
 
-    public Byte getDeleteFlag() {
-        return deleteFlag;
+    public Byte getStatus() {
+        return status;
     }
 
-    public void setDeleteFlag(Byte deleteFlag) {
-        this.deleteFlag = deleteFlag;
+    public void setStatus(Byte status) {
+        this.status = status;
     }
 }
