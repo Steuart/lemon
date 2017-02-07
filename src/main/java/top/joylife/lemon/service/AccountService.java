@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * Created by WuHaiming on 2016/10/21.
  */
-public interface AccountService {
+public interface AccountService extends SuperService<Account>{
 
     /**
      * 通过身份标识获取账户
