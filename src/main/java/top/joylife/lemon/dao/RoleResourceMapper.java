@@ -1,17 +1,17 @@
 package top.joylife.lemon.dao;
 
-import top.joylife.lemon.entity.roleResource;
+import top.joylife.lemon.entity.RoleResource;
 
 public interface RoleResourceMapper {
     int deleteByPrimaryKey(Integer id);
 
-    int insert(roleResource record);
+    int insert(RoleResource record);
 
-    int insertSelective(roleResource record);
+    int insertSelective(RoleResource record);
 
-    roleResource selectByPrimaryKey(Integer id);
+    RoleResource selectByPrimaryKey(Integer id);
 
-    int updateByPrimaryKeySelective(roleResource record);
+    int updateByPrimaryKeySelective(RoleResource record);
 
-    int updateByPrimaryKey(roleResource record);
+    int updateByPrimaryKey(RoleResource record);
 }

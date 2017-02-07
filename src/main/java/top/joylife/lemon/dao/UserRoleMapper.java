@@ -11,8 +11,6 @@ public interface UserRoleMapper {
 
     UserRole selectByPrimaryKey(Integer id);
 
-
-
     int updateByPrimaryKeySelective(UserRole record);
 
     int updateByPrimaryKey(UserRole record);

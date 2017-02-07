@@ -1,6 +1,6 @@
 package top.joylife.lemon.entity;
 
-public class roleResource {
+public class RoleResource {
     private Integer id;
 
     private Integer roleId;

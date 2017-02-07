@@ -17,7 +17,7 @@ public class Account {
 
     private Date updateTime;
 
-    private Integer deleteFlag;
+    private Byte deleteFlag;
 
     public Integer getId() {
         return id;
@@ -75,11 +75,11 @@ public class Account {
         this.updateTime = updateTime;
     }
 
-    public Integer getDeleteFlag() {
+    public Byte getDeleteFlag() {
         return deleteFlag;
     }
 
-    public void setDeleteFlag(Integer deleteFlag) {
+    public void setDeleteFlag(Byte deleteFlag) {
         this.deleteFlag = deleteFlag;
     }
 }
