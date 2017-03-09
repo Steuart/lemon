@@ -27,7 +27,7 @@ import top.joylife.lemon.common.cache.RedisCache;
 	L  字符仅被用于天（月）和天（星期）两个子表达式，表示一个月的最后一天或者一个星期的最后一天
 	6L 可以表示倒数第６天
 	
- * @author yingjun
+ * @author HemingWu
  *
  */
 @Component
@@ -41,7 +41,7 @@ public class BizQuartz {
 	/**
 	 * 每隔5分钟定时清理缓存
 	 */
-	@Scheduled(cron = "0 0/5 * * * ? ")
+	@Scheduled(cron = "0 0/1 * * * ? ")
 	public void cacheClear() {
 		LOG.info("@Scheduled-------cacheClear()");
 		cache.clearCache();

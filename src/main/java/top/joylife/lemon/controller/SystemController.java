@@ -6,9 +6,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import top.joylife.lemon.common.cache.RedisCache;
 import top.joylife.lemon.common.consts.ReData;
 import top.joylife.lemon.common.util.ReUtil;
 
+import javax.annotation.Resource;
 import java.util.Date;
 
 
@@ -21,6 +23,8 @@ public class SystemController {
 
     private Logger logger = LoggerFactory.getLogger(SystemController.class);
 
+    @Resource
+    private RedisCache redisCache;
 
     @RequestMapping("")
     public String index(ModelMap model){
@@ -44,5 +48,13 @@ public class SystemController {
 
 
         return "login";
+    }
+
+    @RequestMapping("redis")
+    @ResponseBody
+    public ReData redis(){
+        redisCache.putCache("test","XXXXXXXX");
+        String reData = redisCache.getCache("test",String.class);
+        return ReUtil.success(reData);
     }
 }
