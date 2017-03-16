@@ -23,8 +23,6 @@ public class SystemController {
 
     private Logger logger = LoggerFactory.getLogger(SystemController.class);
 
-    @Resource
-    private RedisCache redisCache;
 
     @RequestMapping("")
     public String index(ModelMap model){
@@ -50,11 +48,9 @@ public class SystemController {
         return "login";
     }
 
-    @RequestMapping("redis")
-    @ResponseBody
-    public ReData redis(){
-        redisCache.putCache("test","XXXXXXXX");
-        String reData = redisCache.getCache("test",String.class);
-        return ReUtil.success(reData);
+
+    @RequestMapping("websocketpage")
+    public String webSocket(){
+        return "websocket";
     }
 }
