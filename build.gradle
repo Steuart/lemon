@@ -83,6 +83,8 @@ dependencies {
     //freemarker
     compile ('org.freemarker:freemarker:2.3.23')
 
+    compile 'org.springframework.data:spring-data-mongodb:1.10.3.RELEASE'
+
     //七牛
     compile 'com.qiniu:qiniu-java-sdk:7.2.+'
 
