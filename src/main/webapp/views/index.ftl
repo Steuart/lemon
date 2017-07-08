@@ -38,9 +38,10 @@
 
                 <div class="menu">
                     <a href="#">首页</a>
-                    <a href="#">话题</a>
                     <a href="#">工艺</a>
                     <a href="#">工具</a>
+                    <a href="#">众筹</a>
+                    <a href="#">铺子</a>
                 </div>
 
                 <div class="opreate">
@@ -54,20 +55,30 @@
             <div class="col-lg-offset-1 col-md-7 left">
                 <ul class="articles">
                     <li>
-                       <h1>
+                        <h1>
                            这是文章标题
-                       </h1>
+                        </h1>
+                        <p class="author">
+                            作者：
+                            <a href="#">admin</a>
+                            <span class="time">2017-07-08 15:45</span>
+                        </p>
                         <div class="content">
-                            <a href="/article">
-                                这是文章摘要,摘要一定要简短,快递员的态度非常差,都是些什么东西,什么情况
-                                这是文章摘要,摘要一定要简短,快递员的态度非常差,都是些什么东西,什么情况
-                                这是文章摘要,摘要一定要简短,快递员的态度非常差,都是些什么东西,什么情况
-                                这是文章摘要,摘要一定要简短,快递员的态度非常差,都是些什么东西,什么情况
-                                这是文章摘要,摘要一定要简短,快递员的态度非常差,都是些什么东西,什么情况
-                                这是文章摘要,摘要一定要简短,快递员的态度非常差,都是些什么东西,什么情况
-                            </a>
+                        <a href="/article">
+                            这是文章摘要,摘要一定要简短,快递员的态度非常差,都是些什么东西,什么情况
+                            这是文章摘要,摘要一定要简短,快递员的态度非常差,都是些什么东西,什么情况
+                            这是文章摘要,摘要一定要简短,快递员的态度非常差,都是些什么东西,什么情况
+                            这是文章摘要,摘要一定要简短,快递员的态度非常差,都是些什么东西,什么情况
+                            这是文章摘要,摘要一定要简短,快递员的态度非常差,都是些什么东西,什么情况
+                            这是文章摘要,摘要一定要简短,快递员的态度非常差,都是些什么东西,什么情况
+                        </a>
                         </div>
-                       <div class="footer">
+                        <div class="tags">
+                            <i class="fa fa-tags"></i>
+                            <a class="tag" href="#">hello</a>
+                            <a href="#" class="tag">快递员</a>
+                        </div>
+                        <div class="footer">
                            <a href="#">
                                <i class="fa fa-thumbs-up"></i>点赞(111)
                            </a>
@@ -80,12 +91,17 @@
                            <a href="#">
                                <i class="fa fa-eye"></i>浏览(121221)
                            </a>
-                       </div>
+                        </div>
                     </li>
                     <li>
                         <h1>
                             这是文章标题
                         </h1>
+                        <p class="author">
+                            作者：
+                            <a href="#">admin</a>
+                            <span class="time">2017-07-08 15:45</span>
+                        </p>
                         <a href="/article" class="content">
                             <img src="/images/kill-browser.png">
                             <img src="/images/alipay-donate.png">
@@ -96,6 +112,13 @@
                                 这是文章摘要,摘要一定要简短,快递员的态度非常差,都是些什么东西,什么情况
                             </p>
                         </a>
+
+                        <div class="tags">
+                            <i class="fa fa-tags"></i>
+                            <a class="tag" href="#">hello</a>
+                            <a href="#" class="tag">快递员</a>
+                        </div>
+
                         <div class="footer">
                             <a href="#">
                                 <i class="fa fa-thumbs-up"></i>点赞(111)
@@ -116,11 +139,23 @@
                         <h1>
                             这是文章标题
                         </h1>
+                        <p class="author">
+                            作者：
+                            <a href="#">admin</a>
+                            <span class="time">2017-07-08 15:45</span>
+                        </p>
                         <div class="content">
                             <img src="/images/close.png">
                             <img src="/images/hacpai.png">
                             <img src="/images/alipay-donate.png">
                         </div>
+
+                        <div class="tags">
+                            <i class="fa fa-tags"></i>
+                            <a class="tag" href="#">hello</a>
+                            <a href="#" class="tag">快递员</a>
+                        </div>
+
                         <div class="footer">
                             <a href="#">
                                 <i class="fa fa-thumbs-up"></i>点赞(111)
@@ -141,6 +176,11 @@
                         <h1>
                             这是文章标题
                         </h1>
+                        <p class="author">
+                            作者：
+                            <a href="#">admin</a>
+                            <span class="time">2017-07-08 15:45</span>
+                        </p>
                         <div class="content">
                             <a href="/article">
                                 这是文章摘要,摘要一定要简短,快递员的态度非常差,都是些什么东西,什么情况
@@ -151,6 +191,13 @@
                                 这是文章摘要,摘要一定要简短,快递员的态度非常差,都是些什么东西,什么情况
                             </a>
                         </div>
+
+                        <div class="tags">
+                            <i class="fa fa-tags"></i>
+                            <a class="tag" href="#">hello</a>
+                            <a href="#" class="tag">快递员</a>
+                        </div>
+
                         <div class="footer">
                             <a href="#">
                                 <i class="fa fa-thumbs-up"></i>点赞(111)
@@ -171,6 +218,11 @@
                         <h1>
                             这是文章标题
                         </h1>
+                        <p class="author">
+                            作者：
+                            <a href="#">admin</a>
+                            <span class="time">2017-07-08 15:45</span>
+                        </p>
                         <div class="content">
                             <a href="/article">
                                 这是文章摘要,摘要一定要简短,快递员的态度非常差,都是些什么东西,什么情况
@@ -181,6 +233,13 @@
                                 这是文章摘要,摘要一定要简短,快递员的态度非常差,都是些什么东西,什么情况
                             </a>
                         </div>
+
+                        <div class="tags">
+                            <i class="fa fa-tags"></i>
+                            <a class="tag" href="#" style="background-color: #5e5e5e;color: #ffffff">hello</a>
+                            <a href="#" class="tag">快递员</a>
+                        </div>
+
                         <div class="footer">
                             <a href="#">
                                 <i class="fa fa-thumbs-up"></i>点赞(111)
@@ -205,12 +264,67 @@
                 </nav>
             </div>
             <div class="col-md-3 right">
-                <div class="ads">
 
+                <div class="the-hours">
+                    <h1>此时此刻</h1>
+                    <ul>
+                        <li>毛毛正在查看</li>
+                        <li>豆豆看完了00000</li>
+                        <li>Arch回复了毛阿莫</li>
+                        <li>妞妞加入平台</li>
+                        <li>妞妞加入平台</li>
+                        <li>妞妞加入平台</li>
+                    </ul>
+                    <a href="#" class="more">------更多------</a>
                 </div>
 
-                <div class="name">
+                <div class="groom">
+                    <h1>热门推荐</h1>
+                    <ul>
+                        <li>
+                            <a href="#">毛毛正在查看</a>
+                        </li>
+                        <li>
+                            <a href="#">毛毛正在查看</a>
+                        </li>
+                        <li>
+                            <a href="#">毛毛正在查看</a>
+                        </li>
+                        <li>
+                            <a href="#">毛毛正在查看</a>
+                        </li>
+                        <li>
+                            <a href="#">毛毛正在查看</a>
+                        </li>
+                    </ul>
 
+                    <a href="#" class="more">------更多------</a>
+                </div>
+
+                <div class="tags">
+                    <h1>标签云</h1>
+                    <div class="list">
+                        <a href="#" style="font-size: 3rem">毛毛</a>
+                        <a href="#" style="font-size: 5rem">毛毛</a>
+                        <a href="#" style="font-size: 5rem">JAVA</a>
+                        <a href="#" style="font-size: 1rem">javascript</a>
+                        <a href="#" style="font-size: 1rem">database</a>
+                        <a href="#" style="font-size: 1rem">搜索引擎</a>
+                        <a href="#" style="font-size: 2rem">天龙八部</a>
+                        <a href="#" style="font-size: 1rem">画江湖</a>
+                        <a href="#" style="font-size: 0.9rem">在这完</a>
+                        <a href="#" style="font-size: 1.54rem">和我们</a>
+                        <a href="#" style="font-size: 1rem">毛毛</a>
+                        <a href="#" style="font-size: 3rem">毛毛</a>
+                        <a href="#" style="font-size: 1rem">毛毛</a>
+                    </div>
+
+                    <a href="/tags" class="more">------更多------</a>
+                </div>
+
+                <div class="ads">
+                    <h1>广而告之</h1>
+                    <a href="#" class="more">------更多------</a>
                 </div>
 
             </div>

@@ -80,4 +80,9 @@ public class SystemController {
     public String updatepwd(){
         return "updatepwd";
     }
+
+    @RequestMapping("tags")
+    public String tags(){
+        return "tags";
+    }
 }
