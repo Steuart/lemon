@@ -32,12 +32,12 @@
     	1、加入对静态资源的处理:js,css,gif,png
     	2、允许使用"/"做整体映射
     -->
-    <mvc:resources mapping="/**" location="/lemon/"/>
+    <mvc:resources mapping="/**" location="/public/"/>
 
 
     <!--freemarker 视图解析器-->
     <bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
-        <property name="templateLoaderPath" value="/lemon/views"/>
+        <property name="templateLoaderPath" value="/views"/>
         <property name="freemarkerSettings">
             <props>
                 <prop key="template_update_delay">1</prop>
