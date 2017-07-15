@@ -85,4 +85,9 @@ public class SystemController {
     public String tags(){
         return "tags";
     }
+
+    @RequestMapping("now")
+    public String now(){
+        return "now";
+    }
 }

@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="top.joylife.lemon.dao.AccountMapper">
-    <resultMap id="BaseResultMap" type="top.joylife.lemon.entity.Account">
-        <id column="id" property="id" jdbcType="INTEGER"/>
-        <result column="user_id" property="userId" jdbcType="INTEGER"/>
-        <result column="identify_type" property="identifyType" jdbcType="INTEGER"/>
-        <result column="identifier" property="identifier" jdbcType="VARCHAR"/>
-        <result column="credential" property="credential" jdbcType="VARCHAR"/>
-        <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
-        <result column="update_time" property="updateTime" jdbcType="TIMESTAMP"/>
-        <result column="status" property="status" jdbcType="TINYINT"/>
-    </resultMap>
-    <sql id="Base_Column_List">
+<mapper namespace="top.joylife.lemon.dao.AccountMapper" >
+  <resultMap id="BaseResultMap" type="top.joylife.lemon.entity.Account" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="user_id" property="userId" jdbcType="INTEGER" />
+    <result column="identify_type" property="identifyType" jdbcType="INTEGER" />
+    <result column="identifier" property="identifier" jdbcType="VARCHAR" />
+    <result column="credential" property="credential" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="status" property="status" jdbcType="TINYINT" />
+  </resultMap>
+  <sql id="Base_Column_List" >
     id, user_id, identify_type, identifier, credential, create_time, update_time, status
   </sql>
-    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer">
-        select
-        <include refid="Base_Column_List"/>
-        from t_account
-        where id = #{id,jdbcType=INTEGER}
-    </select>
-    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_account
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from t_account
     where id = #{id,jdbcType=INTEGER}
   </delete>
-    <insert id="insert" parameterType="top.joylife.lemon.entity.Account">
+  <insert id="insert" parameterType="top.joylife.lemon.entity.Account" >
     insert into t_account (id, user_id, identify_type, 
       identifier, credential, create_time, 
       update_time, status)
@@ -32,103 +32,89 @@
       #{identifier,jdbcType=VARCHAR}, #{credential,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, 
       #{updateTime,jdbcType=TIMESTAMP}, #{status,jdbcType=TINYINT})
   </insert>
-    <insert id="insertSelective" parameterType="top.joylife.lemon.entity.Account">
-        insert into t_account
-        <trim prefix="(" suffix=")" suffixOverrides=",">
-            <if test="id != null">
-                id,
-            </if>
-            <if test="userId != null">
-                user_id,
-            </if>
-            <if test="identifyType != null">
-                identify_type,
-            </if>
-            <if test="identifier != null">
-                identifier,
-            </if>
-            <if test="credential != null">
-                credential,
-            </if>
-            <if test="createTime != null">
-                create_time,
-            </if>
-            <if test="updateTime != null">
-                update_time,
-            </if>
-            <if test="status != null">
-                status,
-            </if>
-        </trim>
-        <trim prefix="values (" suffix=")" suffixOverrides=",">
-            <if test="id != null">
-                #{id,jdbcType=INTEGER},
-            </if>
-            <if test="userId != null">
-                #{userId,jdbcType=INTEGER},
-            </if>
-            <if test="identifyType != null">
-                #{identifyType,jdbcType=INTEGER},
-            </if>
-            <if test="identifier != null">
-                #{identifier,jdbcType=VARCHAR},
-            </if>
-            <if test="credential != null">
-                #{credential,jdbcType=VARCHAR},
-            </if>
-            <if test="createTime != null">
-                #{createTime,jdbcType=TIMESTAMP},
-            </if>
-            <if test="updateTime != null">
-                #{updateTime,jdbcType=TIMESTAMP},
-            </if>
-            <if test="status != null">
-                #{status,jdbcType=TINYINT},
-            </if>
-        </trim>
-    </insert>
-
-    <!--更改账户状态账户-->
-    <update id="updateStatusByUserId" parameterType="top.joylife.lemon.entity.Account">
-        update t_account
-        set status=#{status}
-        where user_id=#{userId}
-    </update>
-
-    <!--删除-->
-    <delete id="deleteByUserId" parameterType="java.lang.Integer">
-        delete from t_account
-        where userId = #{userId,jdbcType=INTEGER}
-    </delete>
-
-    <update id="updateByPrimaryKeySelective" parameterType="top.joylife.lemon.entity.Account">
-        update t_account
-        <set>
-            <if test="userId != null">
-                user_id = #{userId,jdbcType=INTEGER},
-            </if>
-            <if test="identifyType != null">
-                identify_type = #{identifyType,jdbcType=INTEGER},
-            </if>
-            <if test="identifier != null">
-                identifier = #{identifier,jdbcType=VARCHAR},
-            </if>
-            <if test="credential != null">
-                credential = #{credential,jdbcType=VARCHAR},
-            </if>
-            <if test="createTime != null">
-                create_time = #{createTime,jdbcType=TIMESTAMP},
-            </if>
-            <if test="updateTime != null">
-                update_time = #{updateTime,jdbcType=TIMESTAMP},
-            </if>
-            <if test="status != null">
-                status = #{status,jdbcType=TINYINT},
-            </if>
-        </set>
-        where id = #{id,jdbcType=INTEGER}
-    </update>
-    <update id="updateByPrimaryKey" parameterType="top.joylife.lemon.entity.Account">
+  <insert id="insertSelective" parameterType="top.joylife.lemon.entity.Account" >
+    insert into t_account
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="userId != null" >
+        user_id,
+      </if>
+      <if test="identifyType != null" >
+        identify_type,
+      </if>
+      <if test="identifier != null" >
+        identifier,
+      </if>
+      <if test="credential != null" >
+        credential,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="userId != null" >
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="identifyType != null" >
+        #{identifyType,jdbcType=INTEGER},
+      </if>
+      <if test="identifier != null" >
+        #{identifier,jdbcType=VARCHAR},
+      </if>
+      <if test="credential != null" >
+        #{credential,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=TINYINT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="top.joylife.lemon.entity.Account" >
+    update t_account
+    <set >
+      <if test="userId != null" >
+        user_id = #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="identifyType != null" >
+        identify_type = #{identifyType,jdbcType=INTEGER},
+      </if>
+      <if test="identifier != null" >
+        identifier = #{identifier,jdbcType=VARCHAR},
+      </if>
+      <if test="credential != null" >
+        credential = #{credential,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=TINYINT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="top.joylife.lemon.entity.Account" >
     update t_account
     set user_id = #{userId,jdbcType=INTEGER},
       identify_type = #{identifyType,jdbcType=INTEGER},

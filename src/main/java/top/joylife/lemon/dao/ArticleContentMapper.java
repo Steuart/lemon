@@ -1,19 +1,20 @@
 package top.joylife.lemon.dao;
 
 import top.joylife.lemon.entity.ArticleContent;
+import top.joylife.lemon.entity.ArticleContentWithBLOBs;
 
 public interface ArticleContentMapper {
     int deleteByPrimaryKey(Integer id);
 
-    int insert(ArticleContent record);
+    int insert(ArticleContentWithBLOBs record);
 
-    int insertSelective(ArticleContent record);
+    int insertSelective(ArticleContentWithBLOBs record);
 
-    ArticleContent selectByPrimaryKey(Integer id);
+    ArticleContentWithBLOBs selectByPrimaryKey(Integer id);
 
-    int updateByPrimaryKeySelective(ArticleContent record);
+    int updateByPrimaryKeySelective(ArticleContentWithBLOBs record);
 
-    int updateByPrimaryKeyWithBLOBs(ArticleContent record);
+    int updateByPrimaryKeyWithBLOBs(ArticleContentWithBLOBs record);
 
     int updateByPrimaryKey(ArticleContent record);
 }

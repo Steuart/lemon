@@ -3,15 +3,6 @@ package top.joylife.lemon.entity;
 import java.util.Date;
 
 public class Account {
-
-    public interface DeleteFlag {
-        //正常
-        byte NOMAL = 0;
-        //删除
-        byte DELETE = 1;
-    }
-
-
     private Integer id;
 
     private Integer userId;

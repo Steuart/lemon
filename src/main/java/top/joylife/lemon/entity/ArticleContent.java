@@ -11,8 +11,6 @@ public class ArticleContent {
 
     private Date updateTime;
 
-    private String content;
-
     public Integer getId() {
         return id;
     }
@@ -43,13 +41,5 @@ public class ArticleContent {
 
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
-    }
-
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content == null ? null : content.trim();
     }
 }

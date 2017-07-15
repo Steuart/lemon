@@ -7,6 +7,12 @@ public class Tag {
 
     private String name;
 
+    private Integer articleCount;
+
+    private String bgColor;
+
+    private String fontColor;
+
     private Date createTime;
 
     private Date updateTime;
@@ -27,6 +33,30 @@ public class Tag {
 
     public void setName(String name) {
         this.name = name == null ? null : name.trim();
+    }
+
+    public Integer getArticleCount() {
+        return articleCount;
+    }
+
+    public void setArticleCount(Integer articleCount) {
+        this.articleCount = articleCount;
+    }
+
+    public String getBgColor() {
+        return bgColor;
+    }
+
+    public void setBgColor(String bgColor) {
+        this.bgColor = bgColor == null ? null : bgColor.trim();
+    }
+
+    public String getFontColor() {
+        return fontColor;
+    }
+
+    public void setFontColor(String fontColor) {
+        this.fontColor = fontColor == null ? null : fontColor.trim();
     }
 
     public Date getCreateTime() {

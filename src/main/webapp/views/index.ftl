@@ -275,7 +275,7 @@
                         <li>妞妞加入平台</li>
                         <li>妞妞加入平台</li>
                     </ul>
-                    <a href="#" class="more">------更多------</a>
+                    <a href="/now" class="more">------更多------</a>
                 </div>
 
                 <div class="groom">
@@ -297,8 +297,6 @@
                             <a href="#">毛毛正在查看</a>
                         </li>
                     </ul>
-
-                    <a href="#" class="more">------更多------</a>
                 </div>
 
                 <div class="tags">
@@ -324,7 +322,6 @@
 
                 <div class="ads">
                     <h1>广而告之</h1>
-                    <a href="#" class="more">------更多------</a>
                 </div>
 
             </div>

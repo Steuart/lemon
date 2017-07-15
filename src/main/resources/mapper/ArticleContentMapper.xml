@@ -7,14 +7,15 @@
     <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
     <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
   </resultMap>
-  <resultMap id="ResultMapWithBLOBs" type="top.joylife.lemon.entity.ArticleContent" extends="BaseResultMap" >
+  <resultMap id="ResultMapWithBLOBs" type="top.joylife.lemon.entity.ArticleContentWithBLOBs" extends="BaseResultMap" >
     <result column="content" property="content" jdbcType="LONGVARCHAR" />
+    <result column="markdown" property="markdown" jdbcType="LONGVARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
     id, article_id, create_time, update_time
   </sql>
   <sql id="Blob_Column_List" >
-    content
+    content, markdown
   </sql>
   <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
     select 
@@ -28,13 +29,15 @@
     delete from t_article_content
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="top.joylife.lemon.entity.ArticleContent" >
+  <insert id="insert" parameterType="top.joylife.lemon.entity.ArticleContentWithBLOBs" >
     insert into t_article_content (id, article_id, create_time, 
-      update_time, content)
+      update_time, content, markdown
+      )
     values (#{id,jdbcType=INTEGER}, #{articleId,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP}, 
-      #{updateTime,jdbcType=TIMESTAMP}, #{content,jdbcType=LONGVARCHAR})
+      #{updateTime,jdbcType=TIMESTAMP}, #{content,jdbcType=LONGVARCHAR}, #{markdown,jdbcType=LONGVARCHAR}
+      )
   </insert>
-  <insert id="insertSelective" parameterType="top.joylife.lemon.entity.ArticleContent" >
+  <insert id="insertSelective" parameterType="top.joylife.lemon.entity.ArticleContentWithBLOBs" >
     insert into t_article_content
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -51,6 +54,9 @@
       </if>
       <if test="content != null" >
         content,
+      </if>
+      <if test="markdown != null" >
+        markdown,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
@@ -69,9 +75,12 @@
       <if test="content != null" >
         #{content,jdbcType=LONGVARCHAR},
       </if>
+      <if test="markdown != null" >
+        #{markdown,jdbcType=LONGVARCHAR},
+      </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="top.joylife.lemon.entity.ArticleContent" >
+  <update id="updateByPrimaryKeySelective" parameterType="top.joylife.lemon.entity.ArticleContentWithBLOBs" >
     update t_article_content
     <set >
       <if test="articleId != null" >
@@ -86,15 +95,19 @@
       <if test="content != null" >
         content = #{content,jdbcType=LONGVARCHAR},
       </if>
+      <if test="markdown != null" >
+        markdown = #{markdown,jdbcType=LONGVARCHAR},
+      </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKeyWithBLOBs" parameterType="top.joylife.lemon.entity.ArticleContent" >
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="top.joylife.lemon.entity.ArticleContentWithBLOBs" >
     update t_article_content
     set article_id = #{articleId,jdbcType=INTEGER},
       create_time = #{createTime,jdbcType=TIMESTAMP},
       update_time = #{updateTime,jdbcType=TIMESTAMP},
-      content = #{content,jdbcType=LONGVARCHAR}
+      content = #{content,jdbcType=LONGVARCHAR},
+      markdown = #{markdown,jdbcType=LONGVARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="top.joylife.lemon.entity.ArticleContent" >
