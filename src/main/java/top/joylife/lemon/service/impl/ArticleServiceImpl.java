@@ -1,18 +1,28 @@
 package top.joylife.lemon.service.impl;
 
+import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.stereotype.Service;
 import top.joylife.lemon.controller.vo.ArticleVo;
+import top.joylife.lemon.dao.ArticleMapper;
 import top.joylife.lemon.domain.ArticleDto;
 import top.joylife.lemon.domain.PageDto;
 import top.joylife.lemon.entity.ArticleContent;
 import top.joylife.lemon.service.ArticleService;
+
+import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * Created by HemingWu on 2017/2/7.
  */
 @Service
 public class ArticleServiceImpl implements ArticleService{
+
+
+    @Resource
+    private ArticleMapper articleMapper;
+
     /**
      * 添加文章
      *
@@ -66,7 +76,10 @@ public class ArticleServiceImpl implements ArticleService{
      */
     @Override
     public PageInfo<ArticleVo> pageList(PageDto pageDto) {
-        return null;
+        PageHelper.startPage(1, 10);
+        List<ArticleVo> articleVos = articleMapper.selectList(pageDto);
+        PageInfo pageInfo = new PageInfo(articleVos);
+        return pageInfo;
     }
 
     /**

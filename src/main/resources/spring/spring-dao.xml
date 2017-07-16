@@ -54,25 +54,4 @@
         <property name="basePackage" value="top.joylife.lemon.dao"/>
     </bean>
 
-
-    <mongo:mongo host="${mongo.host}" port="${mongo.port}">
-        <mongo:options
-                connections-per-host="${mongo.connectionsPerHost}"
-                threads-allowed-to-block-for-connection-multiplier="${mongo.threadsAllowedToBlockForConnectionMultiplier}"
-                connect-timeout="${mongo.connectTimeout}"
-                max-wait-time="${mongo.maxWaitTime}"
-                auto-connect-retry="${mongo.autoConnectRetry}"
-                socket-keep-alive="${mongo.socketKeepAlive}"
-                socket-timeout="${mongo.socketTimeout}"
-                slave-ok="${mongo.slaveOk}"
-                write-number="1"
-                write-timeout="0"
-                write-fsync="true"/>
-    </mongo:mongo>
-
-    <bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
-        <constructor-arg ref="mongo"/>
-        <constructor-arg name="databaseName" value="stock"/>
-    </bean>
-
 </beans>

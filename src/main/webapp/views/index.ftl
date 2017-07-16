@@ -54,207 +54,43 @@
         <div class="row body">
             <div class="col-lg-offset-1 col-md-7 left">
                 <ul class="articles">
+                <#list pageInfo.list as articleVo>
                     <li>
                         <h1>
-                           这是文章标题
+                            ${articleVo.title}
                         </h1>
                         <p class="author">
                             作者：
-                            <a href="#">admin</a>
-                            <span class="time">2017-07-08 15:45</span>
-                        </p>
-                        <div class="content">
-                        <a href="/article">
-                            这是文章摘要,摘要一定要简短,快递员的态度非常差,都是些什么东西,什么情况
-                            这是文章摘要,摘要一定要简短,快递员的态度非常差,都是些什么东西,什么情况
-                            这是文章摘要,摘要一定要简短,快递员的态度非常差,都是些什么东西,什么情况
-                            这是文章摘要,摘要一定要简短,快递员的态度非常差,都是些什么东西,什么情况
-                            这是文章摘要,摘要一定要简短,快递员的态度非常差,都是些什么东西,什么情况
-                            这是文章摘要,摘要一定要简短,快递员的态度非常差,都是些什么东西,什么情况
-                        </a>
-                        </div>
-                        <div class="tags">
-                            <i class="fa fa-tags"></i>
-                            <a class="tag" href="#">hello</a>
-                            <a href="#" class="tag">快递员</a>
-                        </div>
-                        <div class="footer">
-                           <a href="#">
-                               <i class="fa fa-thumbs-up"></i>点赞(111)
-                           </a>
-                           <a href="#">
-                               <i class="fa fa-thumbs-down"></i>踩(1212)
-                           </a>
-                           <a href="#">
-                               <i class="fa fa-comment"></i>评论(21)
-                           </a>
-                           <a href="#">
-                               <i class="fa fa-eye"></i>浏览(121221)
-                           </a>
-                        </div>
-                    </li>
-                    <li>
-                        <h1>
-                            这是文章标题
-                        </h1>
-                        <p class="author">
-                            作者：
-                            <a href="#">admin</a>
-                            <span class="time">2017-07-08 15:45</span>
-                        </p>
-                        <a href="/article" class="content">
-                            <img src="/images/kill-browser.png">
-                            <img src="/images/alipay-donate.png">
-                            <img src="/images/kill-browser.png">
-                            <p href="#">
-                                这是文章摘要,摘要一定要简短,快递员的态度非常差,都是些什么东西,什么情况
-                                这是文章摘要,摘要一定要简短,快递员的态度非常差,都是些什么东西,什么情况
-                                这是文章摘要,摘要一定要简短,快递员的态度非常差,都是些什么东西,什么情况
-                            </p>
-                        </a>
-
-                        <div class="tags">
-                            <i class="fa fa-tags"></i>
-                            <a class="tag" href="#">hello</a>
-                            <a href="#" class="tag">快递员</a>
-                        </div>
-
-                        <div class="footer">
-                            <a href="#">
-                                <i class="fa fa-thumbs-up"></i>点赞(111)
-                            </a>
-
-                            <a href="#">
-                                <i class="fa fa-thumbs-down"></i>踩(1212)
-                            </a>
-                            <a href="#">
-                                <i class="fa fa-comment"></i>评论(21)
-                            </a>
-                            <a href="#">
-                                <i class="fa fa-eye"></i>浏览(121221)
-                            </a>
-                        </div>
-                    </li>
-                    <li>
-                        <h1>
-                            这是文章标题
-                        </h1>
-                        <p class="author">
-                            作者：
-                            <a href="#">admin</a>
-                            <span class="time">2017-07-08 15:45</span>
-                        </p>
-                        <div class="content">
-                            <img src="/images/close.png">
-                            <img src="/images/hacpai.png">
-                            <img src="/images/alipay-donate.png">
-                        </div>
-
-                        <div class="tags">
-                            <i class="fa fa-tags"></i>
-                            <a class="tag" href="#">hello</a>
-                            <a href="#" class="tag">快递员</a>
-                        </div>
-
-                        <div class="footer">
-                            <a href="#">
-                                <i class="fa fa-thumbs-up"></i>点赞(111)
-                            </a>
-                            <a href="#">
-                                <i class="fa fa-thumbs-down"></i>踩(1212)
-                            </a>
-                            <a href="#">
-                                <i class="fa fa-comment"></i>评论(21)
-                            </a>
-                            <a href="#">
-                                <i class="fa fa-eye"></i>浏览(121221)
-                            </a>
-                        </div>
-                    </li>
-
-                    <li>
-                        <h1>
-                            这是文章标题
-                        </h1>
-                        <p class="author">
-                            作者：
-                            <a href="#">admin</a>
-                            <span class="time">2017-07-08 15:45</span>
+                            <a href="#">${articleVo.author}</a>
+                            <span class="time">${articleVo.createTime?datetime}</span>
                         </p>
                         <div class="content">
                             <a href="/article">
-                                这是文章摘要,摘要一定要简短,快递员的态度非常差,都是些什么东西,什么情况
-                                这是文章摘要,摘要一定要简短,快递员的态度非常差,都是些什么东西,什么情况
-                                这是文章摘要,摘要一定要简短,快递员的态度非常差,都是些什么东西,什么情况
-                                这是文章摘要,摘要一定要简短,快递员的态度非常差,都是些什么东西,什么情况
-                                这是文章摘要,摘要一定要简短,快递员的态度非常差,都是些什么东西,什么情况
-                                这是文章摘要,摘要一定要简短,快递员的态度非常差,都是些什么东西,什么情况
+                                ${articleVo.summary}
                             </a>
                         </div>
-
                         <div class="tags">
                             <i class="fa fa-tags"></i>
-                            <a class="tag" href="#">hello</a>
-                            <a href="#" class="tag">快递员</a>
+                            <#list articleVo.tags as tag>
+                                <a class="tag" href="#" style="color: ${tag.fontColor};background-color: ${tag.bgColor}">${tag.name}</a>
+                            </#list >
                         </div>
-
                         <div class="footer">
                             <a href="#">
-                                <i class="fa fa-thumbs-up"></i>点赞(111)
+                                <i class="fa fa-thumbs-up"></i>点赞(${articleVo.praiseNo})
                             </a>
                             <a href="#">
-                                <i class="fa fa-thumbs-down"></i>踩(1212)
+                                <i class="fa fa-thumbs-down"></i>踩(${articleVo.treadNo})
                             </a>
                             <a href="#">
-                                <i class="fa fa-comment"></i>评论(21)
+                                <i class="fa fa-comment"></i>评论(${articleVo.commentNo})
                             </a>
                             <a href="#">
-                                <i class="fa fa-eye"></i>浏览(121221)
+                                <i class="fa fa-eye"></i>浏览(${articleVo.scanNo})
                             </a>
                         </div>
                     </li>
-
-                    <li>
-                        <h1>
-                            这是文章标题
-                        </h1>
-                        <p class="author">
-                            作者：
-                            <a href="#">admin</a>
-                            <span class="time">2017-07-08 15:45</span>
-                        </p>
-                        <div class="content">
-                            <a href="/article">
-                                这是文章摘要,摘要一定要简短,快递员的态度非常差,都是些什么东西,什么情况
-                                这是文章摘要,摘要一定要简短,快递员的态度非常差,都是些什么东西,什么情况
-                                这是文章摘要,摘要一定要简短,快递员的态度非常差,都是些什么东西,什么情况
-                                这是文章摘要,摘要一定要简短,快递员的态度非常差,都是些什么东西,什么情况
-                                这是文章摘要,摘要一定要简短,快递员的态度非常差,都是些什么东西,什么情况
-                                这是文章摘要,摘要一定要简短,快递员的态度非常差,都是些什么东西,什么情况
-                            </a>
-                        </div>
-
-                        <div class="tags">
-                            <i class="fa fa-tags"></i>
-                            <a class="tag" href="#" style="background-color: #5e5e5e;color: #ffffff">hello</a>
-                            <a href="#" class="tag">快递员</a>
-                        </div>
-
-                        <div class="footer">
-                            <a href="#">
-                                <i class="fa fa-thumbs-up"></i>点赞(111)
-                            </a>
-                            <a href="#">
-                                <i class="fa fa-thumbs-down"></i>踩(1212)
-                            </a>
-                            <a href="#">
-                                <i class="fa fa-comment"></i>评论(21)
-                            </a>
-                            <a href="#">
-                                <i class="fa fa-eye"></i>浏览(121221)
-                            </a>
-                        </div>
-                    </li>
+                </#list>
                 </ul>
                 <nav aria-label="...">
                     <ul class="pager">

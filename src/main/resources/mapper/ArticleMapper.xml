@@ -1,165 +1,235 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="top.joylife.lemon.dao.ArticleMapper" >
-  <resultMap id="BaseResultMap" type="top.joylife.lemon.entity.Article" >
-    <id column="id" property="id" jdbcType="INTEGER" />
-    <result column="title" property="title" jdbcType="VARCHAR" />
-    <result column="summary" property="summary" jdbcType="VARCHAR" />
-    <result column="author" property="author" jdbcType="VARCHAR" />
-    <result column="source" property="source" jdbcType="VARCHAR" />
-    <result column="sort" property="sort" jdbcType="INTEGER" />
-    <result column="click_no" property="clickNo" jdbcType="INTEGER" />
-    <result column="scan_no" property="scanNo" jdbcType="INTEGER" />
-    <result column="comment_no" property="commentNo" jdbcType="INTEGER" />
-    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
-    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
-    <result column="status" property="status" jdbcType="TINYINT" />
-  </resultMap>
-  <sql id="Base_Column_List" >
-    id, title, summary, author, source, sort, click_no, scan_no, comment_no, create_time, 
-    update_time, status
-  </sql>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
-    select 
-    <include refid="Base_Column_List" />
-    from t_article
-    where id = #{id,jdbcType=INTEGER}
-  </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
-    delete from t_article
-    where id = #{id,jdbcType=INTEGER}
-  </delete>
-  <insert id="insert" parameterType="top.joylife.lemon.entity.Article" >
-    insert into t_article (id, title, summary, 
-      author, source, sort, 
-      click_no, scan_no, comment_no, 
-      create_time, update_time, status
-      )
-    values (#{id,jdbcType=INTEGER}, #{title,jdbcType=VARCHAR}, #{summary,jdbcType=VARCHAR}, 
-      #{author,jdbcType=VARCHAR}, #{source,jdbcType=VARCHAR}, #{sort,jdbcType=INTEGER}, 
-      #{clickNo,jdbcType=INTEGER}, #{scanNo,jdbcType=INTEGER}, #{commentNo,jdbcType=INTEGER}, 
-      #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, #{status,jdbcType=TINYINT}
-      )
-  </insert>
-  <insert id="insertSelective" parameterType="top.joylife.lemon.entity.Article" >
-    insert into t_article
-    <trim prefix="(" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
-        id,
-      </if>
-      <if test="title != null" >
-        title,
-      </if>
-      <if test="summary != null" >
-        summary,
-      </if>
-      <if test="author != null" >
-        author,
-      </if>
-      <if test="source != null" >
-        source,
-      </if>
-      <if test="sort != null" >
-        sort,
-      </if>
-      <if test="clickNo != null" >
-        click_no,
-      </if>
-      <if test="scanNo != null" >
-        scan_no,
-      </if>
-      <if test="commentNo != null" >
-        comment_no,
-      </if>
-      <if test="createTime != null" >
-        create_time,
-      </if>
-      <if test="updateTime != null" >
-        update_time,
-      </if>
-      <if test="status != null" >
-        status,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
-        #{id,jdbcType=INTEGER},
-      </if>
-      <if test="title != null" >
-        #{title,jdbcType=VARCHAR},
-      </if>
-      <if test="summary != null" >
-        #{summary,jdbcType=VARCHAR},
-      </if>
-      <if test="author != null" >
-        #{author,jdbcType=VARCHAR},
-      </if>
-      <if test="source != null" >
-        #{source,jdbcType=VARCHAR},
-      </if>
-      <if test="sort != null" >
-        #{sort,jdbcType=INTEGER},
-      </if>
-      <if test="clickNo != null" >
-        #{clickNo,jdbcType=INTEGER},
-      </if>
-      <if test="scanNo != null" >
-        #{scanNo,jdbcType=INTEGER},
-      </if>
-      <if test="commentNo != null" >
-        #{commentNo,jdbcType=INTEGER},
-      </if>
-      <if test="createTime != null" >
-        #{createTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="updateTime != null" >
-        #{updateTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="status != null" >
-        #{status,jdbcType=TINYINT},
-      </if>
-    </trim>
-  </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="top.joylife.lemon.entity.Article" >
-    update t_article
-    <set >
-      <if test="title != null" >
-        title = #{title,jdbcType=VARCHAR},
-      </if>
-      <if test="summary != null" >
-        summary = #{summary,jdbcType=VARCHAR},
-      </if>
-      <if test="author != null" >
-        author = #{author,jdbcType=VARCHAR},
-      </if>
-      <if test="source != null" >
-        source = #{source,jdbcType=VARCHAR},
-      </if>
-      <if test="sort != null" >
-        sort = #{sort,jdbcType=INTEGER},
-      </if>
-      <if test="clickNo != null" >
-        click_no = #{clickNo,jdbcType=INTEGER},
-      </if>
-      <if test="scanNo != null" >
-        scan_no = #{scanNo,jdbcType=INTEGER},
-      </if>
-      <if test="commentNo != null" >
-        comment_no = #{commentNo,jdbcType=INTEGER},
-      </if>
-      <if test="createTime != null" >
-        create_time = #{createTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="updateTime != null" >
-        update_time = #{updateTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="status != null" >
-        status = #{status,jdbcType=TINYINT},
-      </if>
-    </set>
-    where id = #{id,jdbcType=INTEGER}
-  </update>
-  <update id="updateByPrimaryKey" parameterType="top.joylife.lemon.entity.Article" >
+    <resultMap id="BaseResultMap" type="top.joylife.lemon.entity.Article" >
+        <id column="id" property="id" jdbcType="INTEGER" />
+        <result column="title" property="title" jdbcType="VARCHAR" />
+        <result column="summary" property="summary" jdbcType="VARCHAR" />
+        <result column="author" property="author" jdbcType="VARCHAR" />
+        <result column="source" property="source" jdbcType="VARCHAR" />
+        <result column="sort" property="sort" jdbcType="INTEGER" />
+        <result column="click_no" property="clickNo" jdbcType="INTEGER" />
+        <result column="scan_no" property="scanNo" jdbcType="INTEGER" />
+        <result column="praise_no" property="praiseNo" jdbcType="INTEGER" />
+        <result column="tread_no" property="treadNo" jdbcType="INTEGER" />
+        <result column="comment_no" property="commentNo" jdbcType="INTEGER" />
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+        <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+        <result column="status" property="status" jdbcType="TINYINT" />
+    </resultMap>
+
+    <resultMap id="ListResult" type="top.joylife.lemon.controller.vo.ArticleVo">
+
+        <id column="a_id" property="id" jdbcType="INTEGER" />
+        <result column="a_title" property="title" jdbcType="VARCHAR" />
+        <result column="a_summary" property="summary" jdbcType="VARCHAR" />
+        <result column="a_author" property="author" jdbcType="VARCHAR" />
+        <result column="a_source" property="source" jdbcType="VARCHAR" />
+        <result column="a_sort" property="sort" jdbcType="INTEGER" />
+        <result column="a_click_no" property="clickNo" jdbcType="INTEGER" />
+        <result column="a_scan_no" property="scanNo" jdbcType="INTEGER" />
+        <result column="a_praise_no" property="praiseNo" jdbcType="INTEGER" />
+        <result column="a_tread_no" property="treadNo" jdbcType="INTEGER" />
+        <result column="a_comment_no" property="commentNo" jdbcType="INTEGER" />
+        <result column="a_create_time" property="createTime" jdbcType="TIMESTAMP" />
+        <result column="a_update_time" property="updateTime" jdbcType="TIMESTAMP" />
+        <result column="a_status" property="status" jdbcType="TINYINT" />
+
+        <collection property="tags" ofType="top.joylife.lemon.entity.Tag">
+            <id column="t_id" property="id" jdbcType="INTEGER" />
+            <result column="t_name" property="name" jdbcType="VARCHAR" />
+            <result column="t_article_count" property="articleCount" jdbcType="INTEGER" />
+            <result column="t_bg_color" property="bgColor" jdbcType="CHAR" />
+            <result column="t_font_color" property="fontColor" jdbcType="CHAR" />
+            <result column="t_create_time" property="createTime" jdbcType="TIMESTAMP" />
+            <result column="t_update_time" property="updateTime" jdbcType="TIMESTAMP" />
+            <result column="t_status" property="status" jdbcType="TINYINT" />
+        </collection>
+    </resultMap>
+
+    <sql id="Base_Column_List" >
+        id, title, summary, author, source, sort, click_no, scan_no, praise_no, tread_no,
+        comment_no, create_time, update_time, status
+    </sql>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+        select
+        <include refid="Base_Column_List" />
+        from t_article
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+
+    <!--查询文章列表-->
+    <select id="selectList" resultMap="ListResult" parameterType="top.joylife.lemon.domain.PageDto">
+        select a.id a_id,a.title a_title,
+        a.summary a_summary,a.author a_author,a.source a_source,
+        a.sort a_sort,a.click_no a_click_no,a.scan_no a_scan_no,
+        a.praise_no a_praise_no,a.tread_no a_tread_no,
+        a.comment_no a_comment_no,a.create_time a_create_time,
+        a.update_time a_update_time,t.id t_id,t.name t_name,
+        t.article_count t_article_count,t.bg_color t_bg_color,
+        t.font_color t_font_color,t.create_time t_create_time,
+        t.update_time t_update_time,t.status t_status
+        from t_article a
+        left join t_article_tag ta
+        on ta.article_id = a.id
+        left join t_tag t
+        on t.id = ta.tag_id
+    </select>
+
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+        delete from t_article
+        where id = #{id,jdbcType=INTEGER}
+    </delete>
+    <insert id="insert" parameterType="top.joylife.lemon.entity.Article" >
+        insert into t_article (id, title, summary,
+        author, source, sort,
+        click_no, scan_no, praise_no,
+        tread_no, comment_no, create_time,
+        update_time, status)
+        values (#{id,jdbcType=INTEGER}, #{title,jdbcType=VARCHAR}, #{summary,jdbcType=VARCHAR},
+        #{author,jdbcType=VARCHAR}, #{source,jdbcType=VARCHAR}, #{sort,jdbcType=INTEGER},
+        #{clickNo,jdbcType=INTEGER}, #{scanNo,jdbcType=INTEGER}, #{praiseNo,jdbcType=INTEGER},
+        #{treadNo,jdbcType=INTEGER}, #{commentNo,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP},
+        #{updateTime,jdbcType=TIMESTAMP}, #{status,jdbcType=TINYINT})
+    </insert>
+    <insert id="insertSelective" parameterType="top.joylife.lemon.entity.Article" >
+        insert into t_article
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                id,
+            </if>
+            <if test="title != null" >
+                title,
+            </if>
+            <if test="summary != null" >
+                summary,
+            </if>
+            <if test="author != null" >
+                author,
+            </if>
+            <if test="source != null" >
+                source,
+            </if>
+            <if test="sort != null" >
+                sort,
+            </if>
+            <if test="clickNo != null" >
+                click_no,
+            </if>
+            <if test="scanNo != null" >
+                scan_no,
+            </if>
+            <if test="praiseNo != null" >
+                praise_no,
+            </if>
+            <if test="treadNo != null" >
+                tread_no,
+            </if>
+            <if test="commentNo != null" >
+                comment_no,
+            </if>
+            <if test="createTime != null" >
+                create_time,
+            </if>
+            <if test="updateTime != null" >
+                update_time,
+            </if>
+            <if test="status != null" >
+                status,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="title != null" >
+                #{title,jdbcType=VARCHAR},
+            </if>
+            <if test="summary != null" >
+                #{summary,jdbcType=VARCHAR},
+            </if>
+            <if test="author != null" >
+                #{author,jdbcType=VARCHAR},
+            </if>
+            <if test="source != null" >
+                #{source,jdbcType=VARCHAR},
+            </if>
+            <if test="sort != null" >
+                #{sort,jdbcType=INTEGER},
+            </if>
+            <if test="clickNo != null" >
+                #{clickNo,jdbcType=INTEGER},
+            </if>
+            <if test="scanNo != null" >
+                #{scanNo,jdbcType=INTEGER},
+            </if>
+            <if test="praiseNo != null" >
+                #{praiseNo,jdbcType=INTEGER},
+            </if>
+            <if test="treadNo != null" >
+                #{treadNo,jdbcType=INTEGER},
+            </if>
+            <if test="commentNo != null" >
+                #{commentNo,jdbcType=INTEGER},
+            </if>
+            <if test="createTime != null" >
+                #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateTime != null" >
+                #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="status != null" >
+                #{status,jdbcType=TINYINT},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="top.joylife.lemon.entity.Article" >
+        update t_article
+        <set >
+            <if test="title != null" >
+                title = #{title,jdbcType=VARCHAR},
+            </if>
+            <if test="summary != null" >
+                summary = #{summary,jdbcType=VARCHAR},
+            </if>
+            <if test="author != null" >
+                author = #{author,jdbcType=VARCHAR},
+            </if>
+            <if test="source != null" >
+                source = #{source,jdbcType=VARCHAR},
+            </if>
+            <if test="sort != null" >
+                sort = #{sort,jdbcType=INTEGER},
+            </if>
+            <if test="clickNo != null" >
+                click_no = #{clickNo,jdbcType=INTEGER},
+            </if>
+            <if test="scanNo != null" >
+                scan_no = #{scanNo,jdbcType=INTEGER},
+            </if>
+            <if test="praiseNo != null" >
+                praise_no = #{praiseNo,jdbcType=INTEGER},
+            </if>
+            <if test="treadNo != null" >
+                tread_no = #{treadNo,jdbcType=INTEGER},
+            </if>
+            <if test="commentNo != null" >
+                comment_no = #{commentNo,jdbcType=INTEGER},
+            </if>
+            <if test="createTime != null" >
+                create_time = #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateTime != null" >
+                update_time = #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="status != null" >
+                status = #{status,jdbcType=TINYINT},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="top.joylife.lemon.entity.Article" >
     update t_article
     set title = #{title,jdbcType=VARCHAR},
       summary = #{summary,jdbcType=VARCHAR},
@@ -168,6 +238,8 @@
       sort = #{sort,jdbcType=INTEGER},
       click_no = #{clickNo,jdbcType=INTEGER},
       scan_no = #{scanNo,jdbcType=INTEGER},
+      praise_no = #{praiseNo,jdbcType=INTEGER},
+      tread_no = #{treadNo,jdbcType=INTEGER},
       comment_no = #{commentNo,jdbcType=INTEGER},
       create_time = #{createTime,jdbcType=TIMESTAMP},
       update_time = #{updateTime,jdbcType=TIMESTAMP},

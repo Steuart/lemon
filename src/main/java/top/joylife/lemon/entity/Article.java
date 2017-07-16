@@ -19,6 +19,10 @@ public class Article {
 
     private Integer scanNo;
 
+    private Integer praiseNo;
+
+    private Integer treadNo;
+
     private Integer commentNo;
 
     private Date createTime;
@@ -91,6 +95,22 @@ public class Article {
         this.scanNo = scanNo;
     }
 
+    public Integer getPraiseNo() {
+        return praiseNo;
+    }
+
+    public void setPraiseNo(Integer praiseNo) {
+        this.praiseNo = praiseNo;
+    }
+
+    public Integer getTreadNo() {
+        return treadNo;
+    }
+
+    public void setTreadNo(Integer treadNo) {
+        this.treadNo = treadNo;
+    }
+
     public Integer getCommentNo() {
         return commentNo;
     }
@@ -122,4 +142,6 @@ public class Article {
     public void setStatus(Byte status) {
         this.status = status;
     }
+
+
 }

@@ -27,15 +27,6 @@ public class SystemController {
     private Logger logger = LoggerFactory.getLogger(SystemController.class);
 
 
-    @RequestMapping("")
-    public String index(ModelMap model, HttpServletRequest request){
-        model.put("msg","welcome");
-        WebApplicationContext context = (WebApplicationContext) request.getAttribute(DispatcherServlet.WEB_APPLICATION_CONTEXT_ATTRIBUTE);
-        SystemController systemController = (SystemController) context.getBean("systemController");
-        ReData reData = systemController.indexJson();
-        return "index";
-    }
-
     @RequestMapping("article")
     public String article(ModelMap model){
         model.put("msg","welcome");

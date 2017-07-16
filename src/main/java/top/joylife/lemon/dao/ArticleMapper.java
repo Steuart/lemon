@@ -1,6 +1,10 @@
 package top.joylife.lemon.dao;
 
+import top.joylife.lemon.controller.vo.ArticleVo;
+import top.joylife.lemon.domain.PageDto;
 import top.joylife.lemon.entity.Article;
+
+import java.util.List;
 
 public interface ArticleMapper {
     int deleteByPrimaryKey(Integer id);
@@ -14,4 +18,11 @@ public interface ArticleMapper {
     int updateByPrimaryKeySelective(Article record);
 
     int updateByPrimaryKey(Article record);
+
+    /**
+     * 获取列表
+     * @param pageDto
+     * @return
+     */
+    List<ArticleVo> selectList(PageDto pageDto);
 }
