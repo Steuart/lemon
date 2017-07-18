@@ -1,8 +1,16 @@
-package top.joylife.lemon.entity;
+package top.joylife.lemon.controller.vo;
+
+import top.joylife.lemon.entity.Tag;
 
 import java.util.Date;
 
-public class Tag {
+/**
+ * Created by Administrator on 2017/7/18 0018.
+ */
+public class TagVo {
+
+    private Integer articleId;
+
     private Integer id;
 
     private String name;
@@ -19,10 +27,13 @@ public class Tag {
 
     private Byte status;
 
-    /**
-     * 字体大小，未持久化
-     */
-    private double fontSize;
+    public Integer getArticleId() {
+        return articleId;
+    }
+
+    public void setArticleId(Integer articleId) {
+        this.articleId = articleId;
+    }
 
     public Integer getId() {
         return id;
@@ -37,7 +48,7 @@ public class Tag {
     }
 
     public void setName(String name) {
-        this.name = name == null ? null : name.trim();
+        this.name = name;
     }
 
     public Integer getArticleCount() {
@@ -53,7 +64,7 @@ public class Tag {
     }
 
     public void setBgColor(String bgColor) {
-        this.bgColor = bgColor == null ? null : bgColor.trim();
+        this.bgColor = bgColor;
     }
 
     public String getFontColor() {
@@ -61,7 +72,7 @@ public class Tag {
     }
 
     public void setFontColor(String fontColor) {
-        this.fontColor = fontColor == null ? null : fontColor.trim();
+        this.fontColor = fontColor;
     }
 
     public Date getCreateTime() {
@@ -86,13 +97,5 @@ public class Tag {
 
     public void setStatus(Byte status) {
         this.status = status;
-    }
-
-    public double getFontSize() {
-        return fontSize;
-    }
-
-    public void setFontSize(double fontSize) {
-        this.fontSize = fontSize;
     }
 }

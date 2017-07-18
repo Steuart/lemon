@@ -18,8 +18,7 @@
         <result column="status" property="status" jdbcType="TINYINT" />
     </resultMap>
 
-    <resultMap id="ListResult" type="top.joylife.lemon.controller.vo.ArticleVo">
-
+    <resultMap id="ArticleInfoVoMap" type="top.joylife.lemon.controller.vo.ArticleInfoVo">
         <id column="a_id" property="id" jdbcType="INTEGER" />
         <result column="a_title" property="title" jdbcType="VARCHAR" />
         <result column="a_summary" property="summary" jdbcType="VARCHAR" />
@@ -34,7 +33,13 @@
         <result column="a_create_time" property="createTime" jdbcType="TIMESTAMP" />
         <result column="a_update_time" property="updateTime" jdbcType="TIMESTAMP" />
         <result column="a_status" property="status" jdbcType="TINYINT" />
-
+        <association property="articleContent" javaType="top.joylife.lemon.entity.ArticleContent">
+            <id column="ac_id" property="id" jdbcType="INTEGER" />
+            <result column="ac_content" property="content" jdbcType="VARCHAR" />
+            <result column="ac_markdown" property="markdown" jdbcType="VARCHAR" />
+            <result column="ac_create_time" property="createTime" jdbcType="TIMESTAMP" />
+            <result column="ac_update_time" property="updateTime" jdbcType="TIMESTAMP" />
+        </association>
         <collection property="tags" ofType="top.joylife.lemon.entity.Tag">
             <id column="t_id" property="id" jdbcType="INTEGER" />
             <result column="t_name" property="name" jdbcType="VARCHAR" />
@@ -58,8 +63,33 @@
         where id = #{id,jdbcType=INTEGER}
     </select>
 
-    <!--查询文章列表-->
-    <select id="selectList" resultMap="ListResult" parameterType="top.joylife.lemon.domain.PageDto">
+    <!--根据文章id获取文章信息-->
+    <select id="getArticleInfo" resultMap="ArticleInfoVoMap" parameterType="java.lang.Integer">
+        select
+            a.id a_id,a.title a_title,
+            a.summary a_summary,a.author a_author,a.source a_source,
+            a.sort a_sort,a.click_no a_click_no,a.scan_no a_scan_no,
+            a.praise_no a_praise_no,a.tread_no a_tread_no,
+            a.comment_no a_comment_no,a.create_time a_create_time,
+            a.update_time a_update_time,t.id t_id,t.name t_name,
+            t.article_count t_article_count,t.bg_color t_bg_color,
+            t.font_color t_font_color,t.create_time t_create_time,
+            t.update_time t_update_time,t.status t_status,
+            ac.id ac_id, ac.content ac_content,
+            ac.markdown ac_markdown,ac.create_time ac_create_time,
+            ac.update_time ac_update_time
+        from t_article a
+        left join t_article_tag ta
+        on ta.article_id = a.id
+        left join t_tag t
+        on t.id = ta.tag_id
+        left join t_article_content ac
+        on ac.article_id=a.id
+        where a.id=#{articleId,jdbcType=INTEGER}
+    </select>
+
+    <!--查询文章列表，废弃-->
+    <!--<select id="selectList" resultMap="ListResult" parameterType="top.joylife.lemon.domain.PageDto">
         select a.id a_id,a.title a_title,
         a.summary a_summary,a.author a_author,a.source a_source,
         a.sort a_sort,a.click_no a_click_no,a.scan_no a_scan_no,
@@ -74,8 +104,23 @@
         on ta.article_id = a.id
         left join t_tag t
         on t.id = ta.tag_id
+    </select>-->
+
+    <!--查询文章列表-->
+    <select id="selectList" resultMap="BaseResultMap" parameterType="top.joylife.lemon.domain.PageDto">
+        select
+        <include refid="Base_Column_List" />
+        from t_article
     </select>
 
+    <!--获取热门文章列表-->
+    <select id="getHotArticles" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from t_article
+        order by scan_no
+        limit #{size,jdbcType=INTEGER}
+    </select>
 
     <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
         delete from t_article

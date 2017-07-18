@@ -6,7 +6,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import top.joylife.lemon.controller.vo.ArticleVo;
 import top.joylife.lemon.domain.PageDto;
+import top.joylife.lemon.entity.Article;
+import top.joylife.lemon.entity.Tag;
 import top.joylife.lemon.service.ArticleService;
+import top.joylife.lemon.service.TagService;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
@@ -24,12 +27,18 @@ public class IndexController {
     @Resource
     private ArticleService articleService;
 
+    @Resource
+    private TagService tagService;
 
     @RequestMapping("/")
-    public String index(Model model){
-        PageDto pageDto = new PageDto();
+    public String index(Model model,PageDto pageDto){
+
         PageInfo<ArticleVo> pageInfo =  articleService.pageList(pageDto);
+        List<Article> articles = articleService.getHotArticles();
+        List<Tag> tags = tagService.getHotTags(null);
         model.addAttribute("pageInfo",pageInfo);
+        model.addAttribute("hotArticles",articles);
+        model.addAttribute("hotTags",tags);
         return "index";
     }
 }

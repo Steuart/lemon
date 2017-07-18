@@ -4,6 +4,8 @@ import com.github.pagehelper.PageInfo;
 import top.joylife.lemon.domain.PageDto;
 import top.joylife.lemon.entity.Tag;
 
+import java.util.List;
+
 /**
  * Created by HemingWu on 2017/2/7.
  */
@@ -36,4 +38,11 @@ public interface TagService {
      * @return
      */
     PageInfo<Tag> pageList(PageDto pageDto);
+
+    /**
+     * 获取热门标签
+     * @param tagId
+     * @return
+     */
+    List<Tag> getHotTags(Integer size);
 }

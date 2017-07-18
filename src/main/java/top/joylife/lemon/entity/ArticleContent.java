@@ -7,6 +7,10 @@ public class ArticleContent {
 
     private Integer articleId;
 
+    private String content;
+
+    private String markdown;
+
     private Date createTime;
 
     private Date updateTime;
@@ -25,6 +29,22 @@ public class ArticleContent {
 
     public void setArticleId(Integer articleId) {
         this.articleId = articleId;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content == null ? null : content.trim();
+    }
+
+    public String getMarkdown() {
+        return markdown;
+    }
+
+    public void setMarkdown(String markdown) {
+        this.markdown = markdown == null ? null : markdown.trim();
     }
 
     public Date getCreateTime() {

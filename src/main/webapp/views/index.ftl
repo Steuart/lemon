@@ -57,36 +57,38 @@
                 <#list pageInfo.list as articleVo>
                     <li>
                         <h1>
-                            ${articleVo.title}
+                            ${articleVo.article.title}
                         </h1>
                         <p class="author">
                             作者：
-                            <a href="#">${articleVo.author}</a>
-                            <span class="time">${articleVo.createTime?datetime}</span>
+                            <a href="#">${articleVo.article.author}</a>
+                            <span class="time">${articleVo.article.createTime?datetime}</span>
                         </p>
                         <div class="content">
-                            <a href="/article">
-                                ${articleVo.summary}
+                            <a href="/article/${articleVo.article.id}">
+                                ${articleVo.article.summary}
                             </a>
                         </div>
                         <div class="tags">
-                            <i class="fa fa-tags"></i>
-                            <#list articleVo.tags as tag>
-                                <a class="tag" href="#" style="color: ${tag.fontColor};background-color: ${tag.bgColor}">${tag.name}</a>
-                            </#list >
+                            <#if articleVo.tags??>
+                                <i class="fa fa-tags"></i>
+                                <#list articleVo.tags as tag>
+                                    <a class="tag" href="#" style="color: ${tag.fontColor};background-color: ${tag.bgColor}">${tag.name}</a>
+                                </#list >
+                            </#if>
                         </div>
                         <div class="footer">
                             <a href="#">
-                                <i class="fa fa-thumbs-up"></i>点赞(${articleVo.praiseNo})
+                                <i class="fa fa-thumbs-up"></i>点赞(${articleVo.article.praiseNo})
                             </a>
                             <a href="#">
-                                <i class="fa fa-thumbs-down"></i>踩(${articleVo.treadNo})
+                                <i class="fa fa-thumbs-down"></i>踩(${articleVo.article.treadNo})
                             </a>
                             <a href="#">
-                                <i class="fa fa-comment"></i>评论(${articleVo.commentNo})
+                                <i class="fa fa-comment"></i>评论(${articleVo.article.commentNo})
                             </a>
                             <a href="#">
-                                <i class="fa fa-eye"></i>浏览(${articleVo.scanNo})
+                                <i class="fa fa-eye"></i>浏览(${articleVo.article.scanNo})
                             </a>
                         </div>
                     </li>
@@ -94,8 +96,17 @@
                 </ul>
                 <nav aria-label="...">
                     <ul class="pager">
-                        <li><a href="#">上一页</a></li>
-                        <li><a href="#">下一页</a></li>
+                        <#if pageInfo.hasPreviousPage>
+                            <li><a href="/?pageNo=${pageInfo.prePage}">上一页</a></li>
+                        <#else>
+                            <li class="disabled"><a>上一页</a></li>
+                        </#if>
+
+                        <#if pageInfo.hasNextPage>
+                            <li><a href="/?pageNo=${pageInfo.nextPage}">下一页</a></li>
+                        <#else>
+                            <li class="disabled"><a>下一页</a></li>
+                        </#if>
                     </ul>
                 </nav>
             </div>
@@ -117,40 +128,20 @@
                 <div class="groom">
                     <h1>热门推荐</h1>
                     <ul>
-                        <li>
-                            <a href="#">毛毛正在查看</a>
-                        </li>
-                        <li>
-                            <a href="#">毛毛正在查看</a>
-                        </li>
-                        <li>
-                            <a href="#">毛毛正在查看</a>
-                        </li>
-                        <li>
-                            <a href="#">毛毛正在查看</a>
-                        </li>
-                        <li>
-                            <a href="#">毛毛正在查看</a>
-                        </li>
+                        <#list hotArticles as article>
+                            <li>
+                                <a href="/article/${article.id}">${article.title}</a>
+                            </li>
+                        </#list>
                     </ul>
                 </div>
 
                 <div class="tags">
                     <h1>标签云</h1>
                     <div class="list">
-                        <a href="#" style="font-size: 3rem">毛毛</a>
-                        <a href="#" style="font-size: 5rem">毛毛</a>
-                        <a href="#" style="font-size: 5rem">JAVA</a>
-                        <a href="#" style="font-size: 1rem">javascript</a>
-                        <a href="#" style="font-size: 1rem">database</a>
-                        <a href="#" style="font-size: 1rem">搜索引擎</a>
-                        <a href="#" style="font-size: 2rem">天龙八部</a>
-                        <a href="#" style="font-size: 1rem">画江湖</a>
-                        <a href="#" style="font-size: 0.9rem">在这完</a>
-                        <a href="#" style="font-size: 1.54rem">和我们</a>
-                        <a href="#" style="font-size: 1rem">毛毛</a>
-                        <a href="#" style="font-size: 3rem">毛毛</a>
-                        <a href="#" style="font-size: 1rem">毛毛</a>
+                        <#list hotTags as tag>
+                            <a href="#" style="background-color: ${tag.bgColor};color: ${tag.fontColor};font-size: ${tag.fontSize}rem;">${tag.name}</a>
+                        </#list>
                     </div>
 
                     <a href="/tags" class="more">------更多------</a>

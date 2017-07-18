@@ -8,7 +8,7 @@ public class PageDto {
     /**
      * 页码
      */
-    private int pageNo;
+    private int pageNo=1;
 
     /**
      * 每页数据大小

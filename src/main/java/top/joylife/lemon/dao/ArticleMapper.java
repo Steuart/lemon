@@ -1,6 +1,6 @@
 package top.joylife.lemon.dao;
 
-import top.joylife.lemon.controller.vo.ArticleVo;
+import top.joylife.lemon.controller.vo.ArticleInfoVo;
 import top.joylife.lemon.domain.PageDto;
 import top.joylife.lemon.entity.Article;
 
@@ -24,5 +24,18 @@ public interface ArticleMapper {
      * @param pageDto
      * @return
      */
-    List<ArticleVo> selectList(PageDto pageDto);
+    List<Article> selectList(PageDto pageDto);
+
+    /**
+     * 获取热门文章列表
+     * @return
+     */
+    List<Article> getHotArticles(Integer size);
+
+    /**
+     * 根据文章id获取文章信息
+     * @param articleId
+     * @return
+     */
+    ArticleInfoVo getArticleInfo(Integer articleId);
 }

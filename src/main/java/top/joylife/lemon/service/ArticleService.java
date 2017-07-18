@@ -1,11 +1,13 @@
 package top.joylife.lemon.service;
 
 import com.github.pagehelper.PageInfo;
+import top.joylife.lemon.controller.vo.ArticleInfoVo;
 import top.joylife.lemon.controller.vo.ArticleVo;
 import top.joylife.lemon.domain.ArticleDto;
 import top.joylife.lemon.domain.PageDto;
 import top.joylife.lemon.entity.Article;
-import top.joylife.lemon.entity.ArticleContent;
+
+import java.util.List;
 
 /**
  * Created by HemingWu on 2017/2/7.
@@ -48,11 +50,18 @@ public interface ArticleService {
      */
     PageInfo<ArticleVo> pageList(PageDto pageDto);
 
+    /**
+     * 获取热门文章列表
+     * @return
+     */
+    List<Article> getHotArticles();
 
     /**
      * 获取文章内容信息
+     *
+     *
      * @param articleId
      * @return
      */
-    ArticleVo getArticleInfo(Integer articleId);
+    ArticleInfoVo getArticleInfo(Integer articleId);
 }
