@@ -1,5 +1,6 @@
 package top.joylife.lemon.dao;
 
+import top.joylife.lemon.controller.vo.CommentVo;
 import top.joylife.lemon.entity.Comment;
 
 import java.util.List;
@@ -18,7 +19,7 @@ public interface CommentMapper {
      * @param articleId
      * @return
      */
-    List<Comment> getComments(Integer articleId);
+    List<CommentVo> getComments(Integer articleId);
 
     int updateByPrimaryKeySelective(Comment record);
 

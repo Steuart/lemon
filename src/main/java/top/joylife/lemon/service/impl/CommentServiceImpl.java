@@ -1,16 +1,29 @@
 package top.joylife.lemon.service.impl;
 
+import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import org.springframework.stereotype.Service;
 import top.joylife.lemon.controller.vo.CommentVo;
+import top.joylife.lemon.dao.CommentMapper;
 import top.joylife.lemon.domain.PageDto;
 import top.joylife.lemon.entity.Comment;
 import top.joylife.lemon.entity.Replay;
 import top.joylife.lemon.service.CommentService;
 
+import javax.annotation.Resource;
+import java.util.List;
+
 /**
  * Created by HemingWu on 2017/2/7.
  */
+
+
+@Service
 public class CommentServiceImpl implements CommentService{
+
+    @Resource
+    private CommentMapper commentMapper;
+
     /**
      * 添加评论
      *
@@ -52,8 +65,15 @@ public class CommentServiceImpl implements CommentService{
      * @return
      */
     @Override
-    public PageInfo<CommentVo> getCommentPageList(PageDto pageDto) {
-        return null;
+    public PageInfo<CommentVo> getCommentPage(PageDto pageDto) {
+
+        Integer articleId = Integer.valueOf(pageDto.getSearchParam());
+        int pageNo = pageDto.getPageNo();
+        int pageSize = pageDto.getPageSize();
+        PageHelper.startPage(pageNo,pageSize);
+        List<CommentVo> commentVos = commentMapper.getComments(articleId);
+        PageInfo<CommentVo> pageInfo = new PageInfo<>(commentVos);
+        return pageInfo;
     }
 
     /**

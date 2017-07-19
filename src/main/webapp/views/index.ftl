@@ -33,11 +33,11 @@
             <div class="containers">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="logo">
-                    <a href="#">joylife</a>
+                    <a href="/">joylife</a>
                 </div>
 
                 <div class="menu">
-                    <a href="#">首页</a>
+                    <a href="/">首页</a>
                     <a href="#">工艺</a>
                     <a href="#">工具</a>
                     <a href="#">众筹</a>

@@ -38,7 +38,7 @@ public interface CommentService {
      * @param pageDto
      * @return
      */
-    PageInfo<CommentVo> getCommentPageList(PageDto pageDto);
+    PageInfo<CommentVo> getCommentPage(PageDto pageDto);
 
     /**
      * 回复评论
