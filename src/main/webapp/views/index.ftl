@@ -155,11 +155,11 @@
         </div>
 
         <footer>
+
             <p>友情链接:
-                <a href="http://www.baidu.com">百度</a>
-                <a href="http://www.baidu.com">淘宝</a>
-                <a href="http://www.baidu.com">堆糖</a>
-                <a href="http://www.baidu.com">啦啦</a>
+                <#list links as link>
+                    <a href="${link.url}" target="_blank">${link.name}</a>
+                </#list>
             </p>
             <p>©2017 joylife.top 版权所有。沪ICP备10038086号-3</p>
         </footer>

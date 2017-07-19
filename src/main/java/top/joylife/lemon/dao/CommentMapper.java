@@ -2,6 +2,8 @@ package top.joylife.lemon.dao;
 
 import top.joylife.lemon.entity.Comment;
 
+import java.util.List;
+
 public interface CommentMapper {
     int deleteByPrimaryKey(Integer id);
 
@@ -10,6 +12,13 @@ public interface CommentMapper {
     int insertSelective(Comment record);
 
     Comment selectByPrimaryKey(Integer id);
+
+    /**
+     * 获取评论列表
+     * @param articleId
+     * @return
+     */
+    List<Comment> getComments(Integer articleId);
 
     int updateByPrimaryKeySelective(Comment record);
 
