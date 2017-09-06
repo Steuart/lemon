@@ -1,7 +1,6 @@
 package top.joylife.lemon.service;
 
-import top.joylife.lemon.domain.StatusDto;
-import top.joylife.lemon.domain.UserAccountDto;
+import top.joylife.lemon.common.bean.domain.UserAccountDto;
 import top.joylife.lemon.entity.User;
 
 /**

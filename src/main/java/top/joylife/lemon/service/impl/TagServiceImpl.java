@@ -1,11 +1,10 @@
 package top.joylife.lemon.service.impl;
 
 import com.github.pagehelper.PageInfo;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import top.joylife.lemon.common.cache.SystemCache;
 import top.joylife.lemon.dao.TagMapper;
-import top.joylife.lemon.domain.PageDto;
+import top.joylife.lemon.common.bean.domain.PageDto;
 import top.joylife.lemon.entity.Tag;
 import top.joylife.lemon.service.TagService;
 

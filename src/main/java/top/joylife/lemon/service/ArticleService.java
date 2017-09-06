@@ -1,10 +1,10 @@
 package top.joylife.lemon.service;
 
 import com.github.pagehelper.PageInfo;
-import top.joylife.lemon.controller.vo.ArticleInfoVo;
-import top.joylife.lemon.controller.vo.ArticleVo;
-import top.joylife.lemon.domain.ArticleDto;
-import top.joylife.lemon.domain.PageDto;
+import top.joylife.lemon.common.bean.vo.ArticleInfoVo;
+import top.joylife.lemon.common.bean.vo.ArticleVo;
+import top.joylife.lemon.common.bean.domain.ArticleDto;
+import top.joylife.lemon.common.bean.domain.PageDto;
 import top.joylife.lemon.entity.Article;
 
 import java.util.List;

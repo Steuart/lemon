@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import top.joylife.lemon.common.consts.ReData;
 import top.joylife.lemon.common.util.ReUtil;
-import top.joylife.lemon.controller.vo.CommentVo;
-import top.joylife.lemon.domain.PageDto;
+import top.joylife.lemon.common.bean.vo.CommentVo;
+import top.joylife.lemon.common.bean.domain.PageDto;
 import top.joylife.lemon.service.CommentService;
 
 import javax.annotation.Resource;

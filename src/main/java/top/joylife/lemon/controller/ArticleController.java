@@ -5,9 +5,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import top.joylife.lemon.controller.vo.ArticleInfoVo;
-import top.joylife.lemon.controller.vo.ArticleVo;
-import top.joylife.lemon.domain.PageDto;
+import top.joylife.lemon.common.bean.vo.ArticleInfoVo;
+import top.joylife.lemon.common.bean.vo.ArticleVo;
+import top.joylife.lemon.common.bean.domain.PageDto;
 import top.joylife.lemon.service.ArticleService;
 
 import javax.annotation.Resource;

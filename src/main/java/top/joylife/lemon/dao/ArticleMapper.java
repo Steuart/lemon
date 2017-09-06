@@ -1,7 +1,7 @@
 package top.joylife.lemon.dao;
 
-import top.joylife.lemon.controller.vo.ArticleInfoVo;
-import top.joylife.lemon.domain.PageDto;
+import top.joylife.lemon.common.bean.vo.ArticleInfoVo;
+import top.joylife.lemon.common.bean.domain.PageDto;
 import top.joylife.lemon.entity.Article;
 
 import java.util.List;

@@ -1,7 +1,7 @@
 package top.joylife.lemon.service;
 
 import com.github.pagehelper.PageInfo;
-import top.joylife.lemon.domain.PageDto;
+import top.joylife.lemon.common.bean.domain.PageDto;
 import top.joylife.lemon.entity.Tag;
 
 import java.util.List;

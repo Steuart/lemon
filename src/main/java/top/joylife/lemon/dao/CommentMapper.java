@@ -1,6 +1,6 @@
 package top.joylife.lemon.dao;
 
-import top.joylife.lemon.controller.vo.CommentVo;
+import top.joylife.lemon.common.bean.vo.CommentVo;
 import top.joylife.lemon.entity.Comment;
 
 import java.util.List;

@@ -88,6 +88,8 @@ dependencies {
     //七牛
     compile 'com.qiniu:qiniu-java-sdk:7.2.+'
 
+    providedCompile group: 'org.projectlombok', name: 'lombok', version: '1.16.18'
+
 }
 
 //打包排除nodejs包

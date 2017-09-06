@@ -11,7 +11,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import top.joylife.lemon.common.consts.ReCode;
-import top.joylife.lemon.exception.Warning;
+import top.joylife.lemon.common.exception.Warning;
 import top.joylife.lemon.entity.Account;
 import top.joylife.lemon.service.AccountService;
 

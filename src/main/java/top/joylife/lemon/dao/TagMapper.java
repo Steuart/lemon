@@ -1,7 +1,7 @@
 package top.joylife.lemon.dao;
 
 import org.apache.ibatis.annotations.Param;
-import top.joylife.lemon.controller.vo.TagVo;
+import top.joylife.lemon.common.bean.vo.TagVo;
 import top.joylife.lemon.entity.Tag;
 
 import java.util.List;

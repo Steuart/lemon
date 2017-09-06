@@ -5,9 +5,7 @@ import org.springframework.transaction.annotation.Transactional;
 import top.joylife.lemon.dao.AccountMapper;
 import top.joylife.lemon.dao.UserMapper;
 import top.joylife.lemon.dao.UserRoleMapper;
-import top.joylife.lemon.domain.PageDto;
-import top.joylife.lemon.domain.StatusDto;
-import top.joylife.lemon.domain.UserAccountDto;
+import top.joylife.lemon.common.bean.domain.UserAccountDto;
 import top.joylife.lemon.entity.Account;
 import top.joylife.lemon.entity.User;
 import top.joylife.lemon.entity.UserRole;
@@ -15,7 +13,6 @@ import top.joylife.lemon.service.UserService;
 
 import javax.annotation.Resource;
 import java.util.Date;
-import java.util.List;
 
 /**
  * Created by HemingWu on 2017/2/7.
