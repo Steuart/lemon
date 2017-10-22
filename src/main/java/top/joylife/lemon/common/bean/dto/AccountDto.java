@@ -1,4 +1,4 @@
-package top.joylife.lemon.bean.dto;
+package top.joylife.lemon.common.bean.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;

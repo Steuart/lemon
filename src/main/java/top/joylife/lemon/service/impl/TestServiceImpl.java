@@ -1,7 +1,7 @@
 package top.joylife.lemon.service.impl;
 
 import org.springframework.stereotype.Service;
-import top.joylife.lemon.bean.dto.AccountDto;
+import top.joylife.lemon.common.bean.dto.AccountDto;
 import top.joylife.lemon.dao.TestDao;
 import top.joylife.lemon.service.TestService;
 

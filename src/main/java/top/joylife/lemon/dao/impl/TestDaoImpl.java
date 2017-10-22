@@ -3,7 +3,7 @@ package top.joylife.lemon.dao.impl;
 import org.jooq.DSLContext;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Repository;
-import top.joylife.lemon.bean.dto.AccountDto;
+import top.joylife.lemon.common.bean.dto.AccountDto;
 import top.joylife.lemon.dao.TestDao;
 import top.joylife.lemon.jooq.tables.records.TAccountRecord;
 

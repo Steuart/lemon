@@ -2,7 +2,9 @@ package top.joylife.lemon.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import top.joylife.lemon.bean.dto.AccountDto;
+import top.joylife.lemon.common.bean.dto.AccountDto;
+import top.joylife.lemon.common.bean.dto.ReData;
+import top.joylife.lemon.common.util.ReUtil;
 import top.joylife.lemon.service.TestService;
 
 import javax.annotation.Resource;
@@ -15,7 +17,9 @@ public class Index {
     private TestService testService;
 
     @RequestMapping("/")
-    public List<AccountDto> index(){
-        return testService.getData();
+    public ReData index(){
+        List<AccountDto> accountDtos = testService.getData();
+
+        return ReUtil.success(accountDtos);
     }
 }

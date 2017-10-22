@@ -1,7 +1,7 @@
 package top.joylife.lemon.dao;
 
 
-import top.joylife.lemon.bean.dto.AccountDto;
+import top.joylife.lemon.common.bean.dto.AccountDto;
 
 import java.util.List;
 
