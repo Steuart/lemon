@@ -22,4 +22,10 @@ public class Index {
 
         return ReUtil.success(accountDtos);
     }
+
+    @RequestMapping("/tran")
+    public ReData tran(){
+        testService.insert();
+        return ReUtil.success("");
+    }
 }

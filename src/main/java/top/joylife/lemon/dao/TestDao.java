@@ -7,4 +7,6 @@ import java.util.List;
 
 public interface TestDao {
     List<AccountDto> getTaccount();
+
+    void insert(int userid,String name);
 }
