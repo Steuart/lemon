@@ -27,6 +27,8 @@ public class User {
 
     private String email;
 
+    private Integer type;
+
     private Date dateCreate;
 
     private Date dateUpdate;
