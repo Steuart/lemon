@@ -3,11 +3,11 @@ package top.joylife.lemon.common.enums;
 import lombok.Getter;
 
 @Getter
-public enum ReCode {
+public enum SystemCode {
     SUCCESS(1,"success"),
     FAIL(0,"FAIL");
 
-    ReCode(int code,String msg){
+    SystemCode(int code, String msg){
         this.code = code;
         this.msg = msg;
     }

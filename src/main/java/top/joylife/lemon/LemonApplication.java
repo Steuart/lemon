@@ -8,7 +8,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableTransactionManagement
 public class LemonApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(LemonApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(LemonApplication.class, args);
+    }
 }

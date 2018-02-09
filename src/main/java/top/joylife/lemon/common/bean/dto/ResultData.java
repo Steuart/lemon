@@ -3,7 +3,7 @@ package top.joylife.lemon.common.bean.dto;
 import lombok.Data;
 
 @Data
-public class ReData {
+public class ResultData {
 
     private int code;
 

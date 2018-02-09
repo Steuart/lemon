@@ -6,7 +6,4 @@ import java.util.List;
 
 public interface TestService {
 
-    List<AccountDto> getData();
-
-    void insert();
 }
