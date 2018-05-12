@@ -3,7 +3,7 @@ package top.joylife.lemon.common.util;
 import top.joylife.lemon.common.bean.dto.ResultData;
 import top.joylife.lemon.common.enums.SystemCode;
 
-public class ResultUtil {
+public class ReUtil {
 
     public static ResultData success(Object data){
         ResultData resultData = new ResultData();
@@ -28,5 +28,4 @@ public class ResultUtil {
         return resultData;
     }
 
-    
 }

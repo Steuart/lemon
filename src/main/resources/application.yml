@@ -26,7 +26,9 @@ spring:
     restart:
       additional-paths: src/main
       enabled: true
-
+  freemarker:
+    cache: false
+    template-loader-path: ["classpath:/static/"]
 mybatis:
   mapper-locations: classpath:mapping/*.xml
   type-aliases-package: top.joylife.lemon.dao.entity
@@ -39,3 +41,8 @@ pagehelper:
 mapper:
   mappers: top.joylife.lemon.dao.mapper
   identity: MYSQL
+
+# 系统自定义参数
+lemon:
+  theme: default
+

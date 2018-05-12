@@ -11,7 +11,7 @@ import top.joylife.lemon.interceptor.AuthInterceptor;
  * created by wuhaiming on 2018/2/9
  */
 @Configuration
-public class InterceptorConfiguration extends WebMvcConfigurerAdapter{
+public class InterceptorConfig extends WebMvcConfigurerAdapter{
 
     @Autowired
     private AuthInterceptor authInterceptor;
