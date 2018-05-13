@@ -21,11 +21,56 @@
     </header>
     <div class="body">
         <div class="left">
+            <article class="type-1">
+                <img src="./${theme}/img/test.jpeg">
+                <div class="summary">
+                    <h3>标题</h3>
+                    asdsadasdasdas
+                </div>
+            </article>
 
+            <article class="type-2">
+                <div class="summary">
+                    <h3>标题</h3>
+                    asdsadasdasdas
+                </div>
+                <img src="./${theme}/img/test.jpeg">
+            </article>
+
+            <article class="type-3">
+                <img src="./${theme}/img/test.jpeg">
+                <div class="summary">
+                    <h3>标题</h3>
+                    asdsadasdasdas
+                </div>
+
+            </article>
+
+            <article>
+                <div class="summary">
+                    <h3>标题</h3>
+                    asdsadasdasdas
+                </div>
+                <img src="./${theme}/img/test.jpeg">
+            </article>
+
+            <article>
+                <img src="./${theme}/img/test.jpeg">
+                <div class="summary">
+                    <h3>标题</h3>
+                    asdsadasdasdas
+                </div>
+            </article>
+
+            <article>
+                <div class="summary">
+                    <h3>标题</h3>
+                    asdsadasdasdas
+                </div>
+                <img src="./${theme}/img/test.jpeg">
+            </article>
         </div>
         <div class="right">
-
-
 
         </div>
     </div>

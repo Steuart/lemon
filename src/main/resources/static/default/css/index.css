@@ -1,7 +1,6 @@
 html,body {
     margin: 0;
     padding: 0;
-    height: 100%;
 }
 
 html {
@@ -16,7 +15,7 @@ body {
 }
 
 header {
-    height: 6rem;
+    height: 4.6rem;
     box-shadow: 0.2rem 0.3rem 0.5rem #eeeeee;
     width: 100%;
 }
@@ -24,23 +23,23 @@ header {
 header nav {
     display: flex;
     justify-content: center;
-    height: 6rem;
+    height: 4.6rem;
 }
 header nav .logo{
-    line-height: 6rem;
+    line-height: 4.6rem;
 }
 
 header nav .menu {
     text-align: center;
     display: inline-block;
     width: 80%;
-    line-height: 6rem;
+    line-height: 4.6rem;
     font-family:"Times New Roman",Georgia,sans-serif;
     color: #525252;
 }
 
 header nav .menu a {
-    padding: 1rem 1rem;
+    padding: 0.5rem 0.5rem;
 }
 
 header nav .menu a:link {
@@ -62,26 +61,42 @@ header nav .menu a:active {
 .body {
     display: flex;
     justify-content: center;
-    height: 80%;
-    margin-top: 2rem;
+    margin-top: 1rem;
     width: 100%;
 }
 
 .body .left {
     height: 100%;
-    background-color: burlywood;
-    width: 38%;
+    width: 43%;
+    border-right: 0.1rem solid #eeeeee;
+    padding-top: 1rem;
+    padding-right: 1rem;
+}
+
+.body .left article {
+    display: flex;
+    justify-content: space-between;
+    height: 15rem;
+    background-color: aliceblue;
+    margin-bottom: 1rem;
+}
+
+.body .left article .summary {
+}
+
+.body .left article img {
+    width: 30rem;
+    height: 15rem;
 }
 
 .body .right {
-    width: 18%;
-    height: 100%;
-    background-color: beige;
+    width: 20%;
 }
 
 footer {
-    width:56%;
+    width:100%;
     text-align: center;
     margin-top: 1rem;
-    box-shadow: 0 -0.2rem 0.5rem #eeeeee;;
+    border-top: 0.1rem solid #eeeeee;
+    height: 4rem;
 }
