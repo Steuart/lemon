@@ -9,10 +9,14 @@
 <body>
     <header>
         <nav>
-            <a>logo</a>
-            <span>首页</span>
-            <span>标签</span>
-            <span>足迹</span>
+            <div class="logo">
+                <a>logo</a>
+            </div>
+            <div class="menu">
+                <a href="/">首页</a>
+                <a href="/">标签</a>
+                <a href="/">足迹</a>
+            </div>
         </nav>
     </header>
     <div class="body">

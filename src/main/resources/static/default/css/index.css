@@ -4,20 +4,84 @@ html,body {
     height: 100%;
 }
 
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    flex-direction:column;
+}
+
+header {
+    height: 6rem;
+    box-shadow: 0.2rem 0.3rem 0.5rem #eeeeee;
+    width: 100%;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    height: 6rem;
+}
+header nav .logo{
+    line-height: 6rem;
+}
+
+header nav .menu {
+    text-align: center;
+    display: inline-block;
+    width: 80%;
+    line-height: 6rem;
+    font-family:"Times New Roman",Georgia,sans-serif;
+    color: #525252;
+}
+
+header nav .menu a {
+    padding: 1rem 1rem;
+}
+
+header nav .menu a:link {
+    text-decoration: none;
+    color: #525252;
+}
+header nav .menu a:visited {
+    text-decoration: none;
+    color: #525252;
+}
+header nav .menu a:hover {
+    text-decoration: none;
+}
+header nav .menu a:active {
+    text-decoration: none;
+    color: #525252;
+}
+
 .body {
     display: flex;
     justify-content: center;
-    height: 90%;
+    height: 80%;
+    margin-top: 2rem;
+    width: 100%;
 }
 
 .body .left {
     height: 100%;
-    background-color: blue;
-    width: 40%;
+    background-color: burlywood;
+    width: 38%;
 }
 
 .body .right {
-    width: 40%;
+    width: 18%;
     height: 100%;
     background-color: beige;
+}
+
+footer {
+    width:56%;
+    text-align: center;
+    margin-top: 1rem;
+    box-shadow: 0 -0.2rem 0.5rem #eeeeee;;
 }
