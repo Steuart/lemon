@@ -34,6 +34,7 @@ public class AuthInterceptor implements HandlerInterceptor {
     public void postHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o, ModelAndView modelAndView) throws Exception {
         if(modelAndView!=null){
             modelAndView.setViewName(systemConfig.getTheme()+"/"+modelAndView.getViewName());
+            modelAndView.addObject("theme",systemConfig.getTheme());
         }
 
     }

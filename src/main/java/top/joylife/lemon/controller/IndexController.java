@@ -1,10 +1,12 @@
 package top.joylife.lemon.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import top.joylife.lemon.common.bean.dto.ResultData;
 import top.joylife.lemon.common.util.ReUtil;
+import top.joylife.lemon.config.SystemConfig;
 import top.joylife.lemon.service.UserService;
 
 import javax.annotation.Resource;
@@ -17,8 +19,16 @@ public class IndexController {
     @Resource(name = "userService")
     private UserService userService;
 
+    @Autowired
+    private SystemConfig systemConfig;
+
     @RequestMapping("/")
-    public String index(){
+    public String index(Map<String,Object> model){
+        return "index";
+    }
+
+    @RequestMapping("/index")
+    public String home(){
 
         return "index";
     }
