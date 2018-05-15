@@ -7,6 +7,23 @@ html {
     font-size: 62.5%;
 }
 
+a:link {
+    text-decoration: none;
+    color: #525252;
+}
+a:visited {
+    text-decoration: none;
+    color: #525252;
+}
+a:hover {
+    text-decoration: none;
+}
+a:active {
+    text-decoration: none;
+    color: #525252;
+}
+
+
 body {
     font-size: 1.6rem;
     display: flex;
@@ -77,15 +94,32 @@ header nav .menu a:active {
     display: flex;
     justify-content: space-between;
     height: 15rem;
-    background-color: aliceblue;
     margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 0.1rem solid #eeeeee;
 }
 
 .body .left article .summary {
+
+}
+.body .left article .summary p{
+    font-size: 1.4rem;
+}
+
+.body .left article .summary .tag{
+    font-size: 1.5rem;
+}
+.body .left article .summary .tag{
+    font-size: 1.5rem;
+}
+
+.body .left article .summary .tag a{
+    background-color: antiquewhite;
+    
 }
 
 .body .left article img {
-    width: 30rem;
+    width: 20rem;
     height: 15rem;
 }
 
