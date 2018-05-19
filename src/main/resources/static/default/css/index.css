@@ -46,6 +46,10 @@ header nav .logo{
     line-height: 4.6rem;
 }
 
+header nav .search{
+    line-height: 4.6rem;
+}
+
 header nav .menu {
     text-align: center;
     display: inline-block;
@@ -95,42 +99,129 @@ header nav .menu a:active {
     justify-content: space-between;
     height: 15rem;
     margin-bottom: 1rem;
-    padding-bottom: 1rem;
+    padding: 1rem;
     border-bottom: 0.1rem solid #eeeeee;
 }
 
 .body .left article .summary {
-
+    width: 66%;
 }
+
+.body .left article .summary .title h3{
+    display: inline-block;
+    margin-bottom: 0;
+}
+
+.body .left article .summary .title .time{
+    font-size: 1.1rem;
+    margin-left: 0.5rem;
+    vertical-align:text-bottom;
+}
+
+
 .body .left article .summary p{
     font-size: 1.4rem;
+    height: 50%;
 }
 
-.body .left article .summary .tag{
-    font-size: 1.5rem;
+.body .left article .summary p:hover{
+    cursor:pointer;
 }
-.body .left article .summary .tag{
-    font-size: 1.5rem;
+.body .left article .summary .footer{
+    display: flex;
+    justify-content: space-between;
 }
 
-.body .left article .summary .tag a{
+.body .left article .summary .footer .tag{
+    font-size: 1.5rem;
+
+}
+
+.body .left article .summary .footer .tag a{
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    border-radius: 1rem;
+    padding: 0.2rem 0.5rem 0.2rem 0.5rem;
     background-color: antiquewhite;
     
 }
 
-.body .left article img {
+.body .left article .summary .footer .operate{
+    font-size: 1.2rem;
+}
+
+.body .left article .summary .footer .operate i{
+    font-size: 1.6rem;
+    margin-left:0.5rem;
+    margin-right: 0.2rem;
+}
+
+.body .left article .media {
+    overflow:hidden;
     width: 20rem;
     height: 15rem;
 }
+
+.body .left article .media img {
+    max-width: 100%;
+}
+
+.body .left ul {
+    padding-left: 0;
+    margin-top: 3rem;
+}
+
+.body .left ul li {
+    list-style:none;
+    display: inline-block;
+    font-size: 1.4rem;
+    padding: 0.2rem 0.8rem 0.2rem 0.8rem;
+    border-radius: 2.2rem;
+    cursor:pointer;
+}
+
+.body .left ul .input {
+    border: 0.1rem solid black;
+}
+
+.body .left ul .focus{
+    background-color: burlywood;
+    color: white;
+}
+
+.body .left ul input {
+    width: 3rem;
+    border-width: 0;
+    outline:medium;
+}
+.body .left ul input:focus {
+    border-width: 0;
+}
+
 
 .body .right {
     width: 20%;
 }
 
+.body .return-top {
+    position: fixed;
+    right: 15rem;
+    bottom: 10rem;
+    cursor:pointer;
+}
+
+.body .return-top img {
+    height: 6rem;
+    transform: rotate(-45deg);
+
+}
+
 footer {
     width:100%;
+    color: white;
     text-align: center;
     margin-top: 1rem;
     border-top: 0.1rem solid #eeeeee;
-    height: 4rem;
+    height: 15rem;
+    background-color: black;
 }
