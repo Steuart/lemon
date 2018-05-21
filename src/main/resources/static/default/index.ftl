@@ -19,8 +19,10 @@
                 <a href="/">足迹</a>
             </div>
             <div class="search">
-                <input>
-                搜索
+                <span class="input">
+                    <input type="text">
+                </span>
+                <i class="fa fa-search" aria-hidden="true"></i>
             </div>
         </nav>
     </header>

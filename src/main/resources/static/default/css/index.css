@@ -50,6 +50,29 @@ header nav .search{
     line-height: 4.6rem;
 }
 
+header nav .search .input{
+    border: 0.1rem solid #525252;
+    border-radius: 2rem;
+    padding: 0.1rem 1.8rem 0.1rem 1rem;
+    box-shadow: 0.1rem -0.1rem 0.1rem #999 inset;
+}
+
+header nav .search input {
+    width: 8rem;
+    border-width: 0;
+    outline:medium;
+    font-size: 1.4rem;
+}
+
+header nav .search input:focus {
+    border-width: 0;
+}
+
+header nav .search i{
+    margin-left: -2rem;
+    font-size: 1.8rem;
+}
+
 header nav .menu {
     text-align: center;
     display: inline-block;
@@ -130,10 +153,11 @@ header nav .menu a:active {
 .body .left article .summary .footer{
     display: flex;
     justify-content: space-between;
+    margin-right: 1rem;
 }
 
 .body .left article .summary .footer .tag{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 
 }
 
