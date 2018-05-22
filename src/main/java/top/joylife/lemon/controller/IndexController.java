@@ -24,6 +24,7 @@ public class IndexController {
 
     @RequestMapping("/")
     public String index(Map<String,Object> model){
+        model.put("title","首页");
         return "index";
     }
 
@@ -41,9 +42,10 @@ public class IndexController {
         return ReUtil.success(data);
     }
 
-    @RequestMapping("/hello")
+    @RequestMapping("/article")
     public String hello(Map<String,Object> data){
         data.put("name","守护天使");
-        return "hello";
+        data.put("title","文章");
+        return "article";
     }
 }

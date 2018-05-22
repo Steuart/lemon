@@ -1,0 +1,10 @@
+.body {
+    background-color: #eeeeee;
+    height: 30rem;
+}
+
+.body .article{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+}

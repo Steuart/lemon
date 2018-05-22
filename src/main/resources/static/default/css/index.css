@@ -1,106 +1,4 @@
-html,body {
-    margin: 0;
-    padding: 0;
-}
 
-html {
-    font-size: 62.5%;
-}
-
-a:link {
-    text-decoration: none;
-    color: #525252;
-}
-a:visited {
-    text-decoration: none;
-    color: #525252;
-}
-a:hover {
-    text-decoration: none;
-}
-a:active {
-    text-decoration: none;
-    color: #525252;
-}
-
-
-body {
-    font-size: 1.6rem;
-    display: flex;
-    align-items: center;
-    flex-direction:column;
-}
-
-header {
-    height: 4.6rem;
-    box-shadow: 0.2rem 0.3rem 0.5rem #eeeeee;
-    width: 100%;
-}
-
-header nav {
-    display: flex;
-    justify-content: center;
-    height: 4.6rem;
-}
-header nav .logo{
-    line-height: 4.6rem;
-}
-
-header nav .search{
-    line-height: 4.6rem;
-}
-
-header nav .search .input{
-    border: 0.1rem solid #525252;
-    border-radius: 2rem;
-    padding: 0.1rem 1.8rem 0.1rem 1rem;
-    box-shadow: 0.1rem -0.1rem 0.1rem #999 inset;
-}
-
-header nav .search input {
-    width: 8rem;
-    border-width: 0;
-    outline:medium;
-    font-size: 1.4rem;
-}
-
-header nav .search input:focus {
-    border-width: 0;
-}
-
-header nav .search i{
-    margin-left: -2rem;
-    font-size: 1.8rem;
-}
-
-header nav .menu {
-    text-align: center;
-    display: inline-block;
-    width: 80%;
-    line-height: 4.6rem;
-    font-family:"Times New Roman",Georgia,sans-serif;
-    color: #525252;
-}
-
-header nav .menu a {
-    padding: 0.5rem 0.5rem;
-}
-
-header nav .menu a:link {
-    text-decoration: none;
-    color: #525252;
-}
-header nav .menu a:visited {
-    text-decoration: none;
-    color: #525252;
-}
-header nav .menu a:hover {
-    text-decoration: none;
-}
-header nav .menu a:active {
-    text-decoration: none;
-    color: #525252;
-}
 
 .body {
     display: flex;
@@ -224,28 +122,22 @@ header nav .menu a:active {
 
 
 .body .right {
-    width: 20%;
-}
-
-.body .return-top {
-    position: fixed;
-    right: 15rem;
-    bottom: 10rem;
-    cursor:pointer;
-}
-
-.body .return-top img {
-    height: 6rem;
-    transform: rotate(-45deg);
-
-}
-
-footer {
-    width:100%;
-    color: white;
-    text-align: center;
+    width: 18%;
+    margin-left: 2rem;
     margin-top: 1rem;
-    border-top: 0.1rem solid #eeeeee;
+}
+
+.body .right .component {
+    padding: 1rem;
     height: 15rem;
-    background-color: black;
+    margin-bottom: 1rem;
+}
+
+.body .right .ads {
+    padding: 0;
+    overflow:hidden;
+}
+
+.body .right .ads img {
+    max-width: 100%;
 }
