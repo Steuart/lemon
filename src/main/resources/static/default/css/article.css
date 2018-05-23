@@ -1,10 +1,19 @@
 .body {
     background-color: #eeeeee;
     height: 30rem;
+    width: 100%;
+}
+
+.body h1 {
+    text-align: center;
 }
 
 .body .article{
     display: flex;
     justify-content: center;
-    width: 80%;
+    width: 100%;
+}
+
+.body .article .content{
+    width: 60%;
 }
