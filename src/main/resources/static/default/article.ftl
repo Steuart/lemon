@@ -5,8 +5,8 @@
 <div class="body">
     <h1>树莓派</h1>
     <div class="article">
-        <div class="content">asddsa</div>
-        <div class="catalog">asddsa</div>
+        <div class="content"></div>
+        <ul class="catalog"></ul>
     </div>
 </div>
 <#include "./footer.ftl">

@@ -1,6 +1,5 @@
 .body {
-    background-color: #eeeeee;
-    height: 30rem;
+    min-height: 30rem;
     width: 100%;
 }
 
@@ -14,6 +13,13 @@
     width: 100%;
 }
 
-.body .article .content{
-    width: 60%;
+.body .article .content {
+    width: 50%;
+    border-right: 0.1rem solid #eeeeee;
+    margin-right: 1rem;
+}
+
+.body .article .catalog {
+    list-style:none;
+    padding-left: 1rem;
 }
