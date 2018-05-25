@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <link type="text/css" href="/${theme}/css/common.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="/${theme}/libs/font-awesome/css/font-awesome.min.css">
-    <script type="text/javascript" src="/${theme}/libs/jquery-3.3.1.min.js"></script>
     <title>${title}</title>
 </head>
 <body>

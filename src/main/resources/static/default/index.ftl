@@ -1,5 +1,6 @@
-<#include "./header.ftl">
+<#include "./reference.ftl">
 <link type="text/css" href="/${theme}/css/index.css" rel="stylesheet"/>
+<#include "./header.ftl">
 <div class="body">
     <div class="left">
         <article>

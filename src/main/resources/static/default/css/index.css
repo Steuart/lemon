@@ -71,11 +71,18 @@
 .body .left article .summary .footer .operate{
     font-size: 1.2rem;
 }
+.body .left article .summary .footer .operate span{
+    display: inline-block;
+    text-align: right;
+    width: 4.1rem;
+}
 
 .body .left article .summary .footer .operate i{
     font-size: 1.6rem;
     margin-left:0.5rem;
     margin-right: 0.2rem;
+    display: inline-block;
+
 }
 
 .body .left article .media {
