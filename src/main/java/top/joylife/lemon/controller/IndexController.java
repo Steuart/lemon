@@ -49,8 +49,8 @@ public class IndexController {
     @RequestMapping("/article")
     public String article(Map<String,Object> data){
         data.put("title","文章");
-        String content="## 树莓派 \n" +
-                "### asddsa \n" +
+        String content="树莓派树莓派树莓派树莓派树莓派树莓派 \n" +
+                "asddsasaddsasdadsa \n" +
                 "#### saddas \n" +
                 "#### saddas \n" +
                 " 先让大家明确Dom对象和jQuery包装集的概念, 将极大的加快我们的学习速度. 我在学习jQuery的过程中就花了很长时间没有领悟到两者的具体差异, 因为书上并没有专门讲解两者的区别, 所以经常被\"this指针为何不能调用jQuery方法\"等问题迷惑.  直到某一天豁然开朗, 发现只要能够区分这两者, 就能够在写程序时变得清清楚楚.\n" + "#### saddas \n" +
@@ -59,7 +59,13 @@ public class IndexController {
                 " 先让大家明确Dom对象和jQuery包装集的概念, 将极大的加快我们的学习速度. 我在学习jQuery的过程中就花了很长时间没有领悟到两者的具体差异, 因为书上并没有专门讲解两者的区别, 所以经常被\"this指针为何不能调用jQuery方法\"等问题迷惑.  直到某一天豁然开朗, 发现只要能够区分这两者, 就能够在写程序时变得清清楚楚.\n" + "#### saddas \n" +
                 " 先让大家明确Dom对象和jQuery包装集的概念, 将极大的加快我们的学习速度. 我在学习jQuery的过程中就花了很长时间没有领悟到两者的具体差异, 因为书上并没有专门讲解两者的区别, 所以经常被\"this指针为何不能调用jQuery方法\"等问题迷惑.  直到某一天豁然开朗, 发现只要能够区分这两者, 就能够在写程序时变得清清楚楚.\n" + "#### saddas \n" +
                 " 先让大家明确Dom对象和jQuery包装集的概念, 将极大的加快我们的学习速度. 我在学习jQuery的过程中就花了很长时间没有领悟到两者的具体差异, 因为书上并没有专门讲解两者的区别, 所以经常被\"this指针为何不能调用jQuery方法\"等问题迷惑.  直到某一天豁然开朗, 发现只要能够区分这两者, 就能够在写程序时变得清清楚楚.\n" + "#### saddas \n" +
-                "** asddsa ** \n";
+                "**asddsa** \n" +
+                "> sdsadsa \n" +
+                "- sadsad \n" +
+                "- 发顺丰大师傅 \n" +
+                "------- \n" +
+                "```saddsa``` \n" +
+                "![image](https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1527271624876&di=2be67e2f3bdf122cf7e0bbf0add18a97&imgtype=0&src=http%3A%2F%2Fe.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2F48540923dd54564e96db4295bfde9c82d0584fdb.jpg)";
         MutableDataSet options = new MutableDataSet();
         Parser parser = Parser.builder(options).build();
         HtmlRenderer renderer = HtmlRenderer.builder(options).build();
