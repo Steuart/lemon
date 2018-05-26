@@ -9,18 +9,15 @@ html {
 
 a:link {
     text-decoration: none;
-    color: #525252;
 }
 a:visited {
     text-decoration: none;
-    color: #525252;
 }
 a:hover {
     text-decoration: none;
 }
 a:active {
     text-decoration: none;
-    color: #525252;
 }
 
 body {
@@ -34,6 +31,8 @@ header {
     height: 4.6rem;
     box-shadow: 0 0.2rem 0.4rem 0 rgba(0, 0, 0, 0.2), 0 0.3rem 1rem 0 rgba(0, 0, 0, 0.19);
     width: 100%;
+    background-color: #3B3E43;
+    color: white;
 }
 
 header nav {
@@ -45,15 +44,33 @@ header nav .logo{
     line-height: 4.6rem;
 }
 
+header nav .logo a:link {
+    text-decoration: none;
+    color: #ffffff;
+}
+header nav .logo a:visited {
+    text-decoration: none;
+    color: #ffffff;
+}
+header nav .logo a:hover {
+    text-decoration: none;
+}
+header nav .logo a:active {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+
 header nav .search{
     line-height: 4.6rem;
+    color: black;
+
 }
 
 header nav .search .input{
-    border: 0.1rem solid #525252;
+    background-color: white;
     border-radius: 2rem;
     padding: 0.1rem 1.8rem 0.1rem 1rem;
-    box-shadow: 0.1rem 0 0.1rem #999 inset;
 }
 
 header nav .search input {
@@ -78,7 +95,6 @@ header nav .menu {
     width: 80%;
     line-height: 4.6rem;
     font-family:"Times New Roman",Georgia,sans-serif;
-    color: #525252;
 }
 
 header nav .menu a {
@@ -87,18 +103,18 @@ header nav .menu a {
 
 header nav .menu a:link {
     text-decoration: none;
-    color: #525252;
+    color: #ffffff;
 }
 header nav .menu a:visited {
     text-decoration: none;
-    color: #525252;
+    color: #ffffff;
 }
 header nav .menu a:hover {
     text-decoration: none;
 }
 header nav .menu a:active {
     text-decoration: none;
-    color: #525252;
+    color: #ffffff;
 }
 
 
@@ -123,5 +139,5 @@ footer {
     margin-top: 1rem;
     border-top: 0.1rem solid #eeeeee;
     min-height: 8rem;
-    background-color: black;
+    background-color: #3B3E43;
 }

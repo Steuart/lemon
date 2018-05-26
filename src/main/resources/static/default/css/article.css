@@ -18,10 +18,11 @@
 }
 
 .body .article .info{
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     display: flex;
     align-items: center;
     margin-bottom: 3rem;
+    color: #D09E9E;
 }
 
 .body .article .info .header-img{
@@ -31,20 +32,20 @@
 }
 
 .body .article .info .auth{
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     margin-bottom: 0.3rem;
 }
 
 .body .article .info .time{
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 
 .body .article .content {
-    width: 50%;
+    width: 42%;
     border-right: 0.1rem solid #eeeeee;
     margin-right: 1rem;
-    padding: 2rem;
+    padding: 0rem 2rem 2rem 2rem;
 }
 .body .article .content p {
     word-wrap:break-word;
@@ -56,10 +57,8 @@
     padding: 1rem 2rem 1rem 2rem;
     min-width: 20rem;
     position: fixed;
-    left: 77%;
+    left: 74%;
     font-size: 1.5rem;
-    border: 0.1rem solid #eeeeee;
-    box-shadow: 0 0.2rem 0.4rem 0 rgba(0, 0, 0, 0.2), 0 0.3rem 1rem 0 rgba(0, 0, 0, 0.19);
 }
 
 .body .article .catalog h4 {
@@ -79,10 +78,22 @@
     margin-bottom: 0.4rem;
 }
 
+
+.body .article .catalog ul a{
+    color: black;
+}
+
+
 .body .article .content .markdown {
     padding-bottom: 2rem;
     margin-bottom: 2rem;
     border-bottom: 0.2rem solid #eeeeee;
+    text-align: justify;
+    color: #6B2F2F;
+}
+
+.markdown li {
+    line-height: 2.5rem;
 }
 
 
@@ -91,109 +102,103 @@
     background-color: #666666;
 }
 
-a {
+.markdown a {
     color: #0645ad;
     text-decoration: none;
 }
 
-a:visited {
+.markdown a:visited {
     color: #0b0080;
 }
 
-a:hover {
+.markdown a:hover {
     color: #06e;
 }
 
-a:active {
+.markdown a:active {
     color: #faa700;
 }
 
-a:focus {
+.markdown a:focus {
     outline: thin dotted;
 }
 
-a:hover,
-a:active {
+.markdown a:hover, a:active {
     outline: 0;
 }
 
-::-moz-selection {
+.markdown ::-moz-selection {
     background: rgba(255, 255, 0, 0.3);
     color: #000;
 }
 
-::selection {
+.markdown ::selection {
     background: rgba(255, 255, 0, 0.3);
     color: #000;
 }
 
-a::-moz-selection {
+.markdown a::-moz-selection {
     background: rgba(255, 255, 0, 0.3);
     color: #0645ad;
 }
 
-a::selection {
+.markdown a::selection {
     background: rgba(255, 255, 0, 0.3);
     color: #0645ad;
 }
 
-p {
+.markdown p {
     margin: 1em 0;
+    line-height: 2.5rem;
 }
 
-img {
+.markdown img {
     max-width: 100%;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.markdown h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
     color: #111;
     line-height: 1em;
 }
 
-h4,
-h5,
-h6 {
+.markdown h4, h5, h6 {
     font-weight: bold;
 }
 
-h1 {
+.markdown h1 {
     font-size: 2.5em;
 }
 
-h2 {
+.markdown h2 {
     font-size: 2em;
 }
 
-h3 {
+.markdown h3 {
     font-size: 1.5em;
 }
 
-h4 {
+.markdown h4 {
     font-size: 1.2em;
 }
 
-h5 {
+.markdown h5 {
     font-size: 1em;
 }
 
-h6 {
+.markdown h6 {
     font-size: 0.9em;
 }
 
-blockquote {
+.markdown blockquote {
     color: #666666;
     margin: 0;
     padding-left: 3em;
     border-left: 0.5em #eee solid;
+    background-color: #F7F7F7;
 }
 
-hr {
+.markdown hr {
     display: block;
     border: 0;
     border-top: 1px solid #aaa;
@@ -202,86 +207,92 @@ hr {
     padding: 0;
 }
 
-pre,
-code,
-kbd,
-samp {
+.markdown pre, code, kbd, samp {
     color: #000;
     font-family: monospace, monospace;
-    _font-family: 'courier new', monospace;
+    _font-family: 'Consolas', monospace;
     font-size: 0.98em;
 }
 
-pre {
-    white-space: pre;
+.markdown pre {
+    background-color: #222222;
+    padding: 1.5rem;
+}
+
+.markdown code{
+    font-family: "Consolas", Times, serif;
+    width: 100%;
+    display: inline-block;
+    color: white;
+
+}
+
+.markdown pre {
     white-space: pre-wrap;
     word-wrap: break-word;
 }
 
-b,
-strong {
+.markdown b,strong {
     font-weight: bold;
 }
 
-dfn {
+.markdown dfn {
     font-style: italic;
 }
 
-ins {
+.markdown ins {
     background: #ff9;
     color: #000;
     text-decoration: none;
 }
 
-mark {
+.markdown mark {
     background: #ff0;
     color: #000;
     font-style: italic;
     font-weight: bold;
 }
 
-sub,
-sup {
+.markdown sub, sup {
     font-size: 75%;
     line-height: 0;
     position: relative;
     vertical-align: baseline;
 }
 
-sup {
+.markdown sup {
     top: -0.5em;
 }
 
-sub {
+.markdown sub {
     bottom: -0.25em;
 }
 
-ul,
-ol {
+.markdown ul, ol {
     margin: 1em 0;
     padding: 0 0 0 2em;
 }
 
-li p:last-child {
+.markdown li p:last-child {
     margin: 0;
 }
 
-dd {
+.markdown dd {
     margin: 0 0 0 2em;
 }
 
-img {
+.markdown img {
     border: 0;
     -ms-interpolation-mode: bicubic;
     vertical-align: middle;
 }
 
-table {
+.markdown table {
     border-collapse: collapse;
     border-spacing: 0;
 }
 
-td {
+.markdown td {
     vertical-align: top;
 }
 
@@ -310,44 +321,39 @@ td {
         max-width: 100%;
     }
 
-    a,
-    a:visited {
+    .markdown  a, a:visited {
         text-decoration: underline;
     }
 
-    hr {
+    .markdown hr {
         height: 1px;
         border: 0;
         border-bottom: 1px solid black;
     }
 
-    a[href]:after {
+    .markdown a[href]:after {
         content: " (" attr(href) ")";
     }
 
-    abbr[title]:after {
+    .markdown abbr[title]:after {
         content: " (" attr(title) ")";
     }
 
-    .ir a:after,
-    a[href^="javascript:"]:after,
-    a[href^="#"]:after {
+    .markdown .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
         content: "";
     }
 
-    pre,
-    blockquote {
+    .markdown pre, blockquote {
         border: 1px solid #999;
         padding-right: 1em;
         page-break-inside: avoid;
     }
 
-    tr,
-    img {
+    .markdown tr, img {
         page-break-inside: avoid;
     }
 
-    img {
+    .markdown img {
         max-width: 100% !important;
     }
 
@@ -359,15 +365,12 @@ td {
         margin: 15mm 10mm 15mm 20mm;
     }
 
-    p,
-    h2,
-    h3 {
+    .markdown p, h2, h3 {
         orphans: 3;
         widows: 3;
     }
 
-    h2,
-    h3 {
+    .markdown h2, h3 {
         page-break-after: avoid;
     }
 }

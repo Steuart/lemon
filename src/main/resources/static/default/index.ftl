@@ -51,10 +51,12 @@
                             <h3>复仇者联盟3：无限战争</h3>
                             <span class="time">2018-02-03</span>
                         </div>
-                        <p>
-                            复仇者联盟3：无限战争》是漫威电影宇宙10周年的
-                            历史性集结，将为影迷们带来史诗版的终极对决。
-                        </p>
+                        <a href="/article">
+                            <p>
+                                复仇者联盟3：无限战争》是漫威电影宇宙10周年的
+                                历史性集结，将为影迷们带来史诗版的终极对决。
+                            </p>
+                        </a>
                         <div class="footer">
                             <div class="tag">
                                 <a href="/" style="background-color: blue;color: white">电子</a>
@@ -84,10 +86,12 @@
                             <h3>复仇者联盟3：无限战争</h3>
                             <span class="time">2018-02-03</span>
                         </div>
-                        <p>
-                            复仇者联盟3：无限战争》是漫威电影宇宙10周年的
-                            历史性集结，将为影迷们带来史诗版的终极对决。
-                        </p>
+                        <a href="/article">
+                            <p>
+                                复仇者联盟3：无限战争》是漫威电影宇宙10周年的
+                                历史性集结，将为影迷们带来史诗版的终极对决。
+                            </p>
+                        </a>
                         <div class="footer">
                             <div class="tag">
                                 <a href="/" style="background-color: blue;color: white">电子</a>
@@ -117,10 +121,12 @@
                             <h3>复仇者联盟3：无限战争</h3>
                             <span class="time">2018-02-03</span>
                         </div>
-                        <p>
-                            复仇者联盟3：无限战争》是漫威电影宇宙10周年的
-                            历史性集结，将为影迷们带来史诗版的终极对决。
-                        </p>
+                        <a href="/article">
+                            <p>
+                                复仇者联盟3：无限战争》是漫威电影宇宙10周年的
+                                历史性集结，将为影迷们带来史诗版的终极对决。
+                            </p>
+                        </a>
                         <div class="footer">
                             <div class="tag">
                                 <a href="/" style="background-color: blue;color: white">电子</a>
@@ -150,10 +156,12 @@
                             <h3>复仇者联盟3：无限战争</h3>
                             <span class="time">2018-02-03</span>
                         </div>
-                        <p>
-                            复仇者联盟3：无限战争》是漫威电影宇宙10周年的
-                            历史性集结，将为影迷们带来史诗版的终极对决。
-                        </p>
+                        <a href="/article">
+                            <p>
+                                复仇者联盟3：无限战争》是漫威电影宇宙10周年的
+                                历史性集结，将为影迷们带来史诗版的终极对决。
+                            </p>
+                        </a>
                         <div class="footer">
                             <div class="tag">
                                 <a href="/" style="background-color: blue;color: white">电子</a>
@@ -183,10 +191,12 @@
                             <h3>复仇者联盟3：无限战争</h3>
                             <span class="time">2018-02-03</span>
                         </div>
-                        <p>
-                            复仇者联盟3：无限战争》是漫威电影宇宙10周年的
-                            历史性集结，将为影迷们带来史诗版的终极对决。
-                        </p>
+                        <a href="/article">
+                            <p>
+                                复仇者联盟3：无限战争》是漫威电影宇宙10周年的
+                                历史性集结，将为影迷们带来史诗版的终极对决。
+                            </p>
+                        </a>
                         <div class="footer">
                             <div class="tag">
                                 <a href="/" style="background-color: blue;color: white">电子</a>
@@ -216,10 +226,12 @@
                             <h3>复仇者联盟3：无限战争</h3>
                             <span class="time">2018-02-03</span>
                         </div>
-                        <p>
-                            复仇者联盟3：无限战争》是漫威电影宇宙10周年的
-                            历史性集结，将为影迷们带来史诗版的终极对决。
-                        </p>
+                        <a href="/article">
+                            <p>
+                                复仇者联盟3：无限战争》是漫威电影宇宙10周年的
+                                历史性集结，将为影迷们带来史诗版的终极对决。
+                            </p>
+                        </a>
                         <div class="footer">
                             <div class="tag">
                                 <a href="/" style="background-color: blue;color: white">电子</a>
@@ -261,11 +273,11 @@
                 <div class="tag component">
                     <h3>热门标签：</h3>
                     <div>
-                        <span style="font-size: 2rem;background-color: #999999">钢铁侠</span>
-                        <span>钢铁侠大战绿巨人</span>
-                        <span style="font-size: 2rem;background-color: #0066ee">钢铁侠</span>
-                        <span style="font-size: 4rem;background-color: yellow">Raspberry pi</span>
-                        <span style="font-size: 3rem">钢铁侠</span>
+                        <a href="/tags" style="background-color: #999999">钢铁侠</a>
+                        <a href="/tags">钢铁侠大战绿巨人</a>
+                        <a href="/tags" style="background-color: #0066ee">钢铁侠</a>
+                        <a href="/tags" style="background-color: yellow">Raspberry pi</a>
+                        <a href="/tags">钢铁侠</a>
                     </div>
                 </div>
 

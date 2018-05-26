@@ -1,12 +1,11 @@
 <header>
     <nav>
         <div class="logo">
-            <a>logo</a>
+            <a href="/">logo</a>
         </div>
         <div class="menu">
             <a href="/">首页</a>
             <a href="/tags">标签</a>
-            <a href="/footprint">足迹</a>
         </div>
         <div class="search">
                 <span class="input">

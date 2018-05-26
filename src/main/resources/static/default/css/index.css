@@ -20,17 +20,35 @@
     justify-content: space-between;
     height: 15rem;
     margin-bottom: 1rem;
-    padding: 1rem;
+    padding: 1rem 1rem 1rem 2rem;
     box-shadow: 0 0.2rem 0.4rem 0 rgba(0, 0, 0, 0.2), 0 0.3rem 1rem 0 rgba(0, 0, 0, 0.19);
+    color: #D09E9E;
 }
 
 .body .left article .summary {
     width: 66%;
 }
 
+.body .left article .summary a:link {
+    text-decoration: none;
+    color: #D09E9E;
+}
+.body .left article .summary a:visited {
+    text-decoration: none;
+    color: #D09E9E;
+}
+.body .left article .summary a:hover {
+    text-decoration: none;
+}
+.body .left article .summary a:active {
+    text-decoration: none;
+    color: #D09E9E;
+}
+
 .body .left article .summary .title h3{
     display: inline-block;
     margin-bottom: 0;
+    color: #000000;
 }
 
 .body .left article .summary .title .time{
@@ -55,7 +73,7 @@
 }
 
 .body .left article .summary .footer .tag{
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 
 }
 
@@ -135,19 +153,20 @@
 }
 
 .body .right .component {
-    padding: 1rem;
+    padding: 1rem 2rem 0 2rem;
     min-height: 17rem;
     margin-bottom: 1rem;
     box-shadow: 0 0.2rem 0.4rem 0 rgba(0, 0, 0, 0.2), 0 0.3rem 1rem 0 rgba(0, 0, 0, 0.19);
 }
 
-.body .right .tag span {
+.body .right .tag a {
     background-color: blue;
     color: white;
     display: inline-block;
     border-radius: 2rem;
     padding: 0.5rem 1rem 0.5rem 1rem;
     margin-top: 0.5rem;
+    font-size: 1.3rem;
 }
 
 .body .right .ads {
