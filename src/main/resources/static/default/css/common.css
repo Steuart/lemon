@@ -122,6 +122,6 @@ footer {
     text-align: center;
     margin-top: 1rem;
     border-top: 0.1rem solid #eeeeee;
-    height: 15rem;
+    min-height: 8rem;
     background-color: black;
 }

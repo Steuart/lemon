@@ -1,0 +1,90 @@
+html,body {
+    height: 100%;
+}
+
+.footprint {
+    margin-top: 1rem;
+    height: 90%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+.footprint .content {
+    height: 100%;
+    width: 63.5%;
+    margin-right: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0.2rem 0.4rem 0 rgba(0, 0, 0, 0.2), 0 0.3rem 1rem 0 rgba(0, 0, 0, 0.19);
+}
+
+.footprint .content img{
+    max-width: 100%;
+}
+
+.footprint .time-line {
+    margin-left: 2rem;
+    height: 100%;
+    min-width: 33.5%;
+    box-shadow: 0 0.2rem 0.4rem 0 rgba(0, 0, 0, 0.2), 0 0.3rem 1rem 0 rgba(0, 0, 0, 0.19);
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.footprint .time-line::-webkit-scrollbar {
+    display: none;
+}
+
+.footprint .time-line ul{
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.footprint .time-line ul li{
+    margin-left: 5rem;
+    border-left: 0.5rem solid #494949;
+    min-height: 10rem;
+}
+
+.footprint .time-line ul li:first-child{
+    padding-top: 4rem;
+}
+
+.footprint .time-line ul li span{
+    height: 2rem;
+    display: inline-block;
+    vertical-align:middle;
+}
+
+.footprint .time-line ul li .time{
+    margin-left: -7.25rem;
+    font-size: 1rem;
+    line-height: 2rem;
+    text-align: center;
+}
+
+.footprint .time-line ul li .point{
+    background-color: #0066ee;
+    width: 2rem;
+    border-radius: 2rem;
+    z-index: 1;
+}
+
+.footprint .time-line ul li .grad{
+    font-size: 1rem;
+    content: '';
+    background: #494949;
+    width: 5rem;
+    height: 0.25rem;
+    margin-left: -1rem;
+    display: inline-block;
+    position: relative;
+    z-index: -1;
+    border-radius: 0.25rem;
+}
+
+.footprint .time-line ul li .describe{
+    margin-left: 1rem;
+    line-height: 2rem;
+}

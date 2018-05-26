@@ -80,4 +80,16 @@ public class IndexController {
         data.put("content",html);
         return "article";
     }
+
+    @RequestMapping("/footprint")
+    public String footprint(Map<String,Object> data){
+        data.put("title","足迹");
+        return "footprint";
+    }
+
+    @RequestMapping("/tags")
+    public String tags(Map<String,Object> data){
+        data.put("title","标签");
+        return "tags";
+    }
 }
