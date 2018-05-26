@@ -261,11 +261,11 @@
                 <div class="tag component">
                     <h3>热门标签：</h3>
                     <div>
-                        <span>钢铁侠</span>
-                        <span>钢铁侠</span>
-                        <span>钢铁侠</span>
-                        <span>钢铁侠</span>
-                        <span>钢铁侠</span>
+                        <span style="font-size: 2rem;background-color: #999999">钢铁侠</span>
+                        <span>钢铁侠大战绿巨人</span>
+                        <span style="font-size: 2rem;background-color: #0066ee">钢铁侠</span>
+                        <span style="font-size: 4rem;background-color: yellow">Raspberry pi</span>
+                        <span style="font-size: 3rem">钢铁侠</span>
                     </div>
                 </div>
 

@@ -79,6 +79,18 @@
     margin-bottom: 0.4rem;
 }
 
+.body .article .content .markdown {
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 0.2rem solid #eeeeee;
+}
+
+
+.body .article .content .comment {
+    height: 20rem;
+    background-color: #666666;
+}
+
 a {
     color: #0645ad;
     text-decoration: none;

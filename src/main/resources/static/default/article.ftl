@@ -9,7 +9,7 @@
         <#include "./header.ftl">
         <div class="body">
             <div class="article">
-                <div class="content markdown">
+                <div class="content">
                     <div class="title">树莓派</div>
                     <div class="info">
                         <img class="header-img" src="/${theme}/img/test.jpeg">
@@ -18,7 +18,13 @@
                             <div class="time">2018-05-10 15:00 字数 3739 阅读 6212 评论 74 喜欢 115 赞赏 4</div>
                         </div>
                     </div>
-                    ${content}
+                    <div class="markdown">
+                        ${content}
+                    </div>
+                    <#--<div class="comment">
+
+                        <textarea></textarea>
+                    </div>-->
                 </div>
                 <div class="catalog">
                     <h4>目录</h4>

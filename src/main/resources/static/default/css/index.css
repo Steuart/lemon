@@ -136,9 +136,18 @@
 
 .body .right .component {
     padding: 1rem;
-    height: 15rem;
+    min-height: 17rem;
     margin-bottom: 1rem;
     box-shadow: 0 0.2rem 0.4rem 0 rgba(0, 0, 0, 0.2), 0 0.3rem 1rem 0 rgba(0, 0, 0, 0.19);
+}
+
+.body .right .tag span {
+    background-color: blue;
+    color: white;
+    display: inline-block;
+    border-radius: 2rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    margin-top: 0.5rem;
 }
 
 .body .right .ads {
