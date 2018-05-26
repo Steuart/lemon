@@ -1,7 +1,5 @@
-        <footer>
-            <span>
-                blog since 2018.
-            </span>
-        </footer>
-    </body>
-</html>
+<footer>
+    <span>
+        blog since 2018.
+    </span>
+</footer>

@@ -41,7 +41,7 @@
 
 
 .body .article .content {
-    width: 55%;
+    width: 50%;
     border-right: 0.1rem solid #eeeeee;
     margin-right: 1rem;
     padding: 2rem;
@@ -52,11 +52,31 @@
 
 
 .body .article .catalog {
-    list-style:none;
-    padding-left: 1rem;
-    width: 15rem;
+    font-family: 'Microsoft Yahei', Helvetica, Arial, sans-serif;
+    padding: 1rem 2rem 1rem 2rem;
+    min-width: 20rem;
     position: fixed;
-    right: 3%;
+    left: 77%;
+    font-size: 1.5rem;
+    border: 0.1rem solid #eeeeee;
+    box-shadow: 0 0.2rem 0.4rem 0 rgba(0, 0, 0, 0.2), 0 0.3rem 1rem 0 rgba(0, 0, 0, 0.19);
+}
+
+.body .article .catalog h4 {
+    margin-top: 0;
+    text-align: center;
+    padding-bottom: 1rem;
+    border-bottom: 0.1rem solid #eeeeee;
+}
+
+
+.body .article .catalog ul {
+    list-style:none;
+    padding: 0;
+}
+
+.body .article .catalog ul li {
+    margin-bottom: 0.4rem;
 }
 
 a {

@@ -12,7 +12,7 @@
     width: 43%;
     border-right: 0.1rem solid #eeeeee;
     padding-top: 1rem;
-    padding-right: 1rem;
+    padding-right: 1.5rem;
 }
 
 .body .left article {
@@ -21,7 +21,7 @@
     height: 15rem;
     margin-bottom: 1rem;
     padding: 1rem;
-    border-bottom: 0.1rem solid #eeeeee;
+    box-shadow: 0 0.2rem 0.4rem 0 rgba(0, 0, 0, 0.2), 0 0.3rem 1rem 0 rgba(0, 0, 0, 0.19);
 }
 
 .body .left article .summary {
@@ -74,7 +74,7 @@
 .body .left article .summary .footer .operate span{
     display: inline-block;
     text-align: right;
-    width: 4.1rem;
+    width: 4.5rem;
 }
 
 .body .left article .summary .footer .operate i{
@@ -130,7 +130,7 @@
 
 .body .right {
     width: 18%;
-    margin-left: 2rem;
+    margin-left: 1.5rem;
     margin-top: 1rem;
 }
 
@@ -138,6 +138,7 @@
     padding: 1rem;
     height: 15rem;
     margin-bottom: 1rem;
+    box-shadow: 0 0.2rem 0.4rem 0 rgba(0, 0, 0, 0.2), 0 0.3rem 1rem 0 rgba(0, 0, 0, 0.19);
 }
 
 .body .right .ads {
