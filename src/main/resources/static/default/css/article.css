@@ -42,10 +42,10 @@
 
 
 .body .article .content {
-    width: 42%;
+    width: 45%;
     border-right: 0.1rem solid #eeeeee;
     margin-right: 1rem;
-    padding: 0rem 2rem 2rem 2rem;
+    padding: 0 2rem 2rem 2rem;
 }
 .body .article .content p {
     word-wrap:break-word;
@@ -220,7 +220,7 @@
 }
 
 .markdown code{
-    font-family: "Consolas", Times, serif;
+    font-family: "Consolas", arial, monospace;
     width: 100%;
     display: inline-block;
     color: white;

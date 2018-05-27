@@ -23,8 +23,6 @@ public class IndexController {
     @Resource(name = "userService")
     private UserService userService;
 
-    @Autowired
-    private SystemConfig systemConfig;
 
     @RequestMapping("/")
     public String index(Map<String,Object> model){

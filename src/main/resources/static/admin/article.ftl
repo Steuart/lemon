@@ -6,7 +6,7 @@
     <body>
     <#include "navbar.ftl">
     <div class="content">
-
+        <h1>写文章</h1>
     </div>
     </body>
 </html>

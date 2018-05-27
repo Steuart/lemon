@@ -6,7 +6,7 @@
     <body>
     <#include "navbar.ftl">
     <div class="content">
-
+        <h1>系统设置</h1>
     </div>
     </body>
 </html>

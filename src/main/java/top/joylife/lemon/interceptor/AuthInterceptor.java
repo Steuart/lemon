@@ -26,21 +26,25 @@ public class AuthInterceptor implements HandlerInterceptor {
 
     @Override
     public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o) throws Exception {
-        System.out.println("拦截器MyInterceptor------->1、请求之前调用，也就是Controller方法调用之前。");
         return true;
     }
 
     @Override
-    public void postHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o, ModelAndView modelAndView) throws Exception {
+    public void postHandle(HttpServletRequest request, HttpServletResponse response, Object o, ModelAndView modelAndView) throws Exception {
         if(modelAndView!=null){
-            modelAndView.setViewName(systemConfig.getTheme()+"/"+modelAndView.getViewName());
-            modelAndView.addObject("theme",systemConfig.getTheme());
+            String uri = request.getRequestURI();
+            if(uri.startsWith("/admin")){
+                modelAndView.setViewName("admin/"+modelAndView.getViewName());
+                modelAndView.addObject("theme","admin");
+            }else{
+                modelAndView.setViewName(systemConfig.getTheme()+"/"+modelAndView.getViewName());
+                modelAndView.addObject("theme",systemConfig.getTheme());
+            }
         }
 
     }
 
     @Override
     public void afterCompletion(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o, Exception e) throws Exception {
-        System.out.println("拦截器MyInterceptor------->3、请求结束之后被调用，主要用于清理工作。");
     }
 }
