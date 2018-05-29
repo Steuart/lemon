@@ -7,6 +7,37 @@ $(document).ready(function () {
     };
     new Editor(getIt("markdown"), getIt("preview"),converter);
 
+    /*按钮点击事件*/
+    var showFlag = true;
+    $("#gear").click(function () {
+        if(!showFlag){
+            $(".operate").css("right","-20%");
+            showFlag = true
+        }else{
+            $(".operate").css("right","0");
+            showFlag = false;
+        }
+    });
+
+    var addTagShowFlag = false;
+    $("#add-tag").click(function () {
+        if(!addTagShowFlag){
+            $(".tag-select").show();
+            $(".mask").show();
+            addTagShowFlag = true;
+        }else{
+            $(".tag-select").hide();
+            $(".mask").hide();
+            addTagShowFlag = false;
+        }
+    });
+    
+    $("#mask").click(function () {
+        $(".tag-select").hide();
+        $(".mask").hide();
+        addTagShowFlag = false;
+    });
+
 });
 
 function Editor(input, preview,converter) {

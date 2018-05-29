@@ -17,8 +17,54 @@
                 <div class="preview markdown" id="preview"></div>
             </div>
             <div class="operate">
-                <i class="fa fa-cog" aria-hidden="true" class="gear"></i>
+                <div class="gear" id="gear">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </div>
+                <ul>
+                    <li class="title">
+                        <p>标题</p>
+                        <input type="text">
+                    </li>
+                    <li class="cover">
+                        <p>封面</p>
+                        <img src="/${theme}/img/test.jpg">
+                    </li>
+                    <li class="summary">
+                        <p>摘要</p>
+                        <textarea></textarea>
+                    </li>
+                    <li class="tags">
+                        <p>
+                            标签
+                            <i class="fa fa-plus" aria-hidden="true" id="add-tag"></i>
+                        </p>
+                        <div class="tag">
+                            <span>树莓派</span>
+                            <span>x</span>
+                        </div>
+                        <div class="tag">
+                            <span>树莓派</span>
+                            <span>x</span>
+                        </div>
+                        <div class="tag">
+                            <span>树莓派</span>
+                            <span>x</span>
+                        </div>
+                        <div class="tag">
+                            <span>树莓派</span>
+                            <span>x</span>
+                        </div>
+                        <div class="tag">
+                            <span>树莓派</span>
+                            <span>x</span>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
+        <div class="tag-select">
+
+        </div>
+        <div class="mask" id="mask"></div>
     </body>
 </html>
