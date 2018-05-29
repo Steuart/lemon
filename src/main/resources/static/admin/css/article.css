@@ -25,13 +25,14 @@
 }
 
 .content .edit .write-area textarea {
-    width: 100%;
+    width: 93%;
     height: 100%;
     overflow: scroll;
     resize: none;
     font-size: 1.4rem;
     border: none;
     padding-left: 2rem;
+    text-align:justify;
 }
 
 .content .edit .write-area textarea:focus {
@@ -48,13 +49,28 @@
     height: 100%;
     width: 48%;
     font-size: 1.4rem;
-    padding: 0 1rem 0 1rem;
+    text-align:justify;
+    padding: 0 2rem 0 1rem;
     border-left: #eeeeee 0.15rem dotted;
     overflow-y: scroll;
     overflow-x: hidden;
 
 }
 
+.content .operate {
+    height: 100%;
+    width: 20%;
+    background-color: #0066ee;
+    position: absolute;
+    right: 0;
+    opacity: 0.5;
+}
+
+.content .operate .gear {
+    margin-right: 2rem;
+    display: inline-block;
+    font-size: 2rem;
+}
 
 .markdown li {
     line-height: 2.5rem;
@@ -179,29 +195,22 @@
 }
 
 .markdown pre {
-    background-color: #222222;
-    padding: 1.5rem;
-}
-
-.markdown pre {
-    background-color: #222222;
-    padding: 1.5rem;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    margin-right: 1rem;
 }
 
 .markdown code{
     font-family: "Consolas", arial, monospace;
-    width: 100%;
+    width: 96%;
     display: inline-block;
     color: white;
     background-color: #222222;
     padding: 1.5rem;
-
+    margin-right: 1rem;
 }
 
-.markdown pre {
-    white-space: pre-wrap;
-    word-wrap: break-word;
-}
+
 
 .markdown b,strong {
     font-weight: bold;
