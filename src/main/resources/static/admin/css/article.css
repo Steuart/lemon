@@ -82,6 +82,18 @@
     padding: 1rem 2rem 1rem 2rem;
 }
 
+.content .operate ul p{
+    margin: 1rem 0 0.75rem 0;
+}
+.content .operate ul .title input{
+    width: 100%;
+    height: 1.6rem;
+    border-radius: 0.5rem;
+    font-size: 1.4rem;
+    border: none;
+    outline: none;
+}
+
 .content .operate ul li{
     margin: 0;
     padding: 0;
@@ -92,16 +104,61 @@
     overflow: hidden;
     height: 15rem;
 }
+
+.content .operate .cover input{
+    display: none;
+
+}
+
+.content .operate .cover label {
+    width: 100%;
+    height: 15rem;
+    background-color: #66afe9;
+}
+
 .content .operate .cover img{
     max-width: 100%;
 }
 
-.content .operate .tags .tag{
+.content .operate .summary textarea{
+    overflow: scroll;
+    resize: none;
+    width: 100%;
+    height: 10rem;
+    font-size: 1.4rem;
+    border-radius: 0.5rem;
+    outline: none;
+    border: none;
+}
+
+.content .operate .tags dt{
+    font-size: 1.3rem;
     display: inline-block;
     background-color: #ffff99;
 }
 
-.tag-select {
+.content .operate .save{
+    width: 100%;
+    height: 2.5rem;
+    background-color: #0066ee;
+    border-radius: 1rem;
+    text-align: center;
+}
+.content .operate .save:active{
+    background-color: #66afe9;
+}
+
+.content .operate .save button{
+    border: 0;
+    background-color: inherit;
+    outline: none;
+    height: 2.5rem;
+    color: white;
+    font-size: 1.5rem;
+}
+
+
+.tags-container {
     width: 55%;
     height: 70%;
     position: absolute;
@@ -112,7 +169,99 @@
     z-index: 3;
     display: none;
     border-radius: 0.5rem;
+    padding: 1.5rem;
 }
+
+.tags-container ul {
+    list-style: none;
+    padding: 0;
+}
+.tags-container button {
+    border: 0;
+    outline: none;
+    background-color: inherit;
+}
+
+.tags-container ul li {
+    display: inline-block;
+}
+
+.tags-container .add {
+    border-bottom: 0.1rem solid #eeeeee;
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.tags-container .add li {
+    margin-right: 1rem;
+}
+
+.tags-container .add li input{
+    margin-left: 0.5rem;
+    border-radius: 0.4rem;
+    height: 1.5rem;
+    border: 0.1rem solid #adadad;
+    outline: none;
+}
+
+.tags-container .add button{
+    background-color: #0066ee;
+    color: white;
+    padding: 0.25rem 1rem 0.25rem 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+
+.tags-container .add button:active{
+    background-color: #66afe9;
+    color: white;
+}
+
+.tags-container .tags {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 70%;
+    margin: 0;
+    font-size: 1.4rem;
+
+}
+.tags-container .tags li{
+    background-color: #0066ee;
+    margin-bottom: 0.5rem;
+    border-radius: 1rem;
+    padding: 0.25rem 1rem 0.25rem 1rem;
+    color: white;
+}
+
+.tags-container .delete {
+    border-top: 0.1rem solid #eeeeee;
+    padding-top: 1rem;
+    width: 100%;
+    text-align: right;
+}
+.tags-container .delete input {
+    border-radius: 0.5rem;
+    margin-right: 1rem;
+    height: 1.5rem;
+    border: 0.1rem solid #adadad;
+    outline: none;
+}
+
+.tags-container .delete button {
+    background-color: red;
+    padding: 0.25rem 1rem 0.25rem 1rem;
+    color: white;
+    border-radius: 1rem;
+    cursor: pointer;
+    margin-right: 1.5rem;
+}
+
+.tags-container .delete button:active {
+    background-color: #aaaaaa;
+    color: white;
+}
+
 
 .mask {
     width: 100%;

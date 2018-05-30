@@ -22,18 +22,18 @@ $(document).ready(function () {
     var addTagShowFlag = false;
     $("#add-tag").click(function () {
         if(!addTagShowFlag){
-            $(".tag-select").show();
+            $(".tags-container").show();
             $(".mask").show();
             addTagShowFlag = true;
         }else{
-            $(".tag-select").hide();
+            $(".tags-container").hide();
             $(".mask").hide();
             addTagShowFlag = false;
         }
     });
     
     $("#mask").click(function () {
-        $(".tag-select").hide();
+        $(".tags-container").hide();
         $(".mask").hide();
         addTagShowFlag = false;
     });

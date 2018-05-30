@@ -22,48 +22,73 @@
                 </div>
                 <ul>
                     <li class="title">
-                        <p>标题</p>
+                        <p>标题:</p>
                         <input type="text">
                     </li>
                     <li class="cover">
-                        <p>封面</p>
-                        <img src="/${theme}/img/test.jpg">
+                        <p>封面:</p>
+                        <label for="upload-img">
+                            <img src="/${theme}/img/test.jpg">
+                        </label>
+                        <input type="file" id="upload-img" name="pic" accept="image/gif"/>
                     </li>
                     <li class="summary">
-                        <p>摘要</p>
+                        <p>摘要:</p>
                         <textarea></textarea>
                     </li>
                     <li class="tags">
                         <p>
-                            标签
+                            标签:
                             <i class="fa fa-plus" aria-hidden="true" id="add-tag"></i>
                         </p>
-                        <div class="tag">
-                            <span>树莓派</span>
-                            <span>x</span>
-                        </div>
-                        <div class="tag">
-                            <span>树莓派</span>
-                            <span>x</span>
-                        </div>
-                        <div class="tag">
-                            <span>树莓派</span>
-                            <span>x</span>
-                        </div>
-                        <div class="tag">
-                            <span>树莓派</span>
-                            <span>x</span>
-                        </div>
-                        <div class="tag">
-                            <span>树莓派</span>
-                            <span>x</span>
-                        </div>
+                        <dl>
+                            <dt>
+                                <span>树莓派</span>
+                                <span>x</span>
+                            </dt>
+                            <dt>
+                                <span>树莓派</span>
+                                <span>x</span>
+                            </dt>
+                            <dt>
+                                <span>树莓派</span>
+                                <span>x</span>
+                            </dt>
+                            <dt>
+                                <span>树莓派</span>
+                                <span>x</span>
+                            </dt>
+                        </dl>
+                    </li>
+                    <li class="save">
+                        <button>保存</button>
                     </li>
                 </ul>
             </div>
         </div>
-        <div class="tag-select">
-
+        <div class="tags-container">
+            <ul class="add">
+                <li>
+                    名字<input type="text">
+                </li>
+                <li>
+                    背景颜色<input type="text">
+                </li>
+                <li>
+                    字体颜色<input type="text">
+                </li>
+                <button type="button" class="save">保存</button>
+            </ul>
+            <ul class="tags">
+                <li>猫咪</li>
+                <li>排骨</li>
+                <li>猫咪</li>
+                <li>排骨</li>
+            </ul>
+            <div class="delete">
+                <input type="text">
+                <button type="button">删除</button>
+            </div>
         </div>
         <div class="mask" id="mask"></div>
     </body>
