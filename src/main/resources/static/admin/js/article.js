@@ -19,6 +19,11 @@ $(document).ready(function () {
         }
     });
 
+    $("#edit").click(function () {
+        $(".operate").css("right","-20%");
+        showFlag = true
+    });
+
     var addTagShowFlag = false;
     $("#add-tag").click(function () {
         if(!addTagShowFlag){

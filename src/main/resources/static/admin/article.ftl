@@ -9,8 +9,10 @@
     <body>
         <#include "navbar.ftl">
         <div class="content">
-            <p class="head-bar">写文章</p>
-            <div class="edit">
+            <div class="head-bar">
+                <span>写文章 /</span>
+            </div>
+            <div class="edit" id="edit">
                 <div class="write-area">
                     <textarea id="markdown" oninput="this.editor.update()" onkeydown="tab(this)">请写点什么</textarea>
                 </div>
@@ -44,25 +46,23 @@
                         <dl>
                             <dt>
                                 <span>树莓派</span>
-                                <span>x</span>
+                                <i class="fa fa-times" aria-hidden="true"></i>
                             </dt>
                             <dt>
                                 <span>树莓派</span>
-                                <span>x</span>
+                                <i class="fa fa-times" aria-hidden="true"></i>
                             </dt>
                             <dt>
                                 <span>树莓派</span>
-                                <span>x</span>
+                                <i class="fa fa-times" aria-hidden="true"></i>
                             </dt>
                             <dt>
                                 <span>树莓派</span>
-                                <span>x</span>
+                                <i class="fa fa-times" aria-hidden="true"></i>
                             </dt>
                         </dl>
                     </li>
-                    <li class="save">
-                        <button>保存</button>
-                    </li>
+                    <button class="save" type="button">保存</button>
                 </ul>
             </div>
         </div>

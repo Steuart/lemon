@@ -7,6 +7,14 @@
     height: 6%;
     margin: 0;
     padding: 0;
+    border-bottom: 0.1rem solid #eeeeee;
+    color: #aaaaaa;
+}
+.content .head-bar span{
+    margin-top: 0.7%;
+    margin-left: 2rem;
+    font-size: 1.4rem;
+    display: inline-block;
 }
 
 .content .edit {
@@ -20,7 +28,7 @@
 .content .edit .write-area {
     height: 100%;
     width: 48%;
-    padding:0;
+    padding:1.2rem 0 0 0;
 
 }
 
@@ -62,7 +70,7 @@
     width: 20%;
     background-color:#eeeeee;
     position: absolute;
-    right: 0;
+    right: -20%;
 }
 
 .content .operate .gear {
@@ -83,7 +91,8 @@
 }
 
 .content .operate ul p{
-    margin: 1rem 0 0.75rem 0;
+    margin: 1rem 0 0.5rem 0;
+    font-size: 1.4rem;
 }
 .content .operate ul .title input{
     width: 100%;
@@ -102,7 +111,7 @@
 .content .operate .cover {
     width: 100%;
     overflow: hidden;
-    height: 15rem;
+    height: 12rem;
 }
 
 .content .operate .cover input{
@@ -112,7 +121,7 @@
 
 .content .operate .cover label {
     width: 100%;
-    height: 15rem;
+    height: 12rem;
     background-color: #66afe9;
 }
 
@@ -135,26 +144,42 @@
     font-size: 1.3rem;
     display: inline-block;
     background-color: #ffff99;
+    padding: 0.25rem 1rem 0.25rem 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 1rem;
+    position: relative;
+}
+.content .operate .tags dt i{
+    top: 0;
+    position: absolute;
+    right: 0;
+    font-size: 1.5rem;
+    color: red;
+    display: none;
 }
 
+.content .operate .tags dt:hover i{
+    display: inline-block;
+}
+
+
+
 .content .operate .save{
-    width: 100%;
-    height: 2.5rem;
+    width: 80%;
+    height: 2rem;
     background-color: #0066ee;
     border-radius: 1rem;
     text-align: center;
+    border: 0;
+    outline: none;
+    color: white;
+    font-size: 1.4rem;
+    padding: 0.2rem;
+    position: absolute;
+    bottom: 2rem;
 }
 .content .operate .save:active{
     background-color: #66afe9;
-}
-
-.content .operate .save button{
-    border: 0;
-    background-color: inherit;
-    outline: none;
-    height: 2.5rem;
-    color: white;
-    font-size: 1.5rem;
 }
 
 
