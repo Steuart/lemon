@@ -28,7 +28,7 @@ public class AdminController {
     public String user(Map<String,Object> data){
         data.put("title","总览");
         data.put("user","focus");
-        return "overview";
+        return "user";
     }
 
     @RequestMapping("/comment")
@@ -43,6 +43,13 @@ public class AdminController {
         data.put("title","总览");
         data.put("article","focus");
         return "article";
+    }
+
+    @RequestMapping("/articleList")
+    public String articleList(Map<String,Object> data){
+        data.put("title","总览");
+        data.put("articleList","focus");
+        return "articleList";
     }
 
     @RequestMapping("/tags")

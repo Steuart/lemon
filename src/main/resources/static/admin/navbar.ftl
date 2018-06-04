@@ -13,8 +13,13 @@
         <li class="${comment!}">
             <a href="/${theme}/comment">评论管理</a>
         </li>
-        <li class="${article!}">
-            <a href="/${theme}/article">写文章</a>
+        <li>
+            <a class="${articleList!}" href="/${theme}/articleList">文章管理</a>
+            <ul>
+                <li class="${article!}">
+                    <a href="/${theme}/article">写文章</a>
+                </li>
+            </ul>
         </li>
         <li class="${tags!}">
             <a href="/${theme}/tags">标签管理</a>

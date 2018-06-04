@@ -6,7 +6,9 @@
     <body>
     <#include "navbar.ftl">
     <div class="content">
-        <h1>总览</h1>
+        <div class="head-bar">
+            <span>总览 /</span>
+        </div>
     </div>
     </body>
 </html>

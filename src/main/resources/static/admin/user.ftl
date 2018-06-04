@@ -6,7 +6,9 @@
     <body>
     <#include "navbar.ftl">
     <div class="content">
-        <h1>用户管理</h1>
+        <div class="head-bar">
+            <span>用户管理 /</span>
+        </div>
     </div>
     </body>
 </html>
