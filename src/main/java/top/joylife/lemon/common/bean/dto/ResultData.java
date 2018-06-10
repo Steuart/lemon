@@ -3,11 +3,11 @@ package top.joylife.lemon.common.bean.dto;
 import lombok.Data;
 
 @Data
-public class ResultData {
+public class ResultData<T> {
 
     private int code;
 
     private String msg;
 
-    private Object Data;
+    private T Data;
 }
