@@ -1,0 +1,23 @@
+package top.joylife.lemon.dao;
+
+import top.joylife.lemon.dao.entity.ArticleTag;
+
+import java.util.List;
+
+/**
+ * created by wuhaiming on 2018/6/20
+ */
+public interface ArticleTagDao {
+
+    /**
+     * 批量添加
+     * @param articleTags
+     */
+    void batchAdd(List<ArticleTag> articleTags);
+
+    /**
+     * 批量删除
+     * @param tagIds
+     */
+    void batchDelete(List<Integer> ids);
+}

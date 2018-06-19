@@ -17,7 +17,13 @@ public class ArticleTag {
     @GeneratedValue(generator = "JDBC")
     private Integer id;
 
+    /**
+     * 文章id
+     */
     private Integer articleId;
 
+    /**
+     * 标签id
+     */
     private Integer tagId;
 }

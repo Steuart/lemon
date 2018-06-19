@@ -8,29 +8,24 @@ import javax.persistence.Table;
 import java.util.Date;
 
 /**
- * created by wuhaiming on 2018/2/9
+ * created by wuhaiming on 2018/6/20
  */
 @Data
-@Table(name = "tag")
-public class Tag {
+@Table(name = "classify")
+public class Classify {
 
     @Id
     @GeneratedValue(generator = "JDBC")
     private Integer id;
 
     /**
-     * 标签名字
+     * 分类名字
      */
     private String name;
 
     /**
-     * 标签下的文章数
-     */
-    private Integer articleNumber;
-
-    /**
      * 创建时间
      */
-    private Date dateCreate;
+    private Date createDate;
 
 }

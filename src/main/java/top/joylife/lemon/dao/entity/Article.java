@@ -31,19 +31,43 @@ public class Article {
      */
     private String authorName;
 
+    /**
+     * 封面图片
+     */
     private String coverImg;
 
+    /**
+     * 摘要
+     */
     private String summary;
 
+    /**
+     * 分类id
+     */
     private String classifyId;
 
+    /**
+     * html内容
+     */
     private String html;
 
+    /**
+     * markdown内容
+     */
     private String markdown;
 
+    /**
+     * 创建时间
+     */
     private Date dateCreate;
 
+    /**
+     * 更新时间
+     */
     private Date dateUpdate;
 
+    /**
+     * 删除时间
+     */
     private Date dateDelete;
 }
