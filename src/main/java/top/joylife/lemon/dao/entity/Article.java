@@ -17,16 +17,27 @@ public class Article {
     @Id
     @GeneratedValue(generator = "JDBC")
     private Integer id;
-
+    /**
+     * 文章标题
+     */
     private String title;
 
+    /**
+     * 作者id
+     */
     private String authorId;
-
+    /**
+     * 作者
+     */
     private String authorName;
+
+    private String coverImg;
 
     private String summary;
 
-    private String content;
+    private String classifyId;
+
+    private String html;
 
     private String markdown;
 
