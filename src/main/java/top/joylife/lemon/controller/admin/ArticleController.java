@@ -1,6 +1,7 @@
 package top.joylife.lemon.controller.admin;
 
 import com.alibaba.fastjson.JSON;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -24,6 +25,7 @@ public class ArticleController {
      * @param id
      * @return
      */
+    @ApiOperation(value = "获取文章")
     @RequestMapping(value = "/{id}",method = RequestMethod.GET)
     public ResultData<ArticleDto> getArticle(@PathVariable Integer id){
         ArticleDto dto = new ArticleDto();
