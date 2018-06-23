@@ -4,9 +4,11 @@ import com.vladsch.flexmark.ast.Node;
 import com.vladsch.flexmark.html.HtmlRenderer;
 import com.vladsch.flexmark.parser.Parser;
 import com.vladsch.flexmark.util.options.MutableDataSet;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import top.joylife.lemon.common.bean.dto.ResultData;
 import top.joylife.lemon.common.util.ReUtil;
@@ -24,19 +26,22 @@ public class IndexController {
     private UserService userService;
 
 
-    @RequestMapping("/")
+    @ApiOperation("首页")
+    @RequestMapping(value = "/",method = RequestMethod.GET)
     public String index(Map<String,Object> model){
         model.put("title","首页");
         return "index";
     }
 
-    @RequestMapping("/index")
+    @ApiOperation("首页")
+    @RequestMapping(value = "/index",method = RequestMethod.GET)
     public String home(){
 
         return "index";
     }
 
-    @RequestMapping("/user")
+    @ApiOperation("不知道干嘛的")
+    @RequestMapping(value = "/user",method = RequestMethod.GET)
     @ResponseBody
     public ResultData tran(){
         Map<String,Object> data = new HashMap<>();
@@ -44,7 +49,8 @@ public class IndexController {
         return ReUtil.success(data);
     }
 
-    @RequestMapping("/article")
+    @ApiOperation("获取文章列表")
+    @RequestMapping(value = "/article",method = RequestMethod.GET)
     public String article(Map<String,Object> data){
         data.put("title","文章");
         String content="树莓派树莓派树莓派树莓派树莓派树莓派 \n" +
@@ -83,13 +89,15 @@ public class IndexController {
         return "article";
     }
 
-    @RequestMapping("/footprint")
+    @ApiOperation("获取足迹")
+    @RequestMapping(value = "/footprint", method = RequestMethod.GET)
     public String footprint(Map<String,Object> data){
         data.put("title","足迹");
         return "footprint";
     }
 
-    @RequestMapping("/tags")
+    @ApiOperation("获取标签")
+    @RequestMapping(value = "/tags", method = RequestMethod.GET)
     public String tags(Map<String,Object> data){
         data.put("title","标签");
         return "tags";

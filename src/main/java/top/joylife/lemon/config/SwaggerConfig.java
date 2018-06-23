@@ -1,5 +1,6 @@
 package top.joylife.lemon.config;
 
+import com.google.common.base.Predicates;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.ApiInfoBuilder;
@@ -22,7 +23,7 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.any())
+                .apis(Predicates.not(RequestHandlerSelectors.basePackage("org.springframework.boot")))
                 .paths(PathSelectors.any())
                 .build();
     }
