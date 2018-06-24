@@ -44,7 +44,7 @@ public class Article {
     /**
      * 分类id
      */
-    private String classifyId;
+    private Integer classifyId;
 
     /**
      * html内容

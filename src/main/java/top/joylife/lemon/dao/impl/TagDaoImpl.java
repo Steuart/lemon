@@ -32,6 +32,20 @@ public class TagDaoImpl implements TagDao {
     }
 
     /**
+     * 根据名字获取标签列表
+     *
+     * @param names
+     * @return
+     */
+    @Override
+    public List<Tag> listByName(List<String> names) {
+        Example example = new Example(Tag.class);
+        example.createCriteria()
+                .andIn("name",names);
+        return tagMapper.selectByExample(example);
+    }
+
+    /**
      * 添加标签
      *
      * @param tag

@@ -21,6 +21,16 @@ public class ArticleDto {
     private String title;
 
     /**
+     * 作者名字
+     */
+    private String authName;
+
+    /**
+     * 作者id
+     */
+    private String authId;
+
+    /**
      * 创建时间
      */
     private Date createDate;
@@ -42,12 +52,13 @@ public class ArticleDto {
     /**
      * 分类
      */
-    private String classify;
+    private Integer classifyId;
 
     /**
      * 文章内容,markdown格式
      */
     private String markdown;
+
 
     /**
      * 文章内容html格式

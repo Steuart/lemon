@@ -17,6 +17,13 @@ public interface TagDao {
     Tag getByName(String name);
 
     /**
+     * 根据名字获取标签列表
+     * @param names
+     * @return
+     */
+    List<Tag> listByName(List<String> names);
+
+    /**
      * 添加标签
      * @param tag
      * @return
