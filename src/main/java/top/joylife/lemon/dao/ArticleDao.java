@@ -8,6 +8,13 @@ import top.joylife.lemon.dao.entity.Article;
 public interface ArticleDao {
 
     /**
+     * 根据id查询
+     * @param id
+     * @return
+     */
+    Article get(Integer id);
+
+    /**
      * 保存
      * @param article
      * @return

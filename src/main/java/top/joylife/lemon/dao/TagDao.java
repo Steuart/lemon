@@ -24,6 +24,13 @@ public interface TagDao {
     List<Tag> listByName(List<String> names);
 
     /**
+     * 根据id查询标签列表
+     * @param ids
+     * @return
+     */
+    List<Tag> listById(List<Integer> ids);
+
+    /**
      * 添加标签
      * @param tag
      * @return

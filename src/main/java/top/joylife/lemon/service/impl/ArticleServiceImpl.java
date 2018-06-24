@@ -15,7 +15,6 @@ import top.joylife.lemon.dao.entity.Tag;
 import top.joylife.lemon.service.ArticleService;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -48,6 +47,80 @@ public class ArticleServiceImpl implements ArticleService {
     @Transactional
     public Integer add(ArticleDto articleDto) {
         //保存文章
+        Article article = buildArticle(articleDto);
+        articleDao.save(article);
+
+        //保存标签
+        List<String> names = articleDto.getTags();
+        saveTag(names);
+
+        //保存文章标签关系
+        saveArticleTag(names,article.getId());
+        return articleDto.getId();
+    }
+
+    /**
+     * 更新文章
+     *
+     * @param articleDto
+     * @return
+     */
+    @Override
+    public Integer update(ArticleDto articleDto) {//保存文章
+        Article article = buildArticle(articleDto);
+        articleDao.update(article);
+
+        //保存标签
+        List<String> names = articleDto.getTags();
+        saveTag(names);
+
+        //删除旧的标签文章关系
+        articleTagDao.deleteByArticleId(articleDto.getId());
+        //保存文章标签关系
+        saveArticleTag(names,article.getId());
+        return articleDto.getId();
+    }
+
+    /**
+     * 根据id查询文章
+     *
+     * @param id
+     * @return
+     */
+    @Override
+    public ArticleDto getById(Integer id) {
+        ArticleDto articleDto = new ArticleDto();
+        //获取文章信息
+        Article article = articleDao.get(id);
+        articleDto.setId(article.getId());
+        articleDto.setMarkdown(article.getMarkdown());
+        articleDto.setAuthId(article.getAuthorId());
+        articleDto.setAuthName(article.getAuthorName());
+        articleDto.setHtml(article.getHtml());
+        articleDto.setClassifyId(article.getClassifyId());
+        articleDto.setCoverImg(article.getCoverImg());
+        articleDto.setSummary(article.getSummary());
+        articleDto.setTitle(article.getTitle());
+
+        //获取标签信息
+        List<ArticleTag> articleTags = articleTagDao.listByArticleId(article.getId());
+        if(!CollectionUtils.isEmpty(articleTags)){
+            List<String> tagNames = new ArrayList<>();
+            articleTags.forEach(articleTag -> {
+                tagNames.add(articleTag.getTagName());
+            });
+            articleDto.setTags(tagNames);
+        }
+
+        return articleDto;
+    }
+
+    /**
+     * 构建文章信息
+     * @param articleDto
+     * @return
+     */
+    private Article buildArticle(ArticleDto articleDto){
         Article article = new Article();
         article.setAuthorName(articleDto.getAuthName());
         article.setAuthorId(articleDto.getAuthId());
@@ -57,10 +130,16 @@ public class ArticleServiceImpl implements ArticleService {
         article.setMarkdown(articleDto.getMarkdown());
         article.setSummary(articleDto.getSummary());
         article.setTitle(article.getTitle());
-        articleDao.save(article);
-        Integer articleId = article.getId();
-        //保存标签
-        List<String> names = articleDto.getTags();
+        article.setId(articleDto.getId());
+        return article;
+    }
+
+    /**
+     * 保存标签
+     * @param names
+     * @return
+     */
+    private void saveTag(List<String> names){
         Map<String,Tag> tagMap = new HashMap<>();
         if(!CollectionUtils.isEmpty(names)){
             List<Tag> tags = tagDao.listByName(names);
@@ -79,35 +158,25 @@ public class ArticleServiceImpl implements ArticleService {
                     addTags.add(tag);
                 }
             });
-            List<Tag> saveTag = tagDao.batchAdd(tags);
-            saveTag.forEach(tag->{
-                tagMap.put(tag.getName(),tag);
-            });
+            tagDao.batchAdd(tags);
         }
-        //删除旧的标签文章关系
-        articleTagDao.deleteByArticleId(articleId);
+    }
+
+    /**
+     * 保存文章标签关系
+     * @param names
+     */
+    private void saveArticleTag(List<String> names,Integer articleId){
         //保存标签文章关系
         if(!CollectionUtils.isEmpty(names)){
             List<ArticleTag> articleTags = new ArrayList<>();
-            tagMap.forEach((name,key)->{
+            names.forEach(name ->{
                 ArticleTag articleTag = new ArticleTag();
                 articleTag.setArticleId(articleId);
-                articleTag.setTagId(key.getId());
+                articleTag.setTagName(name);
                 articleTags.add(articleTag);
             });
             articleTagDao.batchAdd(articleTags);
         }
-        return articleId;
-    }
-
-    /**
-     * 根据id查询文章
-     *
-     * @param id
-     * @return
-     */
-    @Override
-    public ArticleDto getById(Integer id) {
-        return null;
     }
 }

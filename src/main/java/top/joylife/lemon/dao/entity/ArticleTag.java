@@ -23,7 +23,7 @@ public class ArticleTag {
     private Integer articleId;
 
     /**
-     * 标签id
+     * 标签名
      */
-    private Integer tagId;
+    private String tagName;
 }

@@ -46,6 +46,20 @@ public class TagDaoImpl implements TagDao {
     }
 
     /**
+     * 根据id查询标签列表
+     *
+     * @param ids
+     * @return
+     */
+    @Override
+    public List<Tag> listById(List<Integer> ids) {
+        Example example = new Example(Tag.class);
+        example.createCriteria()
+                .andIn("id",ids);
+        return tagMapper.selectByExample(example);
+    }
+
+    /**
      * 添加标签
      *
      * @param tag

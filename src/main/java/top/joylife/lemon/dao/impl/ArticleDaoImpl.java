@@ -17,6 +17,16 @@ public class ArticleDaoImpl implements ArticleDao {
     @Autowired
     private ArticleMapper articleMapper;
 
+    /**
+     * 根据id查询
+     *
+     * @param id
+     * @return
+     */
+    @Override
+    public Article get(Integer id) {
+        return articleMapper.selectByPrimaryKey(id);
+    }
 
     /**
      * 保存

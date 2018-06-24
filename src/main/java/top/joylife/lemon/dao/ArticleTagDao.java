@@ -26,4 +26,11 @@ public interface ArticleTagDao {
      * @param articleId
      */
     void deleteByArticleId(Integer articleId);
+
+    /**
+     * 根据文章id查询
+     * @param articleId
+     * @return
+     */
+    List<ArticleTag> listByArticleId(Integer articleId);
 }

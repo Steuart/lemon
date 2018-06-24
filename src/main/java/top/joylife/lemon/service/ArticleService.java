@@ -15,6 +15,13 @@ public interface ArticleService {
     Integer add(ArticleDto articleDto);
 
     /**
+     * 更新文章
+     * @param articleDto
+     * @return
+     */
+    Integer update(ArticleDto articleDto);
+
+    /**
      * 根据id查询文章
      * @param id
      * @return
