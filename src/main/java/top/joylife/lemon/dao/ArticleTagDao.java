@@ -20,4 +20,10 @@ public interface ArticleTagDao {
      * @param tagIds
      */
     void batchDelete(List<Integer> ids);
+
+    /**
+     * 根据文章id删除
+     * @param articleId
+     */
+    void deleteByArticleId(Integer articleId);
 }

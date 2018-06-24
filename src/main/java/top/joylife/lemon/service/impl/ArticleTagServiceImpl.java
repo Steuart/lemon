@@ -25,6 +25,16 @@ public class ArticleTagServiceImpl implements ArticleTagService{
      */
     @Override
     public void batchAdd(List<ArticleTag> articleTags) {
+        articleTagDao.batchAdd(articleTags);
+    }
+
+    /**
+     * 根据文章id删除标签关系
+     *
+     * @param articleId
+     */
+    @Override
+    public void deleteByArticleId(Integer articleId) {
         
     }
 }

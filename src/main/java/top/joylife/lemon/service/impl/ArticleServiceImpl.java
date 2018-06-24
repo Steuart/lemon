@@ -6,9 +6,11 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
 import top.joylife.lemon.common.bean.dto.ArticleDto;
 import top.joylife.lemon.dao.ArticleDao;
+import top.joylife.lemon.dao.ArticleTagDao;
 import top.joylife.lemon.dao.ClassifyDao;
 import top.joylife.lemon.dao.TagDao;
 import top.joylife.lemon.dao.entity.Article;
+import top.joylife.lemon.dao.entity.ArticleTag;
 import top.joylife.lemon.dao.entity.Tag;
 import top.joylife.lemon.service.ArticleService;
 
@@ -29,6 +31,9 @@ public class ArticleServiceImpl implements ArticleService {
 
     @Autowired
     private TagDao tagDao;
+
+    @Autowired
+    private ArticleTagDao articleTagDao;
 
     @Autowired
     private ClassifyDao classifyDao;
@@ -56,17 +61,43 @@ public class ArticleServiceImpl implements ArticleService {
         Integer articleId = article.getId();
         //保存标签
         List<String> names = articleDto.getTags();
-        List<Tag> tags = tagDao.listByName(names);
         Map<String,Tag> tagMap = new HashMap<>();
-        if(!CollectionUtils.isEmpty(tags)){
-            tags.forEach(tag -> {
+        if(!CollectionUtils.isEmpty(names)){
+            List<Tag> tags = tagDao.listByName(names);
+            if(!CollectionUtils.isEmpty(tags)){
+                tags.forEach(tag -> {
+                    tagMap.put(tag.getName(),tag);
+                });
+            }
+            List<Tag> addTags = new ArrayList<>();
+            names.forEach(name->{
+                Tag exist = tagMap.get(name);
+                if(exist==null){
+                    Tag tag = new Tag();
+                    tag.setArticleNumber(0);
+                    tag.setName(name);
+                    addTags.add(tag);
+                }
+            });
+            List<Tag> saveTag = tagDao.batchAdd(tags);
+            saveTag.forEach(tag->{
                 tagMap.put(tag.getName(),tag);
             });
         }
-        List<Tag> addTags = new ArrayList<>();
-
-
-        return null;
+        //删除旧的标签文章关系
+        articleTagDao.deleteByArticleId(articleId);
+        //保存标签文章关系
+        if(!CollectionUtils.isEmpty(names)){
+            List<ArticleTag> articleTags = new ArrayList<>();
+            tagMap.forEach((name,key)->{
+                ArticleTag articleTag = new ArticleTag();
+                articleTag.setArticleId(articleId);
+                articleTag.setTagId(key.getId());
+                articleTags.add(articleTag);
+            });
+            articleTagDao.batchAdd(articleTags);
+        }
+        return articleId;
     }
 
     /**

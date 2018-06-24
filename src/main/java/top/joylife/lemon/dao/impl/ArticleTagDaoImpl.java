@@ -41,4 +41,17 @@ public class ArticleTagDaoImpl implements ArticleTagDao {
                 .andIn("id",ids);
         articleTagMapper.deleteByExample(example);
     }
+
+    /**
+     * 根据文章id删除
+     *
+     * @param articleId
+     */
+    @Override
+    public void deleteByArticleId(Integer articleId) {
+        Example example = new Example(ArticleTag.class);
+        example.createCriteria()
+                .andEqualTo("articleId",articleId);
+        articleTagMapper.deleteByExample(example);
+    }
 }

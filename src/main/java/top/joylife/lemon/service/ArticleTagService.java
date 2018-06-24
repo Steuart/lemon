@@ -14,4 +14,10 @@ public interface ArticleTagService {
      * @param articleTags
      */
     void batchAdd(List<ArticleTag> articleTags);
+
+    /**
+     * 根据文章id删除标签关系
+     * @param articleId
+     */
+    void deleteByArticleId(Integer articleId);
 }
