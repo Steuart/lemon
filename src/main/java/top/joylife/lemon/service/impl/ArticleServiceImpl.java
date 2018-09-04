@@ -89,12 +89,7 @@ public class ArticleServiceImpl implements ArticleService {
     @Override
     @Transactional
     public void delete(Integer id) {
-        Article article = articleDao.get(id);
-        if(article==null){
-            throw new Warning(SystemCode.ARTICLE_NOT_FOUNT);
-        }
-        article.setDeleteDate(new Date());
-        articleDao.update(article);
+        articleDao.delete(id);
     }
 
     /**

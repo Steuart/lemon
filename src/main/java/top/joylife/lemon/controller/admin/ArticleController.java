@@ -2,6 +2,7 @@ package top.joylife.lemon.controller.admin;
 
 import com.alibaba.fastjson.JSON;
 import io.swagger.annotations.ApiOperation;
+import io.swagger.models.auth.In;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.math.NumberUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,6 +53,7 @@ public class ArticleController {
      * @param articleDto
      * @return
      */
+    @ApiOperation(value = "更新文章")
     @RequestMapping(value = "/",method = RequestMethod.PUT)
     public ResultData<Integer> updateArticle(@RequestBody ArticleDto articleDto){
         Integer articleId = articleDto.getId();
@@ -67,14 +69,14 @@ public class ArticleController {
      * @param id
      * @return
      */
+    @ApiOperation(value = "删除文章")
     @RequestMapping(value = "/{id}",method = RequestMethod.DELETE)
     public ResultData<String> deleteArticle(@PathVariable String id){
         if(!NumberUtils.isDigits(id)){
             throw new Warning(SystemCode.ARTICLE_ID_WRONG);
         }
-        
-        String articleId = "";
-        return ReUtil.success(articleId);
+        articleService.delete(Integer.valueOf(id));
+        return ReUtil.success(id);
     }
 
     /**
@@ -82,10 +84,10 @@ public class ArticleController {
      * @param articleDto
      * @return
      */
+    @ApiOperation(value = "添加文章")
     @RequestMapping(value = "/",method = RequestMethod.POST)
-    public ResultData<String> addArticle(@RequestBody ArticleDto articleDto){
-        String articleId = "";
-        log.info(JSON.toJSONString(articleDto));
+    public ResultData<Integer> addArticle(@RequestBody ArticleDto articleDto){
+        Integer articleId = articleService.add(articleDto);
         return ReUtil.success(articleId);
     }
 

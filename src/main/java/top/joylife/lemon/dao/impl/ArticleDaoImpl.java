@@ -58,7 +58,7 @@ public class ArticleDaoImpl implements ArticleDao {
     @Override
     public void delete(Integer articleId) {
         Article param = new Article();
-        param.setDateDelete(new Date());
+        param.setDeleteDate(new Date());
         param.setId(articleId);
         articleMapper.updateByPrimaryKeySelective(param);
     }
