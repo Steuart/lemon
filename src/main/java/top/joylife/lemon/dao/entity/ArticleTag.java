@@ -1,5 +1,6 @@
 package top.joylife.lemon.dao.entity;
 
+import io.swagger.models.auth.In;
 import lombok.Data;
 
 import javax.persistence.GeneratedValue;
@@ -25,5 +26,5 @@ public class ArticleTag {
     /**
      * 标签名
      */
-    private String tagName;
+    private Integer tagId;
 }

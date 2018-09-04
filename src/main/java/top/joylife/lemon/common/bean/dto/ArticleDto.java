@@ -47,7 +47,7 @@ public class ArticleDto {
     /**
      * 标签
      */
-    private List<String> tags;
+    private List<TagDto> tags;
 
     /**
      * 分类

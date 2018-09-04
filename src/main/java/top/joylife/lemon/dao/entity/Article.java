@@ -59,15 +59,15 @@ public class Article {
     /**
      * 创建时间
      */
-    private Date dateCreate;
+    private Date createDate;
 
     /**
      * 更新时间
      */
-    private Date dateUpdate;
+    private Date updateDate;
 
     /**
      * 删除时间
      */
-    private Date dateDelete;
+    private Date deleteDate;
 }

@@ -26,7 +26,7 @@ public class UserController {
     public ResultData<Map<String,Object>> login(@RequestBody Map<String,Object> param){
         Map<String,Object> data = new HashMap<>();
         log.info(JSON.toJSONString(param));
-        data.put("token","1221");
+        data.put("token",param.get("token"));
         return ReUtil.success(data);
     }
 
@@ -38,6 +38,12 @@ public class UserController {
         data.put("roles",roles);
         data.put("name","admin");
         data.put("avatar","https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif");
+        data.put("token",token);
+        try {
+            Thread.sleep(2000L);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return ReUtil.success(data);
     }
 

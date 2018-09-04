@@ -22,6 +22,12 @@ public interface ArticleService {
     Integer update(ArticleDto articleDto);
 
     /**
+     * 删除文章
+     * @param id
+     */
+    void delete(Integer id);
+
+    /**
      * 根据id查询文章
      * @param id
      * @return

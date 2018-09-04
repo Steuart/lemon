@@ -31,6 +31,15 @@ public class Tag {
     /**
      * 创建时间
      */
-    private Date dateCreate;
+    private Date createDate;
 
+    /**
+     * 更新时间
+     */
+    private Date updateDate;
+
+    /**
+     * 删除时间
+     */
+    private Date deleteDate;
 }
