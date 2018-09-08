@@ -23,10 +23,16 @@ public class Menu {
      * 名字
      */
     private String label;
+
+    /**
+     * 编号
+     */
+    private Integer number;
+
     /**
      * 描述
      */
-    private String describe;
+    private String remark;
     /**
      * 链接
      */
